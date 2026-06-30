@@ -141,6 +141,7 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
 
 
 
+@app.get("/api/next-question")
 def next_question():
     category = "vocabulary"
     count = get_question_count(category)
