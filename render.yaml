@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: yds-mentor-ai
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false  # Bu değeri Render Dashboard > Environment kısmından elle gireceksin (Neon bağlantı adresi)
