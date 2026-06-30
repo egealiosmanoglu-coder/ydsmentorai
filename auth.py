@@ -1,7 +1,7 @@
 import os
 import jwt
+import bcrypt
 from datetime import datetime, timedelta, timezone
-from passlib.context import CryptContext
 from fastapi import Header, HTTPException
 
 # Render'da bir environment variable olarak ayarlanmalı (rastgele uzun bir metin).
@@ -11,15 +11,21 @@ SECRET_KEY = os.environ.get("JWT_SECRET", "gelistirme-icin-degistir-bunu-render-
 ALGORITHM = "HS256"
 TOKEN_EXPIRE_DAYS = 30
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    # bcrypt 72 byte'tan uzun şifreleri desteklemiyor, güvenlik açısından
+    # bu yeterli bir sınır (zaten 72 karakter çok uzun bir şifre).
+    pw_bytes = password.encode("utf-8")[:72]
+    hashed = bcrypt.hashpw(pw_bytes, bcrypt.gensalt())
+    return hashed.decode("utf-8")
 
 
 def verify_password(password: str, password_hash: str) -> bool:
-    return pwd_context.verify(password, password_hash)
+    pw_bytes = password.encode("utf-8")[:72]
+    try:
+        return bcrypt.checkpw(pw_bytes, password_hash.encode("utf-8"))
+    except ValueError:
+        return False
 
 
 def create_token(user_id: int) -> str:
