@@ -35,8 +35,18 @@
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
         /* Auth ekranı */
-        .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; }
-        .auth-card { width: 100%; max-width: 380px; background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(16px); padding: 36px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); }
+        .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+        .auth-container { display: flex; gap: 60px; align-items: center; max-width: 900px; width: 100%; }
+        .welcome-side { flex: 1; }
+        .welcome-logo { font-size: 48px; margin-bottom: 16px; display: inline-block; animation: float 3s infinite ease-in-out; }
+        .welcome-title { font-size: 32px; font-weight: 800; color: #f8fafc; margin-bottom: 8px; line-height: 1.2; }
+        .welcome-title span { color: #38bdf8; }
+        .welcome-desc { font-size: 15px; color: #94a3b8; line-height: 1.8; margin-bottom: 28px; }
+        .welcome-features { list-style: none; padding: 0; margin: 0; }
+        .welcome-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #cbd5e1; margin-bottom: 12px; }
+        .welcome-features li span.icon { font-size: 18px; }
+        .divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; min-height: 300px; }
+        .auth-card { width: 100%; max-width: 360px; background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(16px); padding: 36px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); }
         .auth-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; text-align: center; }
         .auth-sub { font-size: 13px; color: #94a3b8; text-align: center; margin-bottom: 24px; }
         .auth-input { width: 100%; box-sizing: border-box; padding: 12px 14px; margin-bottom: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #f8fafc; font-size: 14px; font-family: inherit; }
@@ -45,13 +55,39 @@
         .auth-toggle { text-align: center; margin-top: 16px; font-size: 13px; color: #94a3b8; }
         .auth-toggle a { color: #38bdf8; cursor: pointer; text-decoration: none; font-weight: 600; }
         .hidden { display: none !important; }
+        @media (max-width: 700px) {
+            .auth-container { flex-direction: column; gap: 30px; }
+            .divider { display: none; }
+            .welcome-side { text-align: center; }
+            .welcome-features { display: inline-block; text-align: left; }
+        }
     </style>
 </head>
 <body>
 
     <!-- GİRİŞ / KAYIT EKRANI -->
     <div class="auth-wrap" id="authWrap">
-        <div class="auth-card">
+        <div class="auth-container">
+
+            <!-- SOL: HOŞGELDİNİZ -->
+            <div class="welcome-side">
+                <div class="welcome-logo">🎓</div>
+                <div class="welcome-title">YDS'ye <span>Akıllıca</span><br>Hazırlan</div>
+                <p class="welcome-desc">
+                    Bu platform, YDS sınavına hazırlanan öğrencilere ücretsiz ve etkili bir çalışma ortamı sunmak amacıyla kurulmuştur. Sorular, ÖSYM sınav standardına uygun biçimde özenle seçilmiş ve her biri detaylı Türkçe mentor analiziyle desteklenmiştir.
+                </p>
+                <ul class="welcome-features">
+                    <li><span class="icon">✅</span> ÖSYM standartlarında vocabulary soruları</li>
+                    <li><span class="icon">🤖</span> Her soru için yapay zeka destekli analiz</li>
+                    <li><span class="icon">📊</span> Kişisel istatistikler ve ilerleme takibi</li>
+                    <li><span class="icon">🔒</span> Ücretsiz, reklamsız ve güvenli</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- SAĞ: GİRİŞ FORMU -->
+            <div class="auth-card">
             <div class="auth-title" id="authTitle">Giriş Yap</div>
             <div class="auth-sub" id="authSub">YDS Mentor AI'a hoş geldin</div>
             <div class="auth-error" id="authError"></div>
@@ -62,8 +98,8 @@
                 <span id="authToggleText">Hesabın yok mu?</span>
                 <a id="authToggleLink" onclick="toggleAuthMode()">Kayıt ol</a>
             </div>
-        </div>
-    </div>
+        </div><!-- /.auth-container -->
+    </div><!-- /#authWrap -->
 
     <!-- ANA UYGULAMA (girişten sonra görünür) -->
     <div id="appWrap" class="hidden" style="display:flex; width:100%;">
