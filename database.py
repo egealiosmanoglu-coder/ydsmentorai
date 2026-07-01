@@ -164,6 +164,17 @@ def get_question_by_id(question_id):
         conn.close()
 
 
+def question_exists(question_text):
+    """Aynı metne sahip bir soru zaten var mı kontrol eder (tekrar eklemeyi önlemek için)."""
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT 1 FROM ai_questions WHERE question_text = %s LIMIT 1", (question_text,))
+        return cursor.fetchone() is not None
+    finally:
+        conn.close()
+
+
 def get_question_count(category):
     """Belirtilen kategoride kaç soru olduğunu döndürür."""
     conn = get_connection()
