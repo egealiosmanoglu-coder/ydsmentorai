@@ -37,6 +37,7 @@ class UserOut(BaseModel):
     email: str
     solved_count: int
     correct_count: int
+    is_verified: bool = False
 
 
 class TokenResponse(BaseModel):
