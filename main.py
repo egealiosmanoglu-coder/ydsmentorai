@@ -962,7 +962,7 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
     """
 
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         return {"answer": response.text}
     except Exception as e:
