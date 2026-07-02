@@ -109,7 +109,11 @@
                 <div style="text-align:center;margin-top:10px;font-size:13px;">
                     <a id="forgotLink" onclick="showForgotPassword()" style="color:#64748b;cursor:pointer;">Şifremi unuttum</a>
                 </div>
-            </div></div></div><div id="appWrap" class="hidden" style="display:flex; width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <div id="appWrap" class="hidden" style="display:flex; width:100%;">
         <div class="sidebar">
             <div>
                 <div class="mentor-profile">
@@ -302,7 +306,7 @@
             return { 'Authorization': 'Bearer ' + authToken };
         }
 
-        // ---------- QUIZ ----------
+        // ---------- QUIZ & AI CHAT ----------
 
         async function loadQuestion() {
             selectedLetter = null;
@@ -322,6 +326,19 @@
                     document.getElementById('optionsBox').innerHTML = "";
                     document.getElementById('actionBtn').innerText = RETRY_LABEL;
                     document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
+                    return;
+                }
+
+                // EĞER 5 SORU LİMİTİ DOLDUYSA
+                if (data.error === "limit_reached") {
+                    document.getElementById('qText').innerHTML = 
+                        "🛑 <strong>Soru Limitine Ulaştın!</strong><br><br>" +
+                        "Email adresini doğrulamadan en fazla 5 soru çözebilirsin. " +
+                        "Kesintisiz bir şekilde çalışmaya devam etmek için lütfen gelen kutunu (veya spam klasörünü) kontrol edip email adresini doğrula.";
+                    document.getElementById('optionsBox').innerHTML = "";
+                    document.getElementById('stokInfo').innerText = "";
+                    document.getElementById('actionBtn').innerText = "📩 Doğrulama Emailini Tekrar Gönder";
+                    document.getElementById('actionBtn').setAttribute("onclick", "resendVerification()");
                     return;
                 }
 
@@ -381,10 +398,88 @@
 
             let rBox = document.getElementById('resultBox');
             rBox.style.display = "block";
-            rBox.innerHTML = `<strong>🤖 Detaylı Mentor Analizi:</strong>\n\n` + (currentQuestion.ai_explanation || "Bu soru için açıklama eklenmemiş.");
+            
+            // YENİ EKLENEN MENTOR SOHBET ARAYÜZÜ
+            rBox.innerHTML = `<strong>🤖 Detaylı Mentor Analizi:</strong><br><br>` + 
+                (currentQuestion.ai_explanation || "Bu soru için açıklama eklenmemiş.") +
+                `
+                <div id="mentorChatBox" style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size:13px; color:#94a3b8; margin-bottom:12px;">💡 Hâlâ kafana takılan bir şey mi var? Mentor'a sor:</div>
+                    <div id="chatHistory" style="margin-bottom:12px; max-height:250px; overflow-y:auto; font-size:14px; display:flex; flex-direction:column; gap:10px;"></div>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="mentorInput" placeholder="Örn: 'despite' yerine ne gelse cevap değişmezdi?" 
+                            style="flex:1; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); color:#f8fafc; outline:none; font-family:inherit; font-size:14px;"
+                            onkeypress="if(event.key === 'Enter') askMentor()">
+                        <button onclick="askMentor()" style="background:#38bdf8; color:#0f172a; border:none; padding:0 20px; border-radius:10px; font-weight:700; cursor:pointer;">Gönder</button>
+                    </div>
+                </div>
+                `;
 
             document.getElementById('actionBtn').innerText = NEXT_LABEL;
             document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
+        }
+
+        // YAPAY ZEKAYA SORU SORMA FONKSİYONU
+        async function askMentor() {
+            const inputEl = document.getElementById('mentorInput');
+            const msg = inputEl.value.trim();
+            if (!msg) return;
+
+            const chatHistory = document.getElementById('chatHistory');
+
+            // 1. Öğrencinin mesajını ekrana yaz
+            chatHistory.innerHTML += `
+                <div style="align-self: flex-end; background: rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 12px 12px 0 12px; max-width: 85%;">
+                    <strong style="color:#f8fafc; font-size:12px;">Sen</strong><br>
+                    ${msg}
+                </div>`;
+            inputEl.value = "";
+
+            // 2. Yükleniyor efekti ekle
+            const loadingId = 'loading-' + Date.now();
+            chatHistory.innerHTML += `
+                <div id="${loadingId}" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); padding: 10px 14px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%;">
+                    <strong style="color:#38bdf8; font-size:12px;">🤖 Mentor AI</strong><br>
+                    <span style="color:#94a3b8; font-style:italic;">Düşünüyor...</span>
+                </div>`;
+            
+            // Scroll'u en alta kaydır
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            try {
+                // 3. Backend'e isteği at
+                const res = await fetch('/api/ask-mentor', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', ...authHeaders() },
+                    body: JSON.stringify({ question_id: currentQuestion.id, user_message: msg })
+                });
+
+                document.getElementById(loadingId).remove();
+
+                if (!res.ok) {
+                    const err = await res.json();
+                    chatHistory.innerHTML += `<div style="color:#f87171; font-size:13px; margin-top:5px;">⚠️ Hata: ${err.detail || 'Bağlantı sorunu.'}</div>`;
+                    return;
+                }
+
+                // 4. Yapay zekanın cevabını ekrana yazdır
+                const data = await res.json();
+                const formattedAnswer = data.answer.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                chatHistory.innerHTML += `
+                    <div style="align-self: flex-start; background: rgba(56, 189, 248, 0.05); padding: 10px 14px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%; line-height: 1.6;">
+                        <strong style="color:#38bdf8; font-size:12px;">🤖 Mentor AI</strong><br>
+                        ${formattedAnswer}
+                    </div>`;
+                
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            } catch (e) {
+                if(document.getElementById(loadingId)) {
+                    document.getElementById(loadingId).remove();
+                }
+                chatHistory.innerHTML += `<div style="color:#f87171; font-size:13px; margin-top:5px;">⚠️ Sisteme ulaşılamadı.</div>`;
+            }
         }
 
         function updateStatsFromUser() {
