@@ -11,7 +11,7 @@ import google.generativeai as genai
 from database import (
     init_db,
     save_ai_question,
-    get_random_stored_question,
+    get_unsolved_random_question,  # YENİ EKLENDİ
     get_question_by_id,
     get_question_count,
     question_exists,
@@ -24,6 +24,7 @@ from database import (
     create_email_token,
     use_email_token,
     get_all_users,
+    log_user_solved_question,      # YENİ EKLENDİ
 )
 from models import (
     DiagnosticTestSubmission,
@@ -876,6 +877,9 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
 
     is_correct = (correct_option is not None) and (payload.selected_option == correct_option)
     update_user_stats(user_id, is_correct)
+    
+    # KULLANICININ BU SORUYU ÇÖZDÜĞÜNÜ KAYDET
+    log_user_solved_question(user_id, payload.question_id)
 
     urow = get_user_by_id(user_id)
     uid, email, _hash, solved_count, correct_count, is_verified = urow
@@ -896,7 +900,7 @@ def next_question(user_id: int = Depends(get_current_user_id)):
     if count == 0:
         return {"error": "loading"}
 
-    row = get_random_stored_question(category)
+    row = get_unsolved_random_question(user_id, category)
     if not row:
         return {"error": "loading"}
 
