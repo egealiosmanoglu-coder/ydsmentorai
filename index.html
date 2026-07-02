@@ -71,17 +71,14 @@
 </head>
 <body>
 
-    <!-- YÜKLENİYOR (auth kontrolü süresince) -->
     <div class="loading-wrap" id="loadingWrap">
         <div class="loading-spinner"></div>
         <div class="loading-text">YDS Mentor AI yükleniyor...</div>
     </div>
 
-    <!-- GİRİŞ / KAYIT EKRANI -->
     <div class="auth-wrap hidden" id="authWrap">
         <div class="auth-container">
 
-            <!-- SOL: HOŞGELDİNİZ -->
             <div class="welcome-side">
                 <div class="welcome-logo">🎓</div>
                 <div class="welcome-title">YDS'ye <span>Akıllıca</span><br>Hazırlan</div>
@@ -98,7 +95,6 @@
 
             <div class="divider"></div>
 
-            <!-- SAĞ: GİRİŞ FORMU -->
             <div class="auth-card">
             <div class="auth-title" id="authTitle">Giriş Yap</div>
             <div class="auth-sub" id="authSub">YDS Mentor AI'a hoş geldin</div>
@@ -113,11 +109,7 @@
             <div style="text-align:center;margin-top:10px;font-size:13px;">
                 <a id="forgotLink" onclick="showForgotPassword()" style="color:#64748b;cursor:pointer;">Şifremi unuttum</a>
             </div>
-        </div><!-- /.auth-container -->
-    </div><!-- /#authWrap -->
-
-    <!-- ANA UYGULAMA (girişten sonra görünür) -->
-    <div id="appWrap" class="hidden" style="display:flex; width:100%;">
+        </div></div><div id="appWrap" class="hidden" style="display:flex; width:100%;">
         <div class="sidebar">
             <div>
                 <div class="mentor-profile">
@@ -215,7 +207,8 @@
                 localStorage.setItem('yds_token', authToken);
                 enterApp();
             } catch (e) {
-                showAuthError("Sunucuya bağlanılamadı.");
+                console.error("Detaylı hata:", e);
+                showAuthError("Bağlantı hatası: " + e.message);
             }
         }
 
@@ -265,7 +258,11 @@
         }
 
         function enterApp() {
-            show('appWrap');
+            document.getElementById('authWrap').classList.add('hidden');
+            document.getElementById('loadingWrap').classList.add('hidden');
+            document.getElementById('appWrap').classList.remove('hidden');
+            document.getElementById('appWrap').style.display = "flex";
+
             document.getElementById('userEmailBadge').innerText = currentUser.email;
             if (!currentUser.is_verified) {
                 const banner = document.createElement('div');
