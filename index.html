@@ -268,6 +268,8 @@
             document.getElementById('appWrap').style.display = "flex";
 
             document.getElementById('userEmailBadge').innerText = currentUser.email;
+            
+            // Mail uyarısı durabilir, sorun yok. İsteyen doğrular, isteyen doğrulamaz.
             if (!currentUser.is_verified) {
                 const banner = document.createElement('div');
                 banner.id = 'verifyBanner';
@@ -329,19 +331,6 @@
                     return;
                 }
 
-                // EĞER 5 SORU LİMİTİ DOLDUYSA
-                if (data.error === "limit_reached") {
-                    document.getElementById('qText').innerHTML = 
-                        "🛑 <strong>Soru Limitine Ulaştın!</strong><br><br>" +
-                        "Email adresini doğrulamadan en fazla 5 soru çözebilirsin. " +
-                        "Kesintisiz bir şekilde çalışmaya devam etmek için lütfen gelen kutunu (veya spam klasörünü) kontrol edip email adresini doğrula.";
-                    document.getElementById('optionsBox').innerHTML = "";
-                    document.getElementById('stokInfo').innerText = "";
-                    document.getElementById('actionBtn').innerText = "📩 Doğrulama Emailini Tekrar Gönder";
-                    document.getElementById('actionBtn').setAttribute("onclick", "resendVerification()");
-                    return;
-                }
-
                 currentQuestion = data;
                 document.getElementById('qText').innerText = data.question_text;
                 document.getElementById('stokInfo').innerText = "Depodaki VIP Soru: " + data.current_count;
@@ -399,7 +388,6 @@
             let rBox = document.getElementById('resultBox');
             rBox.style.display = "block";
             
-            // YENİ EKLENEN MENTOR SOHBET ARAYÜZÜ
             rBox.innerHTML = `<strong>🤖 Detaylı Mentor Analizi:</strong><br><br>` + 
                 (currentQuestion.ai_explanation || "Bu soru için açıklama eklenmemiş.") +
                 `
