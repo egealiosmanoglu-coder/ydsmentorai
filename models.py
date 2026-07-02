@@ -49,3 +49,7 @@ class TokenResponse(BaseModel):
 class AnswerSubmission(BaseModel):
     question_id: int
     selected_option: str
+    
+class AskMentorRequest(BaseModel):
+    question_id: int
+    user_message: str
