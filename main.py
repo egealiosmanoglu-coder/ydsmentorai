@@ -881,23 +881,15 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
     uid, email, _hash, solved_count, correct_count, is_verified = urow
     return UserOut(id=uid, email=email, solved_count=solved_count, correct_count=correct_count, is_verified=is_verified)
 
-
 @app.get("/api/next-question")
 def next_question(user_id: int = Depends(get_current_user_id)):
     """
-    Kullanıcıya sıradaki soruyu gönderir. Eğer kullanıcının emaili onaylanmamışsa
-    ve 5 sorudan fazla çözmüşse hata döndürür.
+    Kullanıcıya sıradaki soruyu gönderir. (Soru limiti şimdilik kaldırıldı).
     """
     user = get_user_by_id(user_id)
     if not user:
         raise HTTPException(status_code=401, detail="Kullanıcı bulunamadı.")
     
-    uid, email, _hash, solved_count, correct_count, is_verified = user
-
-    # 1. DOĞRULAMA KONTROLÜ (5 SORU LİMİTİ)
-    if not is_verified and solved_count >= 5:
-        return {"error": "limit_reached"}
-
     category = "vocabulary"
     count = get_question_count(category)
 
