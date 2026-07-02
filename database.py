@@ -52,6 +52,17 @@ def init_db():
         cursor.execute("""
             ALTER TABLE users ADD COLUMN IF NOT EXISTS is_verified BOOLEAN DEFAULT FALSE
         """)
+        
+        # YENİ: Öğrencilerin çözdüğü soruları takip edeceğimiz tablo
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS user_solved_questions (
+                id SERIAL PRIMARY KEY,
+                user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+                question_id INTEGER REFERENCES ai_questions(id) ON DELETE CASCADE,
+                UNIQUE(user_id, question_id)
+            )
+        """)
+        
         conn.commit()
     finally:
         conn.close()
@@ -221,6 +232,7 @@ def save_ai_question(category, question_text, options, correct_option, ai_explan
 
 
 def get_random_stored_question(category):
+    """Bağlam dışı rastgele soru getirir (Eski sistem)."""
     conn = get_connection()
     try:
         cursor = conn.cursor()
@@ -229,6 +241,58 @@ def get_random_stored_question(category):
             FROM ai_questions WHERE category = %s ORDER BY RANDOM() LIMIT 1
         """, (category,))
         return cursor.fetchone()
+    finally:
+        conn.close()
+
+
+def get_unsolved_random_question(user_id, category):
+    """
+    Kullanıcıya daha önce çözmediği rastgele bir soru getirir. 
+    Eğer tüm sorular bittiyse, kullanıcının geçmişini silip havuzu sıfırlar.
+    """
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        
+        # 1. Kullanıcının daha önce çözmediği soruları ara
+        cursor.execute("""
+            SELECT id, question_text, options, correct_option, ai_explanation
+            FROM ai_questions 
+            WHERE category = %s AND id NOT IN (
+                SELECT question_id FROM user_solved_questions WHERE user_id = %s
+            )
+            ORDER BY RANDOM() LIMIT 1
+        """, (category, user_id))
+        row = cursor.fetchone()
+        
+        # 2. Eğer çözülmemiş soru KALMADIYSA (Tüm sorular bittiyse)
+        if not row:
+            # Kullanıcının çözme geçmişini temizle (Sıfırla)
+            cursor.execute("DELETE FROM user_solved_questions WHERE user_id = %s", (user_id,))
+            conn.commit()
+            
+            # Şimdi tüm havuzdan tekrar rastgele bir soru getir
+            cursor.execute("""
+                SELECT id, question_text, options, correct_option, ai_explanation
+                FROM ai_questions WHERE category = %s ORDER BY RANDOM() LIMIT 1
+            """, (category,))
+            row = cursor.fetchone()
+            
+        return row
+    finally:
+        conn.close()
+
+
+def log_user_solved_question(user_id, question_id):
+    """Kullanıcının bir soruyu çözdüğünü veritabanına kaydeder."""
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO user_solved_questions (user_id, question_id)
+            VALUES (%s, %s) ON CONFLICT DO NOTHING
+        """, (user_id, question_id))
+        conn.commit()
     finally:
         conn.close()
 
