@@ -78,7 +78,6 @@
 
     <div class="auth-wrap hidden" id="authWrap">
         <div class="auth-container">
-
             <div class="welcome-side">
                 <div class="welcome-logo">🎓</div>
                 <div class="welcome-title">YDS'ye <span>Akıllıca</span><br>Hazırlan</div>
@@ -163,9 +162,7 @@
         function toggleAuthMode() {
             isRegisterMode = !isRegisterMode;
             document.getElementById('authTitle').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
-            document.getElementById('authSub').innerText = isRegisterMode
-                ? "Yeni bir hesap oluştur"
-                : "YDS Mentor AI'a hoş geldin";
+            document.getElementById('authSub').innerText = isRegisterMode ? "Yeni bir hesap oluştur" : "YDS Mentor AI'a hoş geldin";
             document.getElementById('authSubmitBtn').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
             document.getElementById('authToggleText').innerText = isRegisterMode ? "Zaten hesabın var mı?" : "Hesabın yok mu?";
             document.getElementById('authToggleLink').innerText = isRegisterMode ? "Giriş yap" : "Kayıt ol";
@@ -269,7 +266,6 @@
 
             document.getElementById('userEmailBadge').innerText = currentUser.email;
             
-            // Mail uyarısı durabilir, sorun yok. İsteyen doğrular, isteyen doğrulamaz.
             if (!currentUser.is_verified) {
                 const banner = document.createElement('div');
                 banner.id = 'verifyBanner';
@@ -381,21 +377,27 @@
                     currentUser = await res.json();
                     updateStatsFromUser();
                 }
-            } catch (e) {
-                // istatistik güncellenemese bile cevabı göstermeye devam et
-            }
+            } catch (e) {}
 
             let rBox = document.getElementById('resultBox');
             rBox.style.display = "block";
             
-            rBox.innerHTML = `<strong>🤖 Detaylı Mentor Analizi:</strong><br><br>` + 
-                (currentQuestion.ai_explanation || "Bu soru için açıklama eklenmemiş.") +
-                `
-                <div id="mentorChatBox" style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <div style="font-size:13px; color:#94a3b8; margin-bottom:12px;">💡 Hâlâ kafana takılan bir şey mi var? Mentor'a sor:</div>
+            // YENİ EKOL: DOĞRUDAN SADECE SOHBET KUTUSUNU BAŞLATALIM
+            let isCorrect = (selectedLetter === currentQuestion.correct_option);
+            let resultMessage = isCorrect 
+                ? `Tebrikler! Doğru cevap <strong>${currentQuestion.correct_option}</strong> şıkkı. 🎉` 
+                : `Maalesef yanlış. Doğru cevap <strong>${currentQuestion.correct_option}</strong> olmalıydı. 😕`;
+            let resultColor = isCorrect ? "#34d399" : "#f87171";
+
+            rBox.innerHTML = `
+                <div style="font-size: 15px; color: ${resultColor}; margin-bottom: 20px; font-weight: 600;">
+                    ${resultMessage}
+                </div>
+                <div id="mentorChatBox" style="padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size:13px; color:#94a3b8; margin-bottom:12px;">💡 Cevabın nedenini öğrenmek veya kelimenin detaylarına inmek ister misin? Mentor'a sor:</div>
                     <div id="chatHistory" style="margin-bottom:12px; max-height:250px; overflow-y:auto; font-size:14px; display:flex; flex-direction:column; gap:10px;"></div>
                     <div style="display:flex; gap:10px;">
-                        <input type="text" id="mentorInput" placeholder="Örn: 'despite' yerine ne gelse cevap değişmezdi?" 
+                        <input type="text" id="mentorInput" placeholder="Örn: Neden ${currentQuestion.correct_option} şıkkı oldu, açıklar mısın?" 
                             style="flex:1; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); color:#f8fafc; outline:none; font-family:inherit; font-size:14px;"
                             onkeypress="if(event.key === 'Enter') askMentor()">
                         <button onclick="askMentor()" style="background:#38bdf8; color:#0f172a; border:none; padding:0 20px; border-radius:10px; font-weight:700; cursor:pointer;">Gönder</button>
@@ -407,7 +409,6 @@
             document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
         }
 
-        // YAPAY ZEKAYA SORU SORMA FONKSİYONU
         async function askMentor() {
             const inputEl = document.getElementById('mentorInput');
             const msg = inputEl.value.trim();
@@ -415,7 +416,6 @@
 
             const chatHistory = document.getElementById('chatHistory');
 
-            // 1. Öğrencinin mesajını ekrana yaz
             chatHistory.innerHTML += `
                 <div style="align-self: flex-end; background: rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 12px 12px 0 12px; max-width: 85%;">
                     <strong style="color:#f8fafc; font-size:12px;">Sen</strong><br>
@@ -423,7 +423,6 @@
                 </div>`;
             inputEl.value = "";
 
-            // 2. Yükleniyor efekti ekle
             const loadingId = 'loading-' + Date.now();
             chatHistory.innerHTML += `
                 <div id="${loadingId}" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); padding: 10px 14px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%;">
@@ -431,11 +430,9 @@
                     <span style="color:#94a3b8; font-style:italic;">Düşünüyor...</span>
                 </div>`;
             
-            // Scroll'u en alta kaydır
             chatHistory.scrollTop = chatHistory.scrollHeight;
 
             try {
-                // 3. Backend'e isteği at
                 const res = await fetch('/api/ask-mentor', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', ...authHeaders() },
@@ -450,7 +447,6 @@
                     return;
                 }
 
-                // 4. Yapay zekanın cevabını ekrana yazdır
                 const data = await res.json();
                 const formattedAnswer = data.answer.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 
