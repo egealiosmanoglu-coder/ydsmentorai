@@ -137,7 +137,19 @@
 
         <div class="main-content">
             <div class="quiz-card" id="quizCard">
-                <div class="badge">👑 ÖSYM YDS AYARI (VOCABULARY)</div>
+                
+                <div style="display: flex; gap: 10px; margin-bottom: 25px; background: rgba(255,255,255,0.02); padding: 6px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                    <button id="tab_vocabulary" onclick="switchCategory('vocabulary')" 
+                        style="flex: 1; padding: 12px; border-radius: 8px; border: none; background: #38bdf8; color: #0f172a; font-weight: 700; cursor: pointer; font-size: 13.5px; transition: all 0.2s;">
+                        📚 Kelime Bilgisi (Vocabulary)
+                    </button>
+                    <button id="tab_sentence_completion" onclick="switchCategory('sentence_completion')" 
+                        style="flex: 1; padding: 12px; border-radius: 8px; border: none; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13.5px; transition: all 0.2s;">
+                        🧩 Cümle Tamamlama
+                    </button>
+                </div>
+
+                <div class="badge" id="categoryBadge">👑 ÖSYM YDS AYARI</div>
                 <div class="question-text" id="qText">Yükleniyor...</div>
                 <div id="optionsBox"></div>
                 <button id="actionBtn" class="btn-submit" onclick="checkAnswer()">Cevabı Gönder</button>
@@ -156,6 +168,37 @@
         let isRegisterMode = false;
         let authToken = localStorage.getItem('yds_token') || null;
         let currentUser = null;
+        let currentCategory = "vocabulary"; // Varsayılan Başlangıç Kategorisi
+
+        // ---------- KATEGORİ GEÇİŞ MANTIĞI ----------
+
+        function switchCategory(category) {
+            currentCategory = category;
+            
+            // Sekme Tasarımlarını Aktif/Pasif Durumuna Getir
+            if (category === 'vocabulary') {
+                document.getElementById('tab_vocabulary').style.background = "#38bdf8";
+                document.getElementById('tab_vocabulary').style.color = "#0f172a";
+                document.getElementById('tab_vocabulary').style.fontWeight = "700";
+                
+                document.getElementById('tab_sentence_completion').style.background = "transparent";
+                document.getElementById('tab_sentence_completion').style.color = "#94a3b8";
+                document.getElementById('tab_sentence_completion').style.fontWeight = "600";
+                document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (VOCABULARY)";
+            } else {
+                document.getElementById('tab_sentence_completion').style.background = "#38bdf8";
+                document.getElementById('tab_sentence_completion').style.color = "#0f172a";
+                document.getElementById('tab_sentence_completion').style.fontWeight = "700";
+                
+                document.getElementById('tab_vocabulary').style.background = "transparent";
+                document.getElementById('tab_vocabulary').style.color = "#94a3b8";
+                document.getElementById('tab_vocabulary').style.fontWeight = "600";
+                document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (SENTENCE COMPLETION)";
+            }
+            
+            // Seçilen kategoriden taze soru yükle
+            loadQuestion();
+        }
 
         // ---------- AUTH ----------
 
@@ -275,7 +318,7 @@
                 if (card && !document.getElementById('verifyBanner')) card.prepend(banner);
             }
             updateStatsFromUser();
-            loadQuestion();
+            switchCategory('vocabulary'); // İlk girişte varsayılan kelime grubunu tetikle
         }
 
         async function resendVerification() {
@@ -313,14 +356,15 @@
             document.getElementById('actionBtn').setAttribute("onclick", "checkAnswer()");
 
             try {
-                const res = await fetch('/api/next-question', { headers: authHeaders() });
+                // DINAMIK KATEGORI ENTEGRASYONU
+                const res = await fetch(`/api/next-question?category=${currentCategory}`, { headers: authHeaders() });
                 if (res.status === 401) { logout(); return; }
                 if (!res.ok) throw new Error("HTTP " + res.status);
                 const data = await res.json();
 
                 if (data.error === "loading") {
                     document.getElementById('qText').innerText =
-                        "🔋 İlk ÖSYM standartlarındaki elit sorular arkada işleniyor, lütfen biraz bekleyip aşağıdaki butona basın...";
+                        "🔋 Bu kategorideki çözülmemiş sorular arkada işleniyor veya tükendi, lütfen biraz bekleyip aşağıdaki butona basın...";
                     document.getElementById('optionsBox').innerHTML = "";
                     document.getElementById('actionBtn').innerText = RETRY_LABEL;
                     document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
@@ -382,13 +426,13 @@
             let rBox = document.getElementById('resultBox');
             rBox.style.display = "block";
             
-            // YENİ EKOL: DOĞRUDAN SADECE SOHBET KUTUSUNU BAŞLATALIM
             let isCorrect = (selectedLetter === currentQuestion.correct_option);
             let resultMessage = isCorrect 
                 ? `Tebrikler! Doğru cevap <strong>${currentQuestion.correct_option}</strong> şıkkı. 🎉` 
                 : `Maalesef yanlış. Doğru cevap <strong>${currentQuestion.correct_option}</strong> olmalıydı. 😕`;
             let resultColor = isCorrect ? "#34d399" : "#f87171";
 
+            // UX DÜZELTMESİ: KÜÇÜLTÜLMÜŞ YAZI VE GENİŞLETİLMİŞ CHAT ALANI
             rBox.innerHTML = `
                 <div style="font-size: 14px; color: ${resultColor}; margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
                     <span>${resultMessage}</span>
