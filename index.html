@@ -5,37 +5,61 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0b0f19; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; }
-        .sidebar { width: 280px; background: rgba(15, 23, 42, 0.8); border-right: 1px solid rgba(255,255,255,0.08); padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
-        .mentor-profile { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(8px); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
+        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; }
+        
+        /* PREMIUM SIDEBAR */
+        .sidebar { width: 300px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
+        .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 24px 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .mentor-avatar { font-size: 45px; margin-bottom: 10px; display: inline-block; animation: float 3s infinite ease-in-out; }
-        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 16px; }
-        .user-badge { margin-top: 15px; display: inline-block; background: rgba(56, 189, 248, 0.1); color: #38bdf8; font-size: 11px; padding: 4px 12px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; word-break: break-all; }
-        .stats-container { margin-top: 30px; }
-        .stat-box { background: rgba(30, 41, 59, 0.3); padding: 15px; border-radius: 12px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.03); }
+        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 16px; letter-spacing: 0.5px; }
+        .user-badge { margin-top: 12px; display: inline-block; background: rgba(56, 189, 248, 0.08); color: #38bdf8; font-size: 11px; padding: 6px 14px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; word-break: break-all; border: 1px solid rgba(56, 189, 248, 0.15); }
+        
+        /* SOL MENÜ KATEGORİ BUTONLARI (PREMIUM TABS) */
+        .nav-container { margin-top: 35px; display: flex; flex-direction: column; gap: 8px; }
+        .nav-label { font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; padding-left: 8px; }
+        .nav-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid transparent; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13.5px; text-align: left; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .nav-btn:hover { color: #f8fafc; background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.05); transform: translateX(4px); }
+        .nav-btn.active { background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.02)); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25); font-weight: 700; box-shadow: 0 4px 12px rgba(56, 189, 248, 0.05); }
+        
+        .stats-container { margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .stat-box { background: rgba(30, 41, 59, 0.2); padding: 15px; border-radius: 12px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.02); }
         .stat-val { font-size: 22px; font-weight: 700; color: #f8fafc; }
-        .stat-lbl { font-size: 12px; color: #94a3b8; }
-        .progress-bg { background: rgba(255,255,255,0.05); height: 6px; border-radius: 9999px; margin-top: 8px; overflow: hidden; }
-        .progress-bar { background: #38bdf8; height: 100%; width: 0%; transition: width 0.5s ease; }
-        .logout-btn { margin-top: 20px; width: 100%; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 13px; }
-        .logout-btn:hover { background: rgba(239, 68, 68, 0.2); }
-        .main-content { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; }
-        .quiz-card { width: 100%; max-width: 720px; background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(16px); padding: 40px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); }
-        .badge { background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
-        .question-text { font-size: 19px; font-weight: 600; line-height: 1.6; margin-bottom: 30px; }
-        .option-container { display: flex; align-items: center; padding: 16px; margin-bottom: 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; cursor: pointer; transition: all 0.2s ease; }
-        .option-container:hover { background: rgba(255,255,255,0.05); transform: translateX(4px); }
-        .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.2); border-radius: 50%; margin-right: 15px; display: inline-block; }
-        .option-selected { background: rgba(56, 189, 248, 0.1) !important; border-color: #38bdf8 !important; }
-        .option-correct { background: rgba(16, 185, 129, 0.15) !important; border-color: #10b981 !important; color: #34d399; }
-        .option-wrong { background: rgba(239, 68, 68, 0.15) !important; border-color: #ef4444 !important; color: #f87171; }
-        .btn-submit { background: #38bdf8; color: #0f172a; border: none; padding: 14px; font-size: 15px; font-weight: 700; border-radius: 10px; cursor: pointer; width: 100%; margin-top: 15px; }
-        .btn-submit:hover { background: #0ea5e9; }
-        .result-box { margin-top: 25px; display: none; background: #1e293b; border-left: 4px solid #38bdf8; padding: 20px; border-radius: 0 10px 10px 0; white-space: pre-wrap; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .stat-lbl { font-size: 12px; color: #64748b; margin-top: 2px; }
+        .progress-bg { background: rgba(255,255,255,0.04); height: 6px; border-radius: 9999px; margin-top: 10px; overflow: hidden; }
+        .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        .logout-btn { margin-top: 20px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 12px; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+        .logout-btn:hover { background: rgba(239, 68, 68, 0.15); border-color: rgba(239,68,68,0.3); }
+        
+        /* MAIN CONTENT & QUIZ CARD */
+        .main-content { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
+        .quiz-card { width: 100%; max-width: 740px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 45px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.07); transition: all 0.3s ease; }
+        .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); letter-spacing: 0.5px; }
+        .question-text { font-size: 19.5px; font-weight: 600; line-height: 1.65; margin-bottom: 35px; color: #f1f5f9; }
+        
+        /* PREMIUM OPTIONS */
+        .option-container { display: flex; align-items: center; padding: 18px 20px; margin-bottom: 14px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+        .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; transition: all 0.2s; flex-shrink: 0; }
+        .option-container:hover .checkmark { border-color: rgba(255,255,255,0.3); }
+        
+        .option-selected { background: rgba(56, 189, 248, 0.06) !important; border-color: rgba(56, 189, 248, 0.4) !important; color: #38bdf8; }
+        .option-selected .checkmark { border-color: #38bdf8 !important; background: #38bdf8; box-shadow: inset 0 0 0 4px #0f172a; }
+        .option-correct { background: rgba(16, 185, 129, 0.08) !important; border-color: rgba(16, 185, 129, 0.4) !important; color: #34d399; font-weight: 500; }
+        .option-correct .checkmark { border-color: #10b981 !important; background: #10b981; box-shadow: inset 0 0 0 4px #0f172a; }
+        .option-wrong { background: rgba(239, 68, 68, 0.08) !important; border-color: rgba(239, 68, 68, 0.4) !important; color: #f87171; }
+        .option-wrong .checkmark { border-color: #ef4444 !important; background: #ef4444; box-shadow: inset 0 0 0 4px #0f172a; }
+        
+        /* PREMIUM SUBMIT BUTTON */
+        .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; letter-spacing: 0.5px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
+        .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); filter: brightness(1.05); }
+        .btn-submit:active { transform: translateY(1px); }
+        
+        .result-box { margin-top: 30px; display: none; background: rgba(30, 41, 59, 0.3); border-left: 4px solid #38bdf8; padding: 24px; border-radius: 4px 16px 24px 16px; white-space: pre-wrap; border-top: 1px solid rgba(255,255,255,0.03); border-right: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
         /* Auth ekranı */
-        .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+        .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
         .auth-container { display: flex; gap: 60px; align-items: center; max-width: 900px; width: 100%; }
         .welcome-side { flex: 1; }
         .welcome-logo { font-size: 48px; margin-bottom: 16px; display: inline-block; animation: float 3s infinite ease-in-out; }
@@ -46,22 +70,29 @@
         .welcome-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #cbd5e1; margin-bottom: 12px; }
         .welcome-features li span.icon { font-size: 18px; }
         .divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; min-height: 300px; }
-        .auth-card { width: 100%; max-width: 360px; background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(16px); padding: 36px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); }
-        .auth-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; text-align: center; }
-        .auth-sub { font-size: 13px; color: #94a3b8; text-align: center; margin-bottom: 24px; }
-        .auth-input { width: 100%; box-sizing: border-box; padding: 12px 14px; margin-bottom: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #f8fafc; font-size: 14px; font-family: inherit; }
-        .auth-input:focus { outline: none; border-color: #38bdf8; }
-        .auth-error { color: #f87171; font-size: 13px; margin-bottom: 10px; min-height: 0; display: none; }
-        .auth-toggle { text-align: center; margin-top: 16px; font-size: 13px; color: #94a3b8; }
+        .auth-card { width: 100%; max-width: 360px; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .auth-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; text-align: center; color: #f1f5f9; }
+        .auth-sub { font-size: 13.5px; color: #64748b; text-align: center; margin-bottom: 28px; }
+        .auth-input { width: 100%; box-sizing: border-box; padding: 14px; margin-bottom: 14px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: #f8fafc; font-size: 14px; font-family: inherit; transition: all 0.2s; }
+        .auth-input:focus { outline: none; border-color: #38bdf8; background: rgba(255,255,255,0.04); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1); }
+        .auth-error { color: #f87171; font-size: 13.5px; margin-bottom: 14px; display: none; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; border: 1px solid rgba(239,68,68,0.2); }
+        .auth-toggle { text-align: center; margin-top: 18px; font-size: 13.5px; color: #64748b; }
         .auth-toggle a { color: #38bdf8; cursor: pointer; text-decoration: none; font-weight: 600; }
         .hidden { display: none !important; }
 
-        /* Yükleniyor ekranı */
-        .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
-        .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(56,189,248,0.2); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
-        .loading-text { color: #64748b; font-size: 14px; }
+        /* Yükleniyor */
+        .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #090d16; }
+        .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(56,189,248,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        .loading-text { color: #475569; font-size: 14px; font-weight: 500; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        @media (max-width: 700px) {
+        
+        @media (max-width: 780px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 20px; }
+            .nav-container { flex-direction: row; margin-top: 15px; }
+            .nav-label { display: none; }
+            .main-content { padding: 20px; }
+            .quiz-card { padding: 25px; }
             .auth-container { flex-direction: column; gap: 30px; }
             .divider { display: none; }
             .welcome-side { text-align: center; }
@@ -105,8 +136,8 @@
                     <span id="authToggleText">Hesabın yok mu?</span>
                     <a id="authToggleLink" onclick="toggleAuthMode()">Kayıt ol</a>
                 </div>
-                <div style="text-align:center;margin-top:10px;font-size:13px;">
-                    <a id="forgotLink" onclick="showForgotPassword()" style="color:#64748b;cursor:pointer;">Şifremi unuttum</a>
+                <div style="text-align:center;margin-top:12px;font-size:13px;">
+                    <a id="forgotLink" onclick="showForgotPassword()" style="color:#475569;cursor:pointer;font-weight:500;">Şifremi unuttum</a>
                 </div>
             </div>
         </div>
@@ -120,6 +151,19 @@
                     <div class="mentor-name">YDS Mentor AI</div>
                     <span class="user-badge" id="userEmailBadge">-</span>
                 </div>
+                
+                <div class="nav-container">
+                    <div class="nav-label">Çalışma Alanı</div>
+                    <button id="tab_vocabulary" class="nav-btn active" onclick="switchCategory('vocabulary')">
+                        <span>📚</span> Kelime Bilgisi
+                    </button>
+                    <button id="tab_sentence_completion" class="nav-btn" onclick="switchCategory('sentence_completion')">
+                        <span>🧩</span> Cümle Tamamlama
+                    </button>
+                </div>
+            </div>
+            
+            <div>
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-val" id="statTotal">0</div>
@@ -137,24 +181,12 @@
 
         <div class="main-content">
             <div class="quiz-card" id="quizCard">
-                
-                <div style="display: flex; gap: 10px; margin-bottom: 25px; background: rgba(255,255,255,0.02); padding: 6px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
-                    <button id="tab_vocabulary" onclick="switchCategory('vocabulary')" 
-                        style="flex: 1; padding: 12px; border-radius: 8px; border: none; background: #38bdf8; color: #0f172a; font-weight: 700; cursor: pointer; font-size: 13.5px; transition: all 0.2s;">
-                        📚 Kelime Bilgisi (Vocabulary)
-                    </button>
-                    <button id="tab_sentence_completion" onclick="switchCategory('sentence_completion')" 
-                        style="flex: 1; padding: 12px; border-radius: 8px; border: none; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13.5px; transition: all 0.2s;">
-                        🧩 Cümle Tamamlama
-                    </button>
-                </div>
-
                 <div class="badge" id="categoryBadge">👑 ÖSYM YDS AYARI</div>
                 <div class="question-text" id="qText">Yükleniyor...</div>
                 <div id="optionsBox"></div>
                 <button id="actionBtn" class="btn-submit" onclick="checkAnswer()">Cevabı Gönder</button>
                 <div id="resultBox" class="result-box"></div>
-                <div style="font-size:11px;color:#64748b;margin-top:15px;text-align:right;" id="stokInfo">Stok: -</div>
+                <div style="font-size:11px;color:#475569;margin-top:18px;text-align:right;font-weight:500;" id="stokInfo">Stok: -</div>
             </div>
         </div>
     </div>
@@ -168,35 +200,24 @@
         let isRegisterMode = false;
         let authToken = localStorage.getItem('yds_token') || null;
         let currentUser = null;
-        let currentCategory = "vocabulary"; // Varsayılan Başlangıç Kategorisi
+        let currentCategory = "vocabulary";
 
-        // ---------- KATEGORİ GEÇİŞ MANTIĞI ----------
+        // ---------- PREMIUM SIDEBAR SEÇİM MANTIĞI ----------
 
         function switchCategory(category) {
             currentCategory = category;
             
-            // Sekme Tasarımlarını Aktif/Pasif Durumuna Getir
+            // Aktif/Pasif Sınıflarını Yönet
             if (category === 'vocabulary') {
-                document.getElementById('tab_vocabulary').style.background = "#38bdf8";
-                document.getElementById('tab_vocabulary').style.color = "#0f172a";
-                document.getElementById('tab_vocabulary').style.fontWeight = "700";
-                
-                document.getElementById('tab_sentence_completion').style.background = "transparent";
-                document.getElementById('tab_sentence_completion').style.color = "#94a3b8";
-                document.getElementById('tab_sentence_completion').style.fontWeight = "600";
+                document.getElementById('tab_vocabulary').classList.add('active');
+                document.getElementById('tab_sentence_completion').classList.remove('active');
                 document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (VOCABULARY)";
             } else {
-                document.getElementById('tab_sentence_completion').style.background = "#38bdf8";
-                document.getElementById('tab_sentence_completion').style.color = "#0f172a";
-                document.getElementById('tab_sentence_completion').style.fontWeight = "700";
-                
-                document.getElementById('tab_vocabulary').style.background = "transparent";
-                document.getElementById('tab_vocabulary').style.color = "#94a3b8";
-                document.getElementById('tab_vocabulary').style.fontWeight = "600";
+                document.getElementById('tab_sentence_completion').classList.add('active');
+                document.getElementById('tab_vocabulary').classList.remove('active');
                 document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (SENTENCE COMPLETION)";
             }
             
-            // Seçilen kategoriden taze soru yükle
             loadQuestion();
         }
 
@@ -251,7 +272,6 @@
                 localStorage.setItem('yds_token', authToken);
                 enterApp();
             } catch (e) {
-                console.error("Detaylı hata:", e);
                 showAuthError("Bağlantı hatası: " + e.message);
             }
         }
@@ -312,13 +332,13 @@
             if (!currentUser.is_verified) {
                 const banner = document.createElement('div');
                 banner.id = 'verifyBanner';
-                banner.style.cssText = 'background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;padding:12px 16px;border-radius:10px;font-size:13px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;';
+                banner.style.cssText = 'background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);color:#fbbf24;padding:12px 16px;border-radius:12px;font-size:13px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;';
                 banner.innerHTML = '<span>⚠️ Email adresin henüz doğrulanmadı.</span><a onclick="resendVerification()" style="color:#38bdf8;cursor:pointer;font-weight:600;white-space:nowrap;">Tekrar gönder</a>';
                 const card = document.querySelector('.quiz-card');
                 if (card && !document.getElementById('verifyBanner')) card.prepend(banner);
             }
             updateStatsFromUser();
-            switchCategory('vocabulary'); // İlk girişte varsayılan kelime grubunu tetikle
+            switchCategory('vocabulary');
         }
 
         async function resendVerification() {
@@ -356,7 +376,6 @@
             document.getElementById('actionBtn').setAttribute("onclick", "checkAnswer()");
 
             try {
-                // DINAMIK KATEGORI ENTEGRASYONU
                 const res = await fetch(`/api/next-question?category=${currentCategory}`, { headers: authHeaders() });
                 if (res.status === 401) { logout(); return; }
                 if (!res.ok) throw new Error("HTTP " + res.status);
@@ -432,7 +451,6 @@
                 : `Maalesef yanlış. Doğru cevap <strong>${currentQuestion.correct_option}</strong> olmalıydı. 😕`;
             let resultColor = isCorrect ? "#34d399" : "#f87171";
 
-            // UX DÜZELTMESİ: KÜÇÜLTÜLMÜŞ YAZI VE GENİŞLETİLMİŞ CHAT ALANI
             rBox.innerHTML = `
                 <div style="font-size: 14px; color: ${resultColor}; margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
                     <span>${resultMessage}</span>
@@ -503,9 +521,7 @@
                 chatHistory.scrollTop = chatHistory.scrollHeight;
 
             } catch (e) {
-                if(document.getElementById(loadingId)) {
-                    document.getElementById(loadingId).remove();
-                }
+                if(document.getElementById(loadingId)) document.getElementById(loadingId).remove();
                 chatHistory.innerHTML += `<div style="color:#f87171; font-size:13px; margin-top:5px;">⚠️ Sisteme ulaşılamadı.</div>`;
             }
         }
