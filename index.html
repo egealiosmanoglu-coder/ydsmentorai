@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; overflow: hidden; }
         
-        /* 1. SOL MENÜ (SIDEBAR) - BİRAZ DAHA KÜÇÜLTÜLDÜ */
+        /* 1. SOL MENÜ (SIDEBAR) */
         .sidebar { width: 240px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
         .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 20px 15px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .mentor-avatar { font-size: 40px; margin-bottom: 8px; display: inline-block; animation: float 3s infinite ease-in-out; }
@@ -28,17 +28,18 @@
         .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s ease; }
         
         .logout-btn { margin-top: 15px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
-        
+        .logout-btn:hover { background: rgba(239, 68, 68, 0.15); }
+
         /* 2. WORKSPACE DÜZENİ */
         .workspace { flex: 1; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
         
-        /* ORTA TARAF: SORU ALANI (QUIZ ZONE) */
+        /* ORTA TARAF: SORU ALANI */
         .quiz-side { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; }
         .quiz-card { width: 100%; max-width: 600px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
         .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); }
         .question-text { font-size: 19px; font-weight: 600; line-height: 1.65; margin-bottom: 30px; color: #f1f5f9; }
         
-        /* PREMIUM OPTIONS */
+        /* OPTIONS */
         .option-container { display: flex; align-items: center; padding: 16px 20px; margin-bottom: 12px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s ease; }
         .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
         .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; flex-shrink: 0; }
@@ -53,7 +54,7 @@
         .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
         .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); }
         
-        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ (AI SIDE PANEL) */
+        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ */
         .ai-side { width: 440px; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; }
         .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); }
         .ai-status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
@@ -83,9 +84,6 @@
         .welcome-title { font-size: 32px; font-weight: 800; color: #f8fafc; margin-bottom: 8px; line-height: 1.2; }
         .welcome-title span { color: #38bdf8; }
         .welcome-desc { font-size: 15px; color: #94a3b8; line-height: 1.8; margin-bottom: 28px; }
-        .welcome-features { list-style: none; padding: 0; margin: 0; }
-        .welcome-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #cbd5e1; margin-bottom: 12px; }
-        .welcome-features li span.icon { font-size: 18px; }
         .divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; min-height: 300px; }
         .auth-card { width: 100%; max-width: 360px; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
         .auth-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; text-align: center; color: #f1f5f9; }
@@ -97,16 +95,15 @@
         .auth-toggle a { color: #38bdf8; cursor: pointer; text-decoration: none; font-weight: 600; }
         .hidden { display: none !important; }
 
-        .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #090d16; }
+        .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #090d16; min-height: 100vh; width: 100%; }
         .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(56,189,248,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
         .loading-text { color: #475569; font-size: 14px; font-weight: 500; }
         @keyframes spin { to { transform: rotate(360deg); } }
         
         @media (max-width: 1150px) {
-            body { flex-direction: column; }
+            body { flex-direction: column; overflow-y: auto; }
             .sidebar { width: 100%; padding: 20px; }
-            .nav-container { flex-direction: row; margin-top: 15px; }
-            .workspace { flex-direction: column; }
+            .workspace { flex-direction: column; overflow: visible; }
             .ai-side { width: 100%; height: 450px; }
         }
     </style>
@@ -124,7 +121,7 @@
                 <div class="welcome-logo">🎓</div>
                 <div class="welcome-title">YDS'ye <span>Akıllıca</span><br>Hazırlan</div>
                 <p class="welcome-desc">
-                    Bu platform, YDS sınavına hazırlanan öğrencilere ücretsiz ve etkili bir çalışma ortamı sunmak amacıyla kurulmuştur. Sorular, ÖSYM sınav standardına uygun biçimde özenle seçilmiş...
+                    Bu platform, YDS sınavına hazırlanan öğrencilere ücretsiz ve etkili bir çalışma ortamı sunmak amacıyla kurulmuştur. Sorular, ÖSYM sınav standardına uygun biçimde özenle seçilmiştir.
                 </p>
             </div>
             <div class="divider"></div>
@@ -135,12 +132,12 @@
                 <input class="auth-input" type="email" id="authEmail" placeholder="Email adresin">
                 <input class="auth-input" type="password" id="authPassword" placeholder="Şifre">
                 <button class="btn-submit" id="authSubmitBtn" onclick="handleAuthSubmit()">Giriş Yap</button>
-                <div class="auth-toggle">Unuttun mu? <a onclick="showForgotPassword()">Şifremi unuttum</a></div>
+                <div class="auth-toggle">Hesabın yok mu? <a onclick="toggleAuthMode()">Kayıt ol</a></div>
             </div>
         </div>
     </div>
 
-    <div id="appWrap" class="hidden" style="display:flex; width:100%;">
+    <div id="appWrap" class="hidden" style="width:100%; min-height: 100vh;">
         <div class="sidebar">
             <div>
                 <div class="mentor-profile">
@@ -227,7 +224,7 @@
             hideAuthError();
             const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value;
-            if (!email || !password) { showAuthError("Doldurun."); return; }
+            if (!email || !password) { showAuthError("Lütfen alanları doldurun."); return; }
             const endpoint = isRegisterMode ? '/api/register' : '/api/login';
             try {
                 const res = await fetch(endpoint, {
@@ -236,19 +233,33 @@
                     body: JSON.stringify({ email, password })
                 });
                 const data = await res.json();
-                if (!res.ok) { showAuthError(data.detail || "Hata."); return; }
+                if (!res.ok) { showAuthError(data.detail || "Kimlik doğrulama hatası."); return; }
                 authToken = data.access_token;
                 currentUser = data.user;
                 localStorage.setItem('yds_token', authToken);
                 enterApp();
-            } catch (e) { showAuthError("Hata."); }
+            } catch (e) { showAuthError("Bağlantı hatası."); }
         }
 
         function showAuthError(msg) { const el = document.getElementById('authError'); el.innerText = msg; el.style.display = "block"; }
         function hideAuthError() { document.getElementById('authError').style.display = "none"; }
-        function toggleAuthMode() { isRegisterMode = !isRegisterMode; handleAuthSubmit(); }
+        
+        function toggleAuthMode() { 
+            isRegisterMode = !isRegisterMode; 
+            document.getElementById('authTitle').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
+            document.getElementById('authSubmitBtn').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
+            document.getElementById('authToggleText').innerText = isRegisterMode ? "Zaten hesabın var mı?" : "Hesabın yok mu?";
+            document.getElementById('authToggleLink').innerText = isRegisterMode ? "Giriş yap" : "Kayıt ol";
+        }
+        
         function logout() { authToken = null; localStorage.removeItem('yds_token'); showAuthScreen(); }
-        function showAuthScreen() { document.getElementById('loadingWrap').classList.add('hidden'); document.getElementById('authWrap').classList.remove('hidden'); document.getElementById('appWrap').style.display = "none"; }
+        
+        function showAuthScreen() { 
+            document.getElementById('loadingWrap').classList.add('hidden'); 
+            document.getElementById('authWrap').classList.remove('hidden'); 
+            document.getElementById('appWrap').classList.add('hidden');
+            document.getElementById('appWrap').style.display = "none"; 
+        }
         
         async function tryAutoLogin() {
             if (!authToken) { showAuthScreen(); return; }
@@ -263,7 +274,12 @@
         function enterApp() {
             document.getElementById('authWrap').classList.add('hidden');
             document.getElementById('loadingWrap').classList.add('hidden');
-            document.getElementById('appWrap').style.display = "flex";
+            
+            // SİYAH EKRAN ÇÖZÜMÜ: appWrap stilini garantili biçimde flex yapıyoruz
+            const appWrap = document.getElementById('appWrap');
+            appWrap.classList.remove('hidden');
+            appWrap.style.setProperty('display', 'flex', 'important');
+            
             document.getElementById('userEmailBadge').innerText = currentUser.email;
             updateStatsFromUser();
             switchCategory('vocabulary');
@@ -274,7 +290,6 @@
         async function loadQuestion() {
             selectedLetter = null;
             
-            // JAVASCRIPT FIXED: SAĞ PANELİ HER YENİ SORUDA RESETLE
             document.getElementById('chatHistory').innerHTML = `
                 <div class="chat-placeholder" id="chatPlaceholder">
                     <div class="chat-placeholder-icon">💡</div>
@@ -290,7 +305,8 @@
                 const res = await fetch(`/api/next-question?category=${currentCategory}`, { headers: authHeaders() });
                 const data = await res.json();
                 if (data.error === "loading") {
-                    document.getElementById('qText').innerText = "Sorular yükleniyor...";
+                    document.getElementById('qText').innerText = "Kategorideki çözülmemiş sorular yükleniyor veya bitti...";
+                    document.getElementById('optionsBox').innerHTML = "";
                     return;
                 }
                 currentQuestion = data;
@@ -316,7 +332,7 @@
         }
 
         async function checkAnswer() {
-            if (!selectedLetter) { alert("Şık seç!"); return; }
+            if (!selectedLetter) { alert("Lütfen bir şık seçin!"); return; }
 
             let correctAns = currentQuestion.correct_option;
             document.querySelectorAll('.option-container').forEach(el => {
@@ -334,7 +350,6 @@
                 if (res.ok) { currentUser = await res.json(); updateStatsFromUser(); }
             } catch (e) {}
 
-            // JAVASCRIPT FIXED: ARTIK CHAT GİRİŞLERİ KİLİTLENMİYOR VE SAĞ PANELDE AKIYOR
             const placeholder = document.getElementById('chatPlaceholder');
             if (placeholder) placeholder.remove();
             
@@ -408,7 +423,7 @@
             document.getElementById('progressBar').style.width = ratio + "%";
         }
 
-        async function showForgotPassword() { alert("Geliştiriliyor."); }
+        async function showForgotPassword() { alert("Şifre sıfırlama linki için lütfen sistem yöneticisiyle iletişime geçin."); }
         tryAutoLogin();
     </script>
 </body>
