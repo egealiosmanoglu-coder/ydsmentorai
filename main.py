@@ -280,8 +280,8 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
 
 
 @app.get("/api/next-question")
-def next_question(user_id: int = Depends(get_current_user_id)):
-    category = "vocabulary"
+def next_question(category: str = "vocabulary", user_id: int = Depends(get_current_user_id)):
+    """Kullanıcının seçtiği kategoriye göre (vocabulary veya sentence_completion) sıradaki soruyu getirir."""
     count = get_question_count(category)
 
     if count == 0:
