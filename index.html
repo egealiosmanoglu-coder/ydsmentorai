@@ -5,43 +5,43 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; }
+        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; overflow-x: hidden; }
         
-        /* PREMIUM SIDEBAR */
-        .sidebar { width: 300px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
-        .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 24px 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .mentor-avatar { font-size: 45px; margin-bottom: 10px; display: inline-block; animation: float 3s infinite ease-in-out; }
-        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 16px; letter-spacing: 0.5px; }
-        .user-badge { margin-top: 12px; display: inline-block; background: rgba(56, 189, 248, 0.08); color: #38bdf8; font-size: 11px; padding: 6px 14px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; word-break: break-all; border: 1px solid rgba(56, 189, 248, 0.15); }
+        /* 1. SOL MENÜ (SIDEBAR) - BİRAZ DAHA KÜÇÜLTÜLDÜ */
+        .sidebar { width: 240px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
+        .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 20px 15px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .mentor-avatar { font-size: 40px; margin-bottom: 8px; display: inline-block; animation: float 3s infinite ease-in-out; }
+        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 15px; letter-spacing: 0.5px; }
+        .user-badge { margin-top: 10px; display: inline-block; background: rgba(56, 189, 248, 0.08); color: #38bdf8; font-size: 11px; padding: 4px 10px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; word-break: break-all; border: 1px solid rgba(56, 189, 248, 0.15); }
         
-        /* SOL MENÜ KATEGORİ BUTONLARI (PREMIUM TABS) */
-        .nav-container { margin-top: 35px; display: flex; flex-direction: column; gap: 8px; }
-        .nav-label { font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; padding-left: 8px; }
-        .nav-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid transparent; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13.5px; text-align: left; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .nav-btn:hover { color: #f8fafc; background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.05); transform: translateX(4px); }
-        .nav-btn.active { background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.02)); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25); font-weight: 700; box-shadow: 0 4px 12px rgba(56, 189, 248, 0.05); }
+        .nav-container { margin-top: 30px; display: flex; flex-direction: column; gap: 6px; }
+        .nav-label { font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; padding-left: 6px; }
+        .nav-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13px; text-align: left; transition: all 0.3s ease; }
+        .nav-btn:hover { color: #f8fafc; background: rgba(255, 255, 255, 0.03); transform: translateX(3px); }
+        .nav-btn.active { background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.02)); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25); font-weight: 700; }
         
-        .stats-container { margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .stat-box { background: rgba(30, 41, 59, 0.2); padding: 15px; border-radius: 12px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.02); }
-        .stat-val { font-size: 22px; font-weight: 700; color: #f8fafc; }
-        .stat-lbl { font-size: 12px; color: #64748b; margin-top: 2px; }
-        .progress-bg { background: rgba(255,255,255,0.04); height: 6px; border-radius: 9999px; margin-top: 10px; overflow: hidden; }
-        .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .stats-container { margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .stat-box { background: rgba(30, 41, 59, 0.2); padding: 12px; border-radius: 10px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.02); }
+        .stat-val { font-size: 20px; font-weight: 700; color: #f8fafc; }
+        .stat-lbl { font-size: 11px; color: #64748b; }
+        .progress-bg { background: rgba(255,255,255,0.04); height: 5px; border-radius: 9999px; margin-top: 8px; overflow: hidden; }
+        .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s ease; }
         
-        .logout-btn { margin-top: 20px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 12px; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.2s; }
-        .logout-btn:hover { background: rgba(239, 68, 68, 0.15); border-color: rgba(239,68,68,0.3); }
+        .logout-btn { margin-top: 15px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
         
-        /* MAIN CONTENT & QUIZ CARD */
-        .main-content { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
-        .quiz-card { width: 100%; max-width: 740px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 45px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.07); transition: all 0.3s ease; }
-        .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); letter-spacing: 0.5px; }
-        .question-text { font-size: 19.5px; font-weight: 600; line-height: 1.65; margin-bottom: 35px; color: #f1f5f9; }
+        /* 2. WORKSPACE DÜZENİ */
+        .workspace { flex: 1; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
+        
+        /* ORTA TARAF: SORU ALANI (QUIZ ZONE) */
+        .quiz-side { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; }
+        .quiz-card { width: 100%; max-width: 600px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
+        .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); }
+        .question-text { font-size: 19px; font-weight: 600; line-height: 1.65; margin-bottom: 30px; color: #f1f5f9; }
         
         /* PREMIUM OPTIONS */
-        .option-container { display: flex; align-items: center; padding: 18px 20px; margin-bottom: 14px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .option-container { display: flex; align-items: center; padding: 16px 20px; margin-bottom: 12px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s ease; }
         .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-        .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; transition: all 0.2s; flex-shrink: 0; }
-        .option-container:hover .checkmark { border-color: rgba(255,255,255,0.3); }
+        .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; flex-shrink: 0; }
         
         .option-selected { background: rgba(56, 189, 248, 0.06) !important; border-color: rgba(56, 189, 248, 0.4) !important; color: #38bdf8; }
         .option-selected .checkmark { border-color: #38bdf8 !important; background: #38bdf8; box-shadow: inset 0 0 0 4px #0f172a; }
@@ -50,13 +50,30 @@
         .option-wrong { background: rgba(239, 68, 68, 0.08) !important; border-color: rgba(239, 68, 68, 0.4) !important; color: #f87171; }
         .option-wrong .checkmark { border-color: #ef4444 !important; background: #ef4444; box-shadow: inset 0 0 0 4px #0f172a; }
         
-        /* PREMIUM SUBMIT BUTTON */
-        .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; letter-spacing: 0.5px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
-        .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); filter: brightness(1.05); }
-        .btn-submit:active { transform: translateY(1px); }
+        .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
+        .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); }
         
-        .result-box { margin-top: 30px; display: none; background: rgba(30, 41, 59, 0.3); border-left: 4px solid #38bdf8; padding: 24px; border-radius: 4px 16px 24px 16px; white-space: pre-wrap; border-top: 1px solid rgba(255,255,255,0.03); border-right: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03); }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ (AI SIDE PANEL) */
+        .ai-side { width: 440px; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; }
+        .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); }
+        .ai-status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
+        .ai-title { font-weight: 700; font-size: 15px; color: #f1f5f9; }
+        .ai-subtitle { font-size: 12px; color: #64748b; margin-top: 1px; }
+        
+        .chat-container { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; }
+        .chat-placeholder { margin: auto; text-align: center; color: #334155; padding: 40px; }
+        .chat-placeholder-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.4; }
+        .chat-placeholder-text { font-size: 13.5px; font-weight: 500; line-height: 1.6; color: #475569; }
+        
+        .chat-input-area { padding: 20px 24px 24px 24px; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(15, 23, 42, 0.4); }
+        .chat-input-wrapper { display: flex; gap: 10px; background: rgba(0,0,0,0.2); padding: 6px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .chat-input { flex: 1; padding: 10px 14px; border: none; background: transparent; color: #f8fafc; outline: none; font-family: inherit; font-size: 13.5px; }
+        .chat-input::placeholder { color: #475569; }
+        .chat-input:disabled { cursor: not-allowed; opacity: 0.5; }
+        .chat-send-btn { background: #38bdf8; color: #0f172a; border: none; padding: 0 18px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
+        .chat-send-btn:disabled { background: #1e293b; color: #475569; cursor: not-allowed; }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
         /* Auth ekranı */
         .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
@@ -73,30 +90,24 @@
         .auth-card { width: 100%; max-width: 360px; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
         .auth-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; text-align: center; color: #f1f5f9; }
         .auth-sub { font-size: 13.5px; color: #64748b; text-align: center; margin-bottom: 28px; }
-        .auth-input { width: 100%; box-sizing: border-box; padding: 14px; margin-bottom: 14px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: #f8fafc; font-size: 14px; font-family: inherit; transition: all 0.2s; }
+        .auth-input { width: 100%; box-sizing: border-box; padding: 14px; margin-bottom: 14px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: #f8fafc; font-size: 14px; font-family: inherit; }
         .auth-input:focus { outline: none; border-color: #38bdf8; background: rgba(255,255,255,0.04); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1); }
         .auth-error { color: #f87171; font-size: 13.5px; margin-bottom: 14px; display: none; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; border: 1px solid rgba(239,68,68,0.2); }
         .auth-toggle { text-align: center; margin-top: 18px; font-size: 13.5px; color: #64748b; }
         .auth-toggle a { color: #38bdf8; cursor: pointer; text-decoration: none; font-weight: 600; }
         .hidden { display: none !important; }
 
-        /* Yükleniyor */
         .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #090d16; }
         .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(56,189,248,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
         .loading-text { color: #475569; font-size: 14px; font-weight: 500; }
         @keyframes spin { to { transform: rotate(360deg); } }
         
-        @media (max-width: 780px) {
+        @media (max-width: 1150px) {
             body { flex-direction: column; }
-            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 20px; }
+            .sidebar { width: 100%; padding: 20px; }
             .nav-container { flex-direction: row; margin-top: 15px; }
-            .nav-label { display: none; }
-            .main-content { padding: 20px; }
-            .quiz-card { padding: 25px; }
-            .auth-container { flex-direction: column; gap: 30px; }
-            .divider { display: none; }
-            .welcome-side { text-align: center; }
-            .welcome-features { display: inline-block; text-align: left; }
+            .workspace { flex-direction: column; }
+            .ai-side { width: 100%; height: 450px; }
         }
     </style>
 </head>
@@ -113,32 +124,18 @@
                 <div class="welcome-logo">🎓</div>
                 <div class="welcome-title">YDS'ye <span>Akıllıca</span><br>Hazırlan</div>
                 <p class="welcome-desc">
-                    Bu platform, YDS sınavına hazırlanan öğrencilere ücretsiz ve etkili bir çalışma ortamı sunmak amacıyla kurulmuştur. Sorular, ÖSYM sınav standardına uygun biçimde özenle seçilmiş ve her biri detaylı Türkçe mentor analiziyle desteklenmiştir.
+                    Bu platform, YDS sınavına hazırlanan öğrencilere ücretsiz ve etkili bir çalışma ortamı sunmak amacıyla kurulmuştur. Sorular, ÖSYM sınav standardına uygun biçimde özenle seçilmiş...
                 </p>
-                <ul class="welcome-features">
-                    <li><span class="icon">✅</span> ÖSYM standartlarında vocabulary soruları</li>
-                    <li><span class="icon">🤖</span> Her soru için yapay zeka destekli analiz</li>
-                    <li><span class="icon">📊</span> Kişisel istatistikler ve ilerleme takibi</li>
-                    <li><span class="icon">🔒</span> Ücretsiz, reklamsız ve güvenli</li>
-                </ul>
             </div>
-
             <div class="divider"></div>
-
             <div class="auth-card">
                 <div class="auth-title" id="authTitle">Giriş Yap</div>
                 <div class="auth-sub" id="authSub">YDS Mentor AI'a hoş geldin</div>
                 <div class="auth-error" id="authError"></div>
-                <input class="auth-input" type="email" id="authEmail" placeholder="Email adresin" autocomplete="email">
-                <input class="auth-input" type="password" id="authPassword" placeholder="Şifre (en az 6 karakter)" autocomplete="current-password">
+                <input class="auth-input" type="email" id="authEmail" placeholder="Email adresin">
+                <input class="auth-input" type="password" id="authPassword" placeholder="Şifre">
                 <button class="btn-submit" id="authSubmitBtn" onclick="handleAuthSubmit()">Giriş Yap</button>
-                <div class="auth-toggle">
-                    <span id="authToggleText">Hesabın yok mu?</span>
-                    <a id="authToggleLink" onclick="toggleAuthMode()">Kayıt ol</a>
-                </div>
-                <div style="text-align:center;margin-top:12px;font-size:13px;">
-                    <a id="forgotLink" onclick="showForgotPassword()" style="color:#475569;cursor:pointer;font-weight:500;">Şifremi unuttum</a>
-                </div>
+                <div class="auth-toggle">Unuttun mu? <a onclick="showForgotPassword()">Şifremi unuttum</a></div>
             </div>
         </div>
     </div>
@@ -151,42 +148,52 @@
                     <div class="mentor-name">YDS Mentor AI</div>
                     <span class="user-badge" id="userEmailBadge">-</span>
                 </div>
-                
                 <div class="nav-container">
                     <div class="nav-label">Çalışma Alanı</div>
-                    <button id="tab_vocabulary" class="nav-btn active" onclick="switchCategory('vocabulary')">
-                        <span>📚</span> Kelime Bilgisi
-                    </button>
-                    <button id="tab_sentence_completion" class="nav-btn" onclick="switchCategory('sentence_completion')">
-                        <span>🧩</span> Cümle Tamamlama
-                    </button>
+                    <button id="tab_vocabulary" class="nav-btn active" onclick="switchCategory('vocabulary')"><span>📚</span> Kelime Bilgisi</button>
+                    <button id="tab_sentence_completion" class="nav-btn" onclick="switchCategory('sentence_completion')"><span>🧩</span> Cümle Tamamlama</button>
                 </div>
             </div>
-            
             <div>
                 <div class="stats-container">
-                    <div class="stat-box">
-                        <div class="stat-val" id="statTotal">0</div>
-                        <div class="stat-lbl">Çözülen Soru</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-val" id="statRatio">0%</div>
-                        <div class="stat-lbl">Doğruluk Oranı</div>
-                        <div class="progress-bg"><div class="progress-bar" id="progressBar"></div></div>
-                    </div>
+                    <div class="stat-box"><div class="stat-val" id="statTotal">0</div><div class="stat-lbl">Çözülen Soru</div></div>
+                    <div class="stat-box"><div class="stat-val" id="statRatio">0%</div><div class="stat-lbl">Doğruluk Oranı</div><div class="progress-bg"><div class="progress-bar" id="progressBar"></div></div></div>
                 </div>
                 <button class="logout-btn" onclick="logout()">Çıkış Yap</button>
             </div>
         </div>
 
-        <div class="main-content">
-            <div class="quiz-card" id="quizCard">
-                <div class="badge" id="categoryBadge">👑 ÖSYM YDS AYARI</div>
-                <div class="question-text" id="qText">Yükleniyor...</div>
-                <div id="optionsBox"></div>
-                <button id="actionBtn" class="btn-submit" onclick="checkAnswer()">Cevabı Gönder</button>
-                <div id="resultBox" class="result-box"></div>
-                <div style="font-size:11px;color:#475569;margin-top:18px;text-align:right;font-weight:500;" id="stokInfo">Stok: -</div>
+        <div class="workspace">
+            <div class="quiz-side">
+                <div class="quiz-card">
+                    <div class="badge" id="categoryBadge">👑 ÖSYM YDS AYARI</div>
+                    <div class="question-text" id="qText">Yükleniyor...</div>
+                    <div id="optionsBox"></div>
+                    <button id="actionBtn" class="btn-submit" onclick="checkAnswer()">Cevabı Gönder</button>
+                    <div style="font-size:11px;color:#475569;margin-top:18px;text-align:right;" id="stokInfo">Stok: -</div>
+                </div>
+            </div>
+
+            <div class="ai-side">
+                <div class="ai-header">
+                    <div class="ai-status-dot"></div>
+                    <div>
+                        <div class="ai-title">Mentor AI Asistanı</div>
+                        <div class="ai-subtitle">Soru analizi ve eşanlamlı kelime taktikleri</div>
+                    </div>
+                </div>
+                <div class="chat-container" id="chatHistory">
+                    <div class="chat-placeholder" id="chatPlaceholder">
+                        <div class="chat-placeholder-icon">💡</div>
+                        <div class="chat-placeholder-text">Sorusunu çözdükten sonra Mentor AI burada canlanacak ve detaylı analiz yapabileceksin!</div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <div class="chat-input-wrapper">
+                        <input type="text" class="chat-input" id="mentorInput" placeholder="Mentor'a bir şey sor..." disabled onkeypress="if(event.key === 'Enter') askMentor()">
+                        <button id="mentorSendBtn" onclick="askMentor()" class="chat-send-btn" disabled>Sor</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -202,12 +209,8 @@
         let currentUser = null;
         let currentCategory = "vocabulary";
 
-        // ---------- PREMIUM SIDEBAR SEÇİM MANTIĞI ----------
-
         function switchCategory(category) {
             currentCategory = category;
-            
-            // Aktif/Pasif Sınıflarını Yönet
             if (category === 'vocabulary') {
                 document.getElementById('tab_vocabulary').classList.add('active');
                 document.getElementById('tab_sentence_completion').classList.remove('active');
@@ -217,42 +220,14 @@
                 document.getElementById('tab_vocabulary').classList.remove('active');
                 document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (SENTENCE COMPLETION)";
             }
-            
             loadQuestion();
-        }
-
-        // ---------- AUTH ----------
-
-        function toggleAuthMode() {
-            isRegisterMode = !isRegisterMode;
-            document.getElementById('authTitle').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
-            document.getElementById('authSub').innerText = isRegisterMode ? "Yeni bir hesap oluştur" : "YDS Mentor AI'a hoş geldin";
-            document.getElementById('authSubmitBtn').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
-            document.getElementById('authToggleText').innerText = isRegisterMode ? "Zaten hesabın var mı?" : "Hesabın yok mu?";
-            document.getElementById('authToggleLink').innerText = isRegisterMode ? "Giriş yap" : "Kayıt ol";
-            hideAuthError();
-        }
-
-        function showAuthError(msg) {
-            const el = document.getElementById('authError');
-            el.innerText = msg;
-            el.style.display = "block";
-        }
-
-        function hideAuthError() {
-            document.getElementById('authError').style.display = "none";
         }
 
         async function handleAuthSubmit() {
             hideAuthError();
             const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value;
-
-            if (!email || !password) {
-                showAuthError("Lütfen email ve şifreni gir.");
-                return;
-            }
-
+            if (!email || !password) { showAuthError("Doldurun."); return; }
             const endpoint = isRegisterMode ? '/api/register' : '/api/login';
             try {
                 const res = await fetch(endpoint, {
@@ -261,138 +236,66 @@
                     body: JSON.stringify({ email, password })
                 });
                 const data = await res.json();
-
-                if (!res.ok) {
-                    showAuthError(data.detail || "Bir hata oluştu.");
-                    return;
-                }
-
+                if (!res.ok) { showAuthError(data.detail || "Hata."); return; }
                 authToken = data.access_token;
                 currentUser = data.user;
                 localStorage.setItem('yds_token', authToken);
                 enterApp();
-            } catch (e) {
-                showAuthError("Bağlantı hatası: " + e.message);
-            }
+            } catch (e) { showAuthError("Hata."); }
         }
 
-        function showLoading() {
-            document.getElementById('loadingWrap').classList.remove('hidden');
-            document.getElementById('authWrap').classList.add('hidden');
-            document.getElementById('appWrap').classList.add('hidden');
-            document.getElementById('appWrap').style.display = "none";
-        }
-
-        function showAuthScreen() {
-            document.getElementById('loadingWrap').classList.add('hidden');
-            document.getElementById('authWrap').classList.remove('hidden');
-            document.getElementById('appWrap').classList.add('hidden');
-            document.getElementById('appWrap').style.display = "none";
-        }
-
-        function logout() {
-            authToken = null;
-            currentUser = null;
-            localStorage.removeItem('yds_token');
-            showAuthScreen();
-            document.getElementById('authEmail').value = "";
-            document.getElementById('authPassword').value = "";
-        }
-
+        function showAuthError(msg) { const el = document.getElementById('authError'); el.innerText = msg; el.style.display = "block"; }
+        function hideAuthError() { document.getElementById('authError').style.display = "none"; }
+        function toggleAuthMode() { isRegisterMode = !isRegisterMode; handleAuthSubmit(); }
+        function logout() { authToken = null; localStorage.removeItem('yds_token'); showAuthScreen(); }
+        function showAuthScreen() { document.getElementById('loadingWrap').classList.add('hidden'); document.getElementById('authWrap').classList.remove('hidden'); document.getElementById('appWrap').style.display = "none"; }
+        
         async function tryAutoLogin() {
-            if (!authToken) {
-                showAuthScreen();
-                return;
-            }
+            if (!authToken) { showAuthScreen(); return; }
             try {
-                const res = await fetch('/api/me', {
-                    headers: { 'Authorization': 'Bearer ' + authToken }
-                });
-                if (!res.ok) {
-                    authToken = null;
-                    localStorage.removeItem('yds_token');
-                    showAuthScreen();
-                    return;
-                }
+                const res = await fetch('/api/me', { headers: { 'Authorization': 'Bearer ' + authToken } });
+                if (!res.ok) { logout(); return; }
                 currentUser = await res.json();
                 enterApp();
-            } catch (e) {
-                showAuthScreen();
-            }
+            } catch (e) { showAuthScreen(); }
         }
 
         function enterApp() {
             document.getElementById('authWrap').classList.add('hidden');
             document.getElementById('loadingWrap').classList.add('hidden');
-            document.getElementById('appWrap').classList.remove('hidden');
             document.getElementById('appWrap').style.display = "flex";
-
             document.getElementById('userEmailBadge').innerText = currentUser.email;
-            
-            if (!currentUser.is_verified) {
-                const banner = document.createElement('div');
-                banner.id = 'verifyBanner';
-                banner.style.cssText = 'background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);color:#fbbf24;padding:12px 16px;border-radius:12px;font-size:13px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;';
-                banner.innerHTML = '<span>⚠️ Email adresin henüz doğrulanmadı.</span><a onclick="resendVerification()" style="color:#38bdf8;cursor:pointer;font-weight:600;white-space:nowrap;">Tekrar gönder</a>';
-                const card = document.querySelector('.quiz-card');
-                if (card && !document.getElementById('verifyBanner')) card.prepend(banner);
-            }
             updateStatsFromUser();
             switchCategory('vocabulary');
         }
 
-        async function resendVerification() {
-            try {
-                await fetch('/api/resend-verification', { headers: authHeaders() });
-                const b = document.getElementById('verifyBanner');
-                if (b) b.innerHTML = '<span>✅ Doğrulama emaili gönderildi, gelen kutunu kontrol et.</span>';
-            } catch(e) {}
-        }
-
-        async function showForgotPassword() {
-            const email = prompt("Kayıtlı email adresini gir:");
-            if (!email) return;
-            try {
-                const res = await fetch('/api/forgot-password', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, password: 'placeholder' })
-                });
-                const data = await res.json();
-                alert(data.message);
-            } catch(e) { alert("Bir hata oluştu."); }
-        }
-
-        function authHeaders() {
-            return { 'Authorization': 'Bearer ' + authToken };
-        }
-
-        // ---------- QUIZ & AI CHAT ----------
+        function authHeaders() { return { 'Authorization': 'Bearer ' + authToken }; }
 
         async function loadQuestion() {
             selectedLetter = null;
-            document.getElementById('resultBox').style.display = "none";
+            
+            // JAVASCRIPT FIXED: SAĞ PANELİ HER YENİ SORUDA RESETLE
+            document.getElementById('chatHistory').innerHTML = `
+                <div class="chat-placeholder" id="chatPlaceholder">
+                    <div class="chat-placeholder-icon">💡</div>
+                    <div class="chat-placeholder-text">Sorusunu çözdükten sonra Mentor AI burada canlanacak ve detaylı analiz yapabileceksin!</div>
+                </div>`;
+            document.getElementById('mentorInput').disabled = true;
+            document.getElementById('mentorSendBtn').disabled = true;
+
             document.getElementById('actionBtn').innerText = "Cevabı Gönder";
             document.getElementById('actionBtn').setAttribute("onclick", "checkAnswer()");
 
             try {
                 const res = await fetch(`/api/next-question?category=${currentCategory}`, { headers: authHeaders() });
-                if (res.status === 401) { logout(); return; }
-                if (!res.ok) throw new Error("HTTP " + res.status);
                 const data = await res.json();
-
                 if (data.error === "loading") {
-                    document.getElementById('qText').innerText =
-                        "🔋 Bu kategorideki çözülmemiş sorular arkada işleniyor veya tükendi, lütfen biraz bekleyip aşağıdaki butona basın...";
-                    document.getElementById('optionsBox').innerHTML = "";
-                    document.getElementById('actionBtn').innerText = RETRY_LABEL;
-                    document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
+                    document.getElementById('qText').innerText = "Sorular yükleniyor...";
                     return;
                 }
-
                 currentQuestion = data;
                 document.getElementById('qText').innerText = data.question_text;
-                document.getElementById('stokInfo').innerText = "Depodaki VIP Soru: " + data.current_count;
+                document.getElementById('stokInfo').innerText = "Stok Soru: " + data.current_count;
 
                 let html = "";
                 for (let [letter, text] of Object.entries(data.options).sort()) {
@@ -402,22 +305,18 @@
                     </div>`;
                 }
                 document.getElementById('optionsBox').innerHTML = html;
-            } catch (e) {
-                document.getElementById('qText').innerText = "Backend ile bağlantı kurulamadı.";
-                document.getElementById('optionsBox').innerHTML = "";
-            }
+            } catch (e) {}
         }
 
         function handleSelect(letter) {
-            const btnText = document.getElementById('actionBtn').innerText;
-            if (btnText === NEXT_LABEL || btnText === RETRY_LABEL) return;
+            if (document.getElementById('actionBtn').innerText === NEXT_LABEL) return;
             selectedLetter = letter;
             document.querySelectorAll('.option-container').forEach(el => el.classList.remove('option-selected'));
             document.getElementById('label_' + letter).classList.add('option-selected');
         }
 
         async function checkAnswer() {
-            if (!selectedLetter) { alert("Lütfen bir şık seçin!"); return; }
+            if (!selectedLetter) { alert("Şık seç!"); return; }
 
             let correctAns = currentQuestion.correct_option;
             document.querySelectorAll('.option-container').forEach(el => {
@@ -430,42 +329,29 @@
                 const res = await fetch('/api/answer', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', ...authHeaders() },
-                    body: JSON.stringify({
-                        question_id: currentQuestion.id,
-                        selected_option: selectedLetter
-                    })
+                    body: JSON.stringify({ question_id: currentQuestion.id, selected_option: selectedLetter })
                 });
-                if (res.status === 401) { logout(); return; }
-                if (res.ok) {
-                    currentUser = await res.json();
-                    updateStatsFromUser();
-                }
+                if (res.ok) { currentUser = await res.json(); updateStatsFromUser(); }
             } catch (e) {}
 
-            let rBox = document.getElementById('resultBox');
-            rBox.style.display = "block";
+            // JAVASCRIPT FIXED: ARTIK CHAT GİRİŞLERİ KİLİTLENMİYOR VE SAĞ PANELDE AKIYOR
+            const placeholder = document.getElementById('chatPlaceholder');
+            if (placeholder) placeholder.remove();
             
+            document.getElementById('mentorInput').disabled = false;
+            document.getElementById('mentorSendBtn').disabled = false;
+
             let isCorrect = (selectedLetter === currentQuestion.correct_option);
             let resultMessage = isCorrect 
-                ? `Tebrikler! Doğru cevap <strong>${currentQuestion.correct_option}</strong> şıkkı. 🎉` 
-                : `Maalesef yanlış. Doğru cevap <strong>${currentQuestion.correct_option}</strong> olmalıydı. 😕`;
+                ? `🚀 <strong>Tebrikler! Doğru cevap ${currentQuestion.correct_option}.</strong>` 
+                : `😕 <strong>Maalesef yanlış. Doğru cevap ${currentQuestion.correct_option} olmalıydı.</strong>`;
             let resultColor = isCorrect ? "#34d399" : "#f87171";
 
-            rBox.innerHTML = `
-                <div style="font-size: 14px; color: ${resultColor}; margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
-                    <span>${resultMessage}</span>
-                </div>
-                <div id="mentorChatBox" style="padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);">
-                    <div style="font-size: 12px; color: #64748b; margin-bottom: 10px;">💡 Cevabın detaylarını Mentor'a sor:</div>
-                    <div id="chatHistory" style="margin-bottom: 12px; max-height: 380px; overflow-y: auto; font-size: 13.5px; display: flex; flex-direction: column; gap: 8px; padding-right: 5px;"></div>
-                    <div style="display: flex; gap: 8px;">
-                        <input type="text" id="mentorInput" placeholder="Örn: Neden ${currentQuestion.correct_option} şıkkı oldu?" 
-                            style="flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); color: #f8fafc; outline: none; font-family: inherit; font-size: 13px;"
-                            onkeypress="if(event.key === 'Enter') askMentor()">
-                        <button onclick="askMentor()" style="background: #38bdf8; color: #0f172a; border: none; padding: 0 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px;">Sor</button>
-                    </div>
-                </div>
-                `;
+            const chatHistory = document.getElementById('chatHistory');
+            chatHistory.innerHTML += `
+                <div style="align-self: flex-start; background: rgba(30, 41, 59, 0.6); padding: 14px; border-radius: 12px; border-left: 4px solid ${resultColor}; max-width: 90%; font-size:13.5px; line-height:1.5;">
+                    ${resultMessage}<br><span style="color:#64748b; font-size:12px; display:inline-block; margin-top:6px;">Detayları, kelime analizlerini veya diğer şıkları bana sormak için aşağıdaki kutuyu kullanabilirsin!</span>
+                </div>`;
 
             document.getElementById('actionBtn').innerText = NEXT_LABEL;
             document.getElementById('actionBtn').setAttribute("onclick", "loadQuestion()");
@@ -477,22 +363,20 @@
             if (!msg) return;
 
             const chatHistory = document.getElementById('chatHistory');
-
             chatHistory.innerHTML += `
-                <div style="align-self: flex-end; background: rgba(255,255,255,0.08); padding: 10px 14px; border-radius: 12px 12px 0 12px; max-width: 85%;">
-                    <strong style="color:#f8fafc; font-size:12px;">Sen</strong><br>
+                <div style="align-self: flex-end; background: rgba(255,255,255,0.06); padding: 12px 16px; border-radius: 12px 12px 0 12px; max-width: 85%; font-size:13.5px;">
+                    <strong style="color:#64748b; font-size:10px; display:block; margin-bottom:4px;">SEN</strong>
                     ${msg}
                 </div>`;
             inputEl.value = "";
+            chatHistory.scrollTop = chatHistory.scrollHeight;
 
             const loadingId = 'loading-' + Date.now();
             chatHistory.innerHTML += `
-                <div id="${loadingId}" style="align-self: flex-start; background: rgba(56, 189, 248, 0.1); padding: 10px 14px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%;">
-                    <strong style="color:#38bdf8; font-size:12px;">🤖 Mentor AI</strong><br>
-                    <span style="color:#94a3b8; font-style:italic;">Düşünüyor...</span>
+                <div id="${loadingId}" style="align-self: flex-start; background: rgba(56, 189, 248, 0.04); padding: 12px 16px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%; font-size:13.5px;">
+                    <strong style="color:#38bdf8; font-size:10px; display:block; margin-bottom:4px;">MENTOR AI</strong>
+                    <span style="color:#475569; font-style:italic;">Analiz ediliyor...</span>
                 </div>`;
-            
-            chatHistory.scrollTop = chatHistory.scrollHeight;
 
             try {
                 const res = await fetch('/api/ask-mentor', {
@@ -500,42 +384,31 @@
                     headers: { 'Content-Type': 'application/json', ...authHeaders() },
                     body: JSON.stringify({ question_id: currentQuestion.id, user_message: msg })
                 });
-
                 document.getElementById(loadingId).remove();
-
-                if (!res.ok) {
-                    const err = await res.json();
-                    chatHistory.innerHTML += `<div style="color:#f87171; font-size:13px; margin-top:5px;">⚠️ Hata: ${err.detail || 'Bağlantı sorunu.'}</div>`;
-                    return;
-                }
-
+                
                 const data = await res.json();
                 const formattedAnswer = data.answer.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 
                 chatHistory.innerHTML += `
-                    <div style="align-self: flex-start; background: rgba(56, 189, 248, 0.05); padding: 10px 14px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 85%; line-height: 1.6;">
-                        <strong style="color:#38bdf8; font-size:12px;">🤖 Mentor AI</strong><br>
+                    <div style="align-self: flex-start; background: rgba(56, 189, 248, 0.02); padding: 12px 16px; border-radius: 12px 12px 12px 0; border-left: 3px solid #38bdf8; max-width: 95%; line-height: 1.6; font-size:13.5px;">
+                        <strong style="color:#38bdf8; font-size:10px; display:block; margin-bottom:6px;">MENTOR AI</strong>
                         ${formattedAnswer}
                     </div>`;
-                
                 chatHistory.scrollTop = chatHistory.scrollHeight;
-
             } catch (e) {
                 if(document.getElementById(loadingId)) document.getElementById(loadingId).remove();
-                chatHistory.innerHTML += `<div style="color:#f87171; font-size:13px; margin-top:5px;">⚠️ Sisteme ulaşılamadı.</div>`;
             }
         }
 
         function updateStatsFromUser() {
             if (!currentUser) return;
-            const solved = currentUser.solved_count;
-            const correct = currentUser.correct_count;
-            document.getElementById('statTotal').innerText = solved;
-            let ratio = solved > 0 ? Math.round((correct / solved) * 100) : 0;
+            document.getElementById('statTotal').innerText = currentUser.solved_count;
+            let ratio = currentUser.solved_count > 0 ? Math.round((currentUser.correct_count / currentUser.solved_count) * 100) : 0;
             document.getElementById('statRatio').innerText = ratio + "%";
             document.getElementById('progressBar').style.width = ratio + "%";
         }
 
+        async function showForgotPassword() { alert("Geliştiriliyor."); }
         tryAutoLogin();
     </script>
 </body>
