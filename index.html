@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #090d16; color: #f8fafc; margin: 0; display: flex; min-height: 100vh; overflow: hidden; }
+        /* TÜM SAYFAYI EKRAN BOYUTUNA ÇİVİLE */
+        html, body { margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden; background: #090d16; font-family: 'Inter', sans-serif; color: #f8fafc; }
+        body { display: flex; }
         
-        /* 1. SOL MENÜ (SIDEBAR) */
-        .sidebar { width: 240px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
+        /* 1. SOL MENÜ (SIDEBAR) - KİLİTLİ BOYUT */
+        .sidebar { width: 240px; height: 100vh; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
         .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 20px 15px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .mentor-avatar { font-size: 40px; margin-bottom: 8px; display: inline-block; animation: float 3s infinite ease-in-out; }
         .mentor-name { font-weight: 700; color: #38bdf8; font-size: 15px; letter-spacing: 0.5px; }
@@ -28,18 +30,16 @@
         .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s ease; }
         
         .logout-btn { margin-top: 15px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
-        .logout-btn:hover { background: rgba(239, 68, 68, 0.15); }
 
-        /* 2. WORKSPACE DÜZENİ */
-        .workspace { flex: 1; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
+        /* 2. WORKSPACE */
+        .workspace { flex: 1; height: 100vh; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
         
-        /* ORTA TARAF: SORU ALANI */
-        .quiz-side { flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; }
+        /* ORTA TARAF: SORU ALANI (KAYMA ENGELLENDİ) */
+        .quiz-side { flex: 1; height: 100vh; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; box-sizing: border-box; }
         .quiz-card { width: 100%; max-width: 600px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
         .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); }
         .question-text { font-size: 19px; font-weight: 600; line-height: 1.65; margin-bottom: 30px; color: #f1f5f9; }
         
-        /* OPTIONS */
         .option-container { display: flex; align-items: center; padding: 16px 20px; margin-bottom: 12px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s ease; }
         .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
         .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; flex-shrink: 0; }
@@ -54,19 +54,20 @@
         .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
         .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); }
         
-        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ */
-        .ai-side { width: 440px; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; }
-        .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); }
+        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ (MUTLAK KİLİTLİ ALAN) */
+        .ai-side { width: 440px; height: 100vh; max-height: 100vh; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+        .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); flex-shrink: 0; }
         .ai-status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
         .ai-title { font-weight: 700; font-size: 15px; color: #f1f5f9; }
         .ai-subtitle { font-size: 12px; color: #64748b; margin-top: 1px; }
         
-        .chat-container { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; }
+        /* CHAT ALANI ESNEYEMEZ, SADECE İÇTEN KAYABİLİR (SICRAMA ÇÖZÜMÜ) */
+        .chat-container { flex: 1; min-height: 0; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; background: transparent; }
         .chat-placeholder { margin: auto; text-align: center; color: #334155; padding: 40px; }
         .chat-placeholder-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.4; }
         .chat-placeholder-text { font-size: 13.5px; font-weight: 500; line-height: 1.6; color: #475569; }
         
-        .chat-input-area { padding: 20px 24px 24px 24px; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(15, 23, 42, 0.4); }
+        .chat-input-area { padding: 20px 24px 24px 24px; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(15, 23, 42, 0.4); flex-shrink: 0; }
         .chat-input-wrapper { display: flex; gap: 10px; background: rgba(0,0,0,0.2); padding: 6px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
         .chat-input { flex: 1; padding: 10px 14px; border: none; background: transparent; color: #f8fafc; outline: none; font-family: inherit; font-size: 13.5px; }
         .chat-input::placeholder { color: #475569; }
@@ -101,10 +102,12 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         
         @media (max-width: 1150px) {
-            body { flex-direction: column; overflow-y: auto; }
-            .sidebar { width: 100%; padding: 20px; }
-            .workspace { flex-direction: column; overflow: visible; }
-            .ai-side { width: 100%; height: 450px; }
+            body { flex-direction: column; overflow-y: auto; height: auto; width: 100%; }
+            .sidebar { width: 100%; height: auto; }
+            .nav-container { flex-direction: row; margin-top: 15px; }
+            .workspace { flex-direction: column; height: auto; overflow: visible; }
+            .quiz-side { height: auto; }
+            .ai-side { width: 100%; height: 450px; max-height: 450px; }
         }
     </style>
 </head>
@@ -137,7 +140,7 @@
         </div>
     </div>
 
-    <div id="appWrap" class="hidden" style="width:100%; min-height: 100vh;">
+    <div id="appWrap" class="hidden" style="width:100%; height: 100vh;">
         <div class="sidebar">
             <div>
                 <div class="mentor-profile">
@@ -248,8 +251,6 @@
             isRegisterMode = !isRegisterMode; 
             document.getElementById('authTitle').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
             document.getElementById('authSubmitBtn').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
-            document.getElementById('authToggleText').innerText = isRegisterMode ? "Zaten hesabın var mı?" : "Hesabın yok mu?";
-            document.getElementById('authToggleLink').innerText = isRegisterMode ? "Giriş yap" : "Kayıt ol";
         }
         
         function logout() { authToken = null; localStorage.removeItem('yds_token'); showAuthScreen(); }
@@ -275,7 +276,6 @@
             document.getElementById('authWrap').classList.add('hidden');
             document.getElementById('loadingWrap').classList.add('hidden');
             
-            // SİYAH EKRAN ÇÖZÜMÜ: appWrap stilini garantili biçimde flex yapıyoruz
             const appWrap = document.getElementById('appWrap');
             appWrap.classList.remove('hidden');
             appWrap.style.setProperty('display', 'flex', 'important');
@@ -392,6 +392,7 @@
                     <strong style="color:#38bdf8; font-size:10px; display:block; margin-bottom:4px;">MENTOR AI</strong>
                     <span style="color:#475569; font-style:italic;">Analiz ediliyor...</span>
                 </div>`;
+            chatHistory.scrollTop = chatHistory.scrollHeight;
 
             try {
                 const res = await fetch('/api/ask-mentor', {
