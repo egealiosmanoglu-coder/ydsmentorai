@@ -4,9 +4,11 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Depends
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse
 
-import google.generativeai as genai
+# Yeni ve güncel Google GenAI SDK entegrasyonu
+from google import genai
+from google.genai import types
 
 from database import (
     init_db,
@@ -27,8 +29,6 @@ from database import (
     log_user_solved_question,
 )
 from models import (
-    DiagnosticTestSubmission,
-    DiagnosticResult,
     AIQuestionFormat,
     UserRegister,
     UserLogin,
@@ -43,27 +43,26 @@ from email_service import send_verification_email, send_password_reset_email
 BASE_DIR = Path(__file__).resolve().parent
 INDEX_FILE = BASE_DIR / "index.html"
 
-# Çevresel Değişkenler
-ADMIN_SECRET = os.environ.get("ADMIN_SECRET", "degistir-bunu")
+ADMIN_SECRET = os.environ.get("ADMIN_SECRET", "degistir-bunu-admin-123")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
-# Gemini API Yapılandırması
+# Yeni SDK istemci başlatma
+client = None
 if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
     
-    # JSON dosyasının yolunu bul ve oku
     questions_file = BASE_DIR / "questions.json"
     
     if questions_file.exists():
         with open(questions_file, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        # JSON'daki kategorileri (vocabulary, paragraph vb.) veritabanına aktar
+        # KeyError Çözümü: .get() kullanarak güvenli okuma yapıyoruz, yoksa boş string atıyoruz
         for category, questions in data.items():
             for q in questions:
                 if not question_exists(q["question_text"]):
@@ -72,7 +71,7 @@ async def lifespan(app: FastAPI):
                         question_text=q["question_text"],
                         options=q["options"],
                         correct_option=q["correct_option"],
-                        ai_explanation=q["ai_explanation"],
+                        ai_explanation=q.get("ai_explanation", ""),
                     )
     yield
 
@@ -90,7 +89,6 @@ def register(payload: UserRegister):
     if user_id is None:
         raise HTTPException(status_code=400, detail="Bu email zaten kayıtlı.")
 
-    # Doğrulama emaili gönder
     token = create_email_token(user_id, "verify", expires_minutes=60)
     send_verification_email(email, token)
 
@@ -281,7 +279,7 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
 
 @app.get("/api/next-question")
 def next_question(category: str = "vocabulary", user_id: int = Depends(get_current_user_id)):
-    """Kullanıcının seçtiği kategoriye göre (vocabulary veya sentence_completion) sıradaki soruyu getirir."""
+    """Kullanıcının seçtiği kategoriye göre dinamik soru getirir."""
     count = get_question_count(category)
 
     if count == 0:
@@ -318,7 +316,7 @@ def add_question(payload: AIQuestionFormat):
 
 @app.post("/api/ask-mentor")
 def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_user_id)):
-    if not GEMINI_API_KEY:
+    if not client:
         raise HTTPException(status_code=503, detail="Yapay zeka (Gemini API) henüz sisteme bağlanmadı.")
 
     row = get_question_by_id(payload.question_id)
@@ -327,7 +325,6 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
         
     q_id, q_text, q_options, q_correct, q_expl = row
 
-    # YAPAY ZEKAYA VERİLECEK ULTIMATE YDS MENTOR PROMPTU
     prompt = f"""
     Sen, YDS ve YÖKDİL sınavlarına hazırlanan öğrencilere yardım eden "YDS Mentor AI" adında uzman, sabırlı, motive edici ve tatlı dilli bir İngilizce öğretmenisin. 
     
@@ -335,7 +332,6 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
     - Soru: {q_text}
     - Şıklar: {q_options}
     - Doğru Cevap: {q_correct}
-    - Sistemdeki Hazır Açıklama: {q_expl}
 
     Öğrencinin sana mesajı: "{payload.user_message}"
 
@@ -350,10 +346,10 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
        - Mümkün olan her açıklamada, öğrenciye o soru tipini daha hızlı çözmesi için minik bir ipucu ver. (Örn: "Boşluktan sonra bir edat (preposition) var, bu yüzden...", veya "Cümle 'Despite' ile başlamış, demek ki eksi (-) bir kelime arıyoruz...").
 
     3. KELİME DAĞARCIĞI (Synonym Bonusu):
-       - Üzerinde konuşulan kelimenin YDS'de en çok çıkan 1 veya 2 eşanlamlısını (synonym) mutlaka parantez içinde belirt. (Örn: "*mitigate* (hafifletmek) kelimesi YDS'de sık sık *alleviate* veya *lessen* olarak da karşına çıkar").
+       - Üzerinde konuşulan kelimenin YDS'de en çok çıkan 1 veya 2 eşanlamlısını (synonym) mutlaka parantez içinde belirt.
 
     4. ETKİLEŞİMİ KORU:
-       - Açıklamanı bitirip kestirip atma. Mesajının sonuna her zaman öğrenciyi düşündürecek veya motive edecek minik bir soru ekle. (Örn: "Peki sence bu cümlede 'despite' yerine 'because' olsaydı cevap değişir miydi?", "Bu kelimeyi hata defterine ekleyelim mi?")
+       - Açıklamanı bitirip kestirip atma. Mesajının sonuna her zaman öğrenciyi düşündürecek veya motive edecek minik bir soru ekle.
 
     ÜSLUP VE FORMAT:
     - Cevapların asla sıkıcı ve boğucu uzunlukta olmasın. Okunması kolay, kısa ve net paragraflar kullan.
@@ -362,8 +358,11 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
     """
 
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash')
-        response = model.generate_content(prompt)
+        # Yeni resmi SDK model çağrısı
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+        )
         return {"answer": response.text}
     except Exception as e:
         print(f"[AI ERROR]: {e}")
