@@ -9,7 +9,7 @@ FROM_EMAIL = "YDS Mentor AI <onboarding@resend.dev>"
 
 
 def _send_email(to_email: str, subject: str, html: str) -> bool:
-    """Resend API'ye istek atarak email gönderir. Başarılıysa True döner."""
+    """Resend API'ye istek atarak email gönderir. Başarısız olsa dahi hatayı yutar."""
     if not RESEND_API_KEY:
         print("[EMAIL] RESEND_API_KEY ayarlanmamış, email gönderilmedi.")
         return False
@@ -35,7 +35,7 @@ def _send_email(to_email: str, subject: str, html: str) -> bool:
         with urllib.request.urlopen(req) as resp:
             return resp.status in (200, 201)
     except urllib.error.HTTPError as e:
-        body = e.read().decode()
+        body = e.read().decode() if e.fp else ""
         print(f"[EMAIL] Resend hatası {e.code}: {body}")
         return False
     except Exception as e:
