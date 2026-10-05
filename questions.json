@@ -10,987 +10,1116 @@
         "E": "inherit"
       },
       "correct_option": "B"
-    },
-    {
-      "question_text": "The archeologists were deeply thrilled when they began to ------- the ancient tomb, hoping to uncover artifacts from the early Bronze Age.",
-      "options": {
-        "A": "excavate",
-        "B": "abandon",
-        "C": "prohibit",
-        "D": "distract",
-        "E": "ignore"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Although the preliminary evidence seemed promising, most scientists remained skeptical because the findings were not ------- enough to support the new climate theory.",
-      "options": {
-        "A": "vague",
-        "B": "convincing",
-        "C": "hazardous",
-        "D": "delicate",
-        "E": "arbitrary"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The strict economic sanctions imposed on the country heavily ------- its ability to engage in international trade and gather foreign investments.",
-      "options": {
-        "A": "flourish",
-        "B": "hinder",
-        "C": "promote",
-        "D": "sustain",
-        "E": "strengthen"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Recent research on neuroplasticity indicates that the human brain has an incredible capacity to ------- its structure and adapt to new learning experiences throughout life.",
-      "options": {
-        "A": "alter",
-        "B": "deny",
-        "C": "preclude",
-        "D": "overlook",
-        "E": "extinguish"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The tragic collapse of the ancient ecosystem was primarily attributed to the ------- depletion of natural water resources by modern industrial complexes.",
-      "options": {
-        "A": "swift",
-        "B": "excessive",
-        "C": "delicate",
-        "D": "hospitable",
-        "E": "scarce"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The newly elected prime minister promised to implement comprehensive agricultural policies designed to ------- local crop production and ensure food security.",
-      "options": {
-        "A": "boost",
-        "B": "jeopardize",
-        "C": "restrict",
-        "D": "diminish",
-        "E": "deteriorate"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Governments worldwide are working in close ------- with private tech companies to combat the rapid spread of sophisticated cyber threats.",
-      "options": {
-        "A": "conflict",
-        "B": "drawback",
-        "C": "collaboration",
-        "D": "obstacle",
-        "E": "deprivation"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "The doctor noted that patients suffering from severe chronic stress are often more ------- to catching infectious diseases due to a weakened immune system.",
-      "options": {
-        "A": "sound",
-        "B": "vibrant",
-        "C": "prone",
-        "D": "pure",
-        "E": "compelling"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "The catastrophic failure of the regional bank triggered a ------- downturn in the local stock market, forcing many small enterprises to declare bankruptcy.",
-      "options": {
-        "A": "drastic",
-        "B": "vague",
-        "C": "hospitable",
-        "D": "mutual",
-        "E": "deliberate"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The core objective of the United Nations' educational program is to completely ------- illiteracy in developing regions over the next decade.",
-      "options": {
-        "A": "sustain",
-        "B": "eradicate",
-        "C": "encompass",
-        "D": "cultivate",
-        "E": "maintain"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Although some minor details of the historical contract remain -------, the core agreements between the two empires are explicitly clear.",
-      "options": {
-        "A": "accurate",
-        "B": "ambiguous",
-        "C": "convincing",
-        "D": "profound",
-        "E": "sustainable"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Environmental biologists are currently conducting a comprehensive study to evaluate the long-term ------- of global warming on polar bear populations.",
-      "options": {
-        "A": "implication",
-        "B": "impact",
-        "C": "convenience",
-        "D": "reputation",
-        "E": "incentive"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The strict regulations imposed by the European Union heavily ------- the use of certain hazardous chemical preservatives in the food industry.",
-      "options": {
-        "A": "expand",
-        "B": "confine",
-        "C": "accelerate",
-        "D": "promote",
-        "E": "flourish"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The severe drought that plagued the agricultural fields last summer led to a drastic ------- in the region's overall annual grain production.",
-      "options": {
-        "A": "increase",
-        "B": "decrease",
-        "C": "advance",
-        "D": "prosperity",
-        "E": "abundance"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Many developing countries are struggling to cope with the heavy financial ------- of paying off massive foreign debts while investing in infrastructure.",
-      "options": {
-        "A": "benefit",
-        "B": "burden",
-        "C": "convenience",
-        "D": "aspiration",
-        "E": "opportunity"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The newly discovered historical manuscripts successfully ------- the long-standing mystery surrounding the final years of the ancient king.",
-      "options": {
-        "A": "uncover",
-        "B": "hinder",
-        "C": "distract",
-        "D": "prohibit",
-        "E": "suspend"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Sociologists believe that a child's early social environment has a ------- and permanent influence on their personality development and future behavioral patterns.",
-      "options": {
-        "A": "vague",
-        "B": "profound",
-        "C": "slight",
-        "D": "scarce",
-        "E": "incidental"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The high cost of maintaining sophisticated laboratory equipment often acts as a major ------- for schools wishing to conduct advanced scientific experiments.",
-      "options": {
-        "A": "incentive",
-        "B": "obstacle",
-        "C": "convenience",
-        "D": "reputation",
-        "E": "solution"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Unlike her previous superficial essays, the author's latest book offers an ------- and highly detailed analysis of the socio-economic factors that led to the French Revolution.",
-      "options": {
-        "A": "elaborate",
-        "B": "arbitrary",
-        "C": "adverse",
-        "D": "unprecedented",
-        "E": "addicted"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The central bank decided to implement a new monetary policy in an aggressive attempt to ------- the country's economic growth and reduce unemployment rates.",
-      "options": {
-        "A": "jeopardize",
-        "B": "stimulate",
-        "C": "hinder",
-        "D": "suspend",
-        "E": "refuse"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Many tech startups fail within their first year not because they lack innovative ideas, but because they fail to ensure a ------- flow of financial capital from reliable investors.",
-      "options": {
-        "A": "steady",
-        "B": "sparse",
-        "C": "vague",
-        "D": "delicate",
-        "E": "fragile"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The unexpected closure of the main factory will inevitably ------- a temporary rise in the local unemployment rates until new businesses open in the area.",
-      "options": {
-        "A": "turn down",
-        "B": "bring about",
-        "C": "call off",
-        "D": "make up for",
-        "E": "look up to"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The newly introduced software update is expected to vastly ------- the overall performance and processing speed of older computer models.",
-      "options": {
-        "A": "enhance",
-        "B": "deteriorate",
-        "C": "diminish",
-        "D": "distract",
-        "E": "deny"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Because the two companies shared a ------- interest in expanding their operations into European markets, they decided to sign a merger treaty.",
-      "options": {
-        "A": "notorious",
-        "B": "mutual",
-        "C": "scarce",
-        "D": "deliberate",
-        "E": "vague"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The long-running dispute between the two neighboring countries was finally resolved when both leaders agreed to establish a mutually beneficial treaty.",
-      "options": {
-        "A": "conflict",
-        "B": "burden",
-        "C": "drawback",
-        "D": "convenience",
-        "E": "obstacle"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The patient's health began to ------- rapidly after she refused to take the prescribed medication for her chronic heart condition.",
-      "options": {
-        "A": "deteriorate",
-        "B": "flourish",
-        "C": "accelerate",
-        "D": "strengthen",
-        "E": "sustain"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Linguists argue that human language is highly ------- as it encompasses a vast array of complex structures and regional dialects.",
-      "options": {
-        "A": "vague",
-        "B": "diverse",
-        "C": "scarce",
-        "D": "pure",
-        "E": "delicate"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The sudden financial crisis forced the board of directors to ------- all secondary expansion projects until the company's budget could be stabilized.",
-      "options": {
-        "A": "launch",
-        "B": "promote",
-        "C": "call off",
-        "D": "enhance",
-        "E": "cultivate"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "Geneticists discovered that certain physical traits are directly ------- from parents to offspring through specific chromosomal combinations.",
-      "options": {
-        "A": "inherited",
-        "B": "denied",
-        "C": "abandoned",
-        "D": "prohibited",
-        "E": "distracted"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The massive wildfire was so intense that it completely ------- thousands of acres of pristine forest within a single week.",
-      "options": {
-        "A": "preserved",
-        "B": "devastated",
-        "C": "sustained",
-        "D": "modified",
-        "E": "harnessed"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The main ------- of the new corporate strategy is to maximize annual profit margins while minimizing overall operational costs.",
-      "options": {
-        "A": "drawback",
-        "B": "burden",
-        "C": "objective",
-        "D": "obstacle",
-        "E": "deprivation"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "Because the instruction manual was highly -------, many customers complained that they could not figure out how to assemble the furniture properly.",
-      "options": {
-        "A": "accurate",
-        "B": "ambiguous",
-        "C": "convincing",
-        "D": "profound",
-        "E": "sustainable"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The government decided to ------- a new law designed to prohibit the illegal exploitation of natural resources in protected wildlife areas.",
-      "options": {
-        "A": "impose",
-        "B": "abandon",
-        "C": "turn down",
-        "D": "call off",
-        "E": "suspend"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The sudden introduction of cheaper synthetic alternatives caused the global market demand for raw cotton to ------- dramatically.",
-      "options": {
-        "A": "raise",
-        "B": "decline",
-        "C": "boost",
-        "D": "expand",
-        "E": "accelerate"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "A team of elite forensic investigators was appointed by the court to ------- the suspicious financial transactions of the tech firm.",
-      "options": {
-        "A": "hinder",
-        "B": "investigate",
-        "C": "distract",
-        "D": "ignore",
-        "E": "abandon"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Unlike the temporary relief offered by local creams, the new oral pill provides a ------- solution to chronic skin irritation.",
-      "options": {
-        "A": "slight",
-        "B": "vague",
-        "C": "permanent",
-        "D": "scarce",
-        "E": "partial"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "The pharmaceutical company spent millions of dollars on research to prove the safety and clinical ------- of their new antibiotic formula.",
-      "options": {
-        "A": "efficacy",
-        "B": "burden",
-        "C": "drawback",
-        "D": "obstacle",
-        "E": "deprivation"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Urban planners emphasize that public transportation systems must be highly ------- to all citizens, including disabled individuals and the elderly.",
-      "options": {
-        "A": "hazardous",
-        "B": "accessible",
-        "C": "delicate",
-        "D": "notorious",
-        "E": "arbitrary"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The historical evidence gathered by the archeologists successfully ------- the long-standing theory about the origins of the ancient civilization.",
-      "options": {
-        "A": "contradicted",
-        "B": "hindered",
-        "C": "prohibited",
-        "D": "suspended",
-        "E": "distracted"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Many deep-sea creatures have developed unique biological mechanisms that allow them to ------- under extreme atmospheric pressure and complete darkness.",
-      "options": {
-        "A": "perish",
-        "B": "endure",
-        "C": "deny",
-        "D": "overlook",
-        "E": "refuse"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The strict lockdown measures implemented during the pandemic successfully managed to ------- the transmission rate of the contagious virus.",
-      "options": {
-        "A": "boost",
-        "B": "reduce",
-        "C": "expand",
-        "D": "promote",
-        "E": "accelerate"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The new environmental policy aims to severely restrict any industrial activities that might ------- the survival of endangered species in the rainforest.",
-      "options": {
-        "A": "jeopardize",
-        "B": "enhance",
-        "C": "cultivate",
-        "D": "sustain",
-        "E": "preserve"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Many business experts argue that offering financial bonuses is the most effective ------- to increase employee productivity and loyalty.",
-      "options": {
-        "A": "obstacle",
-        "B": "incentive",
-        "C": "drawback",
-        "D": "burden",
-        "E": "deprivation"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The international trade agreement was suspended because one of the major signing countries was found to ------- the labor rights of its domestic workers.",
-      "options": {
-        "A": "violate",
-        "B": "sustain",
-        "C": "enhance",
-        "D": "protect",
-        "E": "preserve"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "The continuous rain and unexpected flash floods during the spring heavily ------- the infrastructure development projects in the rural regions.",
-      "options": {
-        "A": "accelerated",
-        "B": "hinder",
-        "C": "promoted",
-        "D": "sustained",
-        "E": "strengthened"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The newly introduced educational curriculum is designed to ------- a wide range of academic disciplines, from molecular biology to digital art.",
-      "options": {
-        "A": "hinder",
-        "B": "encompass",
-        "C": "distract",
-        "D": "prohibit",
-        "E": "suspend"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Sociologists argue that modern social media platforms often ------- young users from their academic duties and long-term goals.",
-      "options": {
-        "A": "enhance",
-        "B": "distract",
-        "C": "sustain",
-        "D": "preserve",
-        "E": "cultivate"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "The software developers had to completely ------- the mobile application after users reported several security flaws in the payment system.",
-      "options": {
-        "A": "launch",
-        "B": "modify",
-        "C": "sustain",
-        "D": "deny",
-        "E": "ignore"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Many corporate analysts argue that offering flexible working hours is a highly ------- solution to reduce employee stress and turnover rates.",
-      "options": {
-        "A": "hazardous",
-        "B": "viable",
-        "C": "vague",
-        "D": "scarce",
-        "E": "delicate"
-      },
-      "correct_option": "B"
     }
   ],
   "sentence_completion": [
     {
-      "question_text": "While some countries restrict access to tattoos to people of a certain age, ----.",
+      "question_text": "Although nuclear energy provides a low-carbon alternative to fossil fuels, ----.",
       "options": {
-        "A": "there are currently no places in the world where the practice of tattooing is illegal",
-        "B": "few people are aware that no tests are carried out on tattoo ink before it is used",
-        "C": "there are also concerns about tattoo removal due to the harmful effects of the operation",
-        "D": "tattoos are associated with antisocial or criminal behavior in many cultures",
-        "E": "it is known that some tattoo pigments may migrate from the skin into the body"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "Teaching is not simply a matter of collecting materials and selecting activities for children; ----,",
-      "options": {
-        "A": "in other words, this is imperative in a well-designed, suitable curriculum for all school children",
-        "B": "therefore, everything teachers plan and do in class should focus on the individual student",
-        "C": "thus, teaching methods must be age-appropriate for getting better results in class activities",
-        "D": "moreover, there should be correct teaching strategies for the inclusion of disabled children in activities",
-        "E": "rather, it requires understanding of the children, their parents and developmentally appropriate practices"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "Every minute, a million plastic bottles are bought around the world ----.",
-      "options": {
-        "A": "given that a great amount of carbon dioxide is released during the recycling process",
-        "B": "as it is a big misconception that all of them will be eventually recycled",
-        "C": "yet only a small proportion of these are recycled and many end up in the sea",
-        "D": "although those used in the food industry are regularly recycled in many countries",
-        "E": "so most people are still unaware of the advantages of recycling them"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "----, it is possible to reduce the numbers and effects of wrinkles.",
-      "options": {
-        "A": "Even if people undergo cosmetic surgery operations to get rid of their wrinkles",
-        "B": "Because people with lighter skin seem to have more wrinkles than those with darker skin",
-        "C": "While wrinkles cannot be totally prevented since they develop as a result of aging",
-        "D": "Given that extensive wrinkles may signal substantial sun damage, which is an alert for skin cancer",
-        "E": "Although products that add moisture and vitamin to the skin help us cope with wrinkles"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "----, new scientific findings are helping to demystify them while adding to our appreciation of these incredible feats.",
-      "options": {
-        "A": "Because the Yellow Sea between China and Korea is a critical way station for millions of migrating water birds",
-        "B": "Provided that having a large wingspan is not a prerequisite for bird migration",
-        "C": "Given that nearly half of known bird species are migratory, moving from one habitat to another",
-        "D": "Whereas scientists are trying to discover how climate change is disrupting bird migration",
-        "E": "Although bird migrations have been a source of wonder for centuries"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "----, the roots of serious language study lie deep in the past.",
-      "options": {
-        "A": "When a great number of sociologists began to collaborate with linguists in the 19th century",
-        "B": "Although linguistic studies were reoriented with the need to improve language pedagogy",
-        "C": "As linguistics today encompasses a wide range of disciplines and associated activities",
-        "D": "If the 19th century is considered the golden era of comparative-historical linguistics",
-        "E": "While the 19th century is a reasonable starting point for modern linguistics"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "Humans are responsible for some of the aerosols - microscopic specks of matter including dust, smoke, ash and salt - in our atmosphere ----.",
-      "options": {
-        "A": "but most come from natural sources, such as volcanoes, dust storms, and forest fires",
-        "B": "while the cloud of smoke over central Africa is caused by agricultural burning",
-        "C": "and the blue particles are sea salt particles, lofted into the air by sea spray",
-        "D": "so NASA visualisations are a combination of the readings taken by satellites and ground sensors",
-        "E": "because the vast barren fields across the northwestern US mostly comes from wildfire smoke"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "----, it is helpful to have a basic understanding of its symptoms.",
-      "options": {
-        "A": "Although knowledge of mortality is a factor shaping human anxiety",
-        "B": "While anxiety is being experienced by more and more people",
-        "C": "Because not all patients with anxiety require treatment",
-        "D": "In order to understand the diagnosis and treatment of anxiety",
-        "E": "Even if symptoms of anxiety include headaches, dizziness, and nausea"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "Although many people regard smart homes, which gather data on their owners' daily routines and act accordingly, as time and energy efficient, ----.",
-      "options": {
-        "A": "others lack knowledge about how their routine can influence the heating schedule",
-        "B": "they can adapt energy usage to people's lives, by collecting data on work and school schedules",
-        "C": "some are excited about how such homes can adjust to their owners rather than owners adjusting to their homes",
-        "D": "there are several methods of finding out what devices are being used in a house at any given moment",
-        "E": "some users are apprehensive about how smart home companies may profile people and use such data"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "----, their academic success and learning outcomes cannot be maximized.",
-      "options": {
-        "A": "Given that some children need intensive support in learning",
-        "B": "Unless individual differences in children's social competences are addressed",
-        "C": "Because all young children benefit from a proactive social curriculum",
-        "D": "As children demonstrate social skills with adults when seeking information",
-        "E": "When early childhood education programs promote young children's capacity to learn"
+        "A": "it has become the most widely used energy source in Europe",
+        "B": "concerns over radioactive waste disposal and safety risks persist",
+        "C": "scientists have completely eliminated the risk of power plant accidents",
+        "D": "renewable energy sources are no longer considered necessary",
+        "E": "many countries are building new facilities without public opposition"
       },
       "correct_option": "B"
     },
     {
-      "question_text": "----, such animal foods typically contribute only a small percentage to their annual diet, most of which is made up of ripe fruits.",
+      "question_text": "----, astronomers were able to identify planets outside our solar system.",
       "options": {
-        "A": "Because several species of primates show the ability to digest high-protein foods",
-        "B": "Even if many smaller monkeys get as much as 65 percent of their diet from concentrated plant foods such as leaves and grasses",
-        "C": "Though wild chimpanzees are known to hunt, kill, and eat small mammals, termites and ants",
-        "D": "Since some plant-eating animals, such as deer, cows, or rabbits, show the tendency to consume animal proteins",
-        "E": "Despite most monkeys and apes living in social groups which dictate the types of foods they should consume"
+        "A": "Because space exploration programs have been completely cancelled",
+        "B": "Unless advanced optical telescopes are installed in ground observatories",
+        "C": "With the deployment of highly sensitive space telescopes like Kepler",
+        "D": "Although satellite technology has not improved in recent decades",
+        "E": "Even if astronomical research receives additional government funding"
       },
       "correct_option": "C"
     },
     {
-      "question_text": "----, it is not surprising that an increasing amount of attention has been given to investigating the treatment of them.",
+      "question_text": "Because urban areas generate vast amounts of heat through asphalt and concrete surfaces, ----.",
       "options": {
-        "A": "As there is currently little data on the rate of anxiety disorders in the elderly population",
-        "B": "Providing that there are several potential explanations for the occurrence of anxiety disorders",
-        "C": "Given that anxiety disorders are getting more and more prevalent around the world",
-        "D": "Choose regular physical activity over high stress level lifestyles",
-        "E": "Even though rates for anxiety disorders vary across studies and differ between males and females"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "While it may seem beneficial to use plant materials for biofuel, ----.",
-      "options": {
-        "A": "plants like oil palm, soybean and corn have already been widely used to produce biofuel",
-        "B": "the use of crop residues and other biomass can raise many environmental concerns",
-        "C": "crops and biofuels are dependent on the same resources for production: land and water",
-        "D": "the rising consumption of fossil fuels is increasing the demand for biofuels",
-        "E": "a major effort has been made to plant crops for biofuel in several tropical countries"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "Teachers who group students for collaborative project work must ensure that each student has responsibility for part of the task ----.",
-      "options": {
-        "A": "so that parents can also help students to set more attainable goals",
-        "B": "because academic motivation is important not only for schooling but also for the future",
-        "C": "since feedback typically informs students whether they are correct or incorrect",
-        "D": "so that the bulk of the work is not done by one or two students",
-        "E": "as teachers might need to work with students to set realistic goals"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "While children's literature specialists have begun to acknowledge the significance of modernity in texts produced for children, ----.",
-      "options": {
-        "A": "children often relate modernism in literature only with science-fiction",
-        "B": "critics think that there should be such a thing as modernist children's literature",
-        "C": "mainstream literary studies of modernism remain ignorant of texts for children",
-        "D": "cultural dynamics of modernism might contribute to children's literature",
-        "E": "children's literature is a genre with its own independent traditions and development"
-      },
-      "correct_option": "C"
-    },
-    {
-      "question_text": "----, and as a result, the national cultural scene is very vibrant.",
-      "options": {
-        "A": "The Sydney Opera House is one of Australia's most recognizable symbols",
-        "B": "People in Australia devote much of their time and money to artistic pursuits",
-        "C": "Low-budget soap operas recorded in Australia have become high-earning exports",
-        "D": "Australians think that their country lives up to its nickname 'the lucky country'",
-        "E": "Going to the beach is almost a national pastime for Australians"
+        "A": "countryside regions experience much higher temperatures during summer",
+        "B": "city planners are striving to create more green spaces to lower temperatures",
+        "C": "vehicle emissions have reached their lowest levels in major capitals",
+        "D": "rural populations are rapidly migrating toward coastal industrial zones",
+        "E": "global warming has ceased to affect major metropolitan regions"
       },
       "correct_option": "B"
     },
     {
-      "question_text": "Even though some herbal remedies may show beneficial effects, ----.",
+      "question_text": "Unless international bodies enforce strict marine conservation policies, ----.",
       "options": {
-        "A": "scientists continue to investigate and discover new medicinal uses of plants",
-        "B": "plant materials are the basis for many of our most helpful medications",
-        "C": "most show little evidence of providing any health benefits",
-        "D": "the popularity of herbal products continues to increase",
-        "E": "the use of some plant remedies dates back thousands of years"
+        "A": "ocean ecosystems will continue to recover at an encouraging pace",
+        "B": "overfishing will lead to the collapse of vulnerable fish stocks",
+        "C": "commercial fishing fleets will voluntarily reduce their daily catches",
+        "D": "plastic pollution in coastal zones will disappear within a decade",
+        "E": "marine biodiversity will reach unprecedented levels of stability"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "While traditional paper books offer a tactile reading experience, ----.",
+      "options": {
+        "A": "digital readers allow users to store thousands of volumes in one portable device",
+        "B": "physical bookstores are opening in record numbers across global cities",
+        "C": "printing technology has remained unchanged since the Gutenberg era",
+        "D": "most readers prefer heavy volumes over lightweight electronic screens",
+        "E": "public libraries have stopped purchasing electronic publications entirely"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "----, the economic recovery of the region proceeded faster than anticipated.",
+      "options": {
+        "A": "In spite of the severe supply chain disruptions caused by global crises",
+        "B": "Due to the sudden drop in industrial production across all major sectors",
+        "C": "Because foreign investors withdrew their capital from domestic markets",
+        "D": "Since local businesses failed to adapt to modern digital platforms",
+        "E": "As long as high inflation rates continue to burden middle-class families"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Just as early navigators relied on constellations to cross uncharted oceans, ----.",
+      "options": {
+        "A": "modern travelers rely on satellite-based GPS systems for navigation",
+        "B": "maps were printed using woodblock printing techniques in ancient times",
+        "C": "seafaring vessels were constructed primarily from native oak trees",
+        "D": "compasses were invented long before astronomical charts were drafted",
+        "E": "aviation technology eliminated the need for ground control communication"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "So long as governments invest in early childhood education, ----.",
+      "options": {
+        "A": "social inequality will inevitably widen across future generations",
+        "B": "long-term economic growth and social mobility will be significantly supported",
+        "C": "educational standards will drop due to overfunded public institutions",
+        "D": "literacy rates among young citizens will remain unexpectedly low",
+        "E": "academic research in higher education will lose its relevance"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "In order to protect fragile biodiversity in alpine environments, ----.",
+      "options": {
+        "A": "tourists are allowed to roam freely across protected wildlife reserves",
+        "B": "local authorities have placed strict limits on resort construction",
+        "C": "commercial logging operations have been granted expanded permits",
+        "D": "mountain hiking trails have been opened to off-road vehicles",
+        "E": "wildlife conservation budgets have been diverted to industrial development"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Even though renewable energy capacity has grown dramatically in recent years, ----.",
+      "options": {
+        "A": "solar panels are now cheaper than fossil fuel energy infrastructure",
+        "B": "many nations still rely heavily on coal and gas for baseline electricity",
+        "C": "global carbon emissions have dropped to near-zero levels worldwide",
+        "D": "wind farms produce more energy than conventional power plants",
+        "E": "energy storage technologies have solved all power grid challenges"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "---- that many historical manuscripts were preserved for centuries.",
+      "options": {
+        "A": "It was through the meticulous copying work of medieval monks",
+        "B": "Because modern digital scanners were invented in the late 20th century",
+        "C": "Although paper manuscripts decay rapidly when exposed to moisture",
+        "D": "Unless library archivists store documents in climate-controlled rooms",
+        "E": "Since ancient writing materials were completely indestructible"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "The rapid urbanization of coastal areas has accelerated loss of natural habitats; ----.",
+      "options": {
+        "A": "however, marine life in these regions has expanded exponentially",
+        "B": "consequently, local species face increasing threats from human encroachment",
+        "C": "otherwise, environmental agencies would not monitor coastal development",
+        "D": "instead, agricultural activities have taken over all coastal land",
+        "E": "nevertheless, coastal populations have decided to move inland"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "----, researchers can better predict severe weather events before they occur.",
+      "options": {
+        "A": "By analyzing satellite meteorological data through machine learning models",
+        "B": "Although weather forecasts have become completely unreliable in recent years",
+        "C": "Unless weather stations collect atmospheric measurements around the clock",
+        "D": "Since climate models are incapable of processing large volume datasets",
+        "E": "In spite of recent investments in advanced Doppler radar technology"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "No matter how sophisticated automated translation algorithms become, ----.",
+      "options": {
+        "A": "they can translate technical manuals with exceptional speed",
+        "B": "human translators will always be needed to capture subtle cultural nuances",
+        "C": "natural language processing has replaced human language learning entirely",
+        "D": "dictionaries are no longer printed by major publishing houses",
+        "E": "language barriers have completely vanished in international trade"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "---- that it transformed the way people communicate across long distances.",
+      "options": {
+        "A": "So revolutionary was the invention of the electric telegraph",
+        "B": "Although early postal systems relied on horse-drawn carriages",
+        "C": "Such effective were modern smartphone communication applications",
+        "D": "Neither radio broadcasting nor television was widely adopted",
+        "E": "Because internet connectivity was limited to research universities"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Provided that strict safety protocols are maintained throughout the experiment, ----.",
+      "options": {
+        "A": "the laboratory results will be rendered invalid by contamination",
+        "B": "the research team can proceed without risking hazardous chemical leaks",
+        "C": "safety inspectors will revoke the facility's operating license",
+        "D": "scientific equipment will suffer irreversible mechanical failure",
+        "E": "researchers must abandon their long-term clinical trials immediately"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "----, the restoration of historic monuments requires extensive historical research.",
+      "options": {
+        "A": "Since architects can rebuild ancient structures using modern concrete",
+        "B": "To ensure that reconstruction efforts remain faithful to original designs",
+        "C": "Although historic preservation projects are funded by local municipalities",
+        "D": "Because tourist visits to historical sites generate significant revenue",
+        "E": "Unless building materials are sourced from local quarries"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Whereas agriculture in arid regions depends heavily on artificial irrigation, ----.",
+      "options": {
+        "A": "farming in tropical zones benefits from abundant natural rainfall",
+        "B": "water scarcity continues to threaten food security in desert climates",
+        "C": "groundwater reservoirs are being depleted at alarming rates",
+        "D": "drought-resistant crop varieties are being engineered by botanists",
+        "E": "soil erosion is exacerbated by improper land management practices"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "----, the archaeological site was designated a UNESCO World Heritage Location.",
+      "options": {
+        "A": "Due to its extraordinary cultural significance and remarkable preservation",
+        "B": "Although heavy rainstorms caused severe damage to the ancient ruins",
+        "C": "Because local authorities decided to build a modern highway nearby",
+        "D": "Unless international funding is granted for further excavations",
+        "E": "In spite of the discovery of ancient gold artifacts and marble statues"
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Not only does regular physical exercise strengthen the cardiovascular system, ----.",
+      "options": {
+        "A": "but it also significantly improves mental health and cognitive function",
+        "B": "nor does it reduce stress levels among working professionals",
+        "C": "and it causes chronic fatigue when practiced on a daily basis",
+        "D": "but doctors advise against engaging in strenuous activities",
+        "E": "yet it has no measurable impact on overall life expectancy"
+      },
+      "correct_option": "A"
+    }
+  ],
+  "reading": [
+    {
+      "question_text": "The Great Barrier Reef, stretching over 2,300 kilometers off the northeastern coast of Australia, is the world's largest coral reef system. It is composed of thousands of individual reefs and hundreds of islands, housing an extraordinarily diverse ecosystem that includes thousands of marine species. However, over the past few decades, the reef has suffered unprecedented damage due to rising ocean temperatures driven by climate change. When water temperatures remain elevated for extended periods, corals expel the symbiotic algae living in their tissues, causing the coral to turn completely white—a phenomenon known as coral bleaching. While bleached corals are not dead, they are under severe stress and highly vulnerable to mortality if conditions do not normalize. Conservationists argue that urgent global reductions in carbon emissions, alongside localized protection measures, are required to prevent catastrophic ecosystem collapse.\n\nAccording to the text, coral bleaching occurs when ----.",
+      "options": {
+        "A": "ocean waters become polluted with industrial chemical waste",
+        "B": "water temperatures remain high, causing corals to lose symbiotic algae",
+        "C": "invasive marine species feed on fragile coral tissues",
+        "D": "marine tourism damages the structural foundation of individual reefs",
+        "E": "extreme ocean currents wash away essential nutrient deposits"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "The Great Barrier Reef, stretching over 2,300 kilometers off the northeastern coast of Australia, is the world's largest coral reef system. It is composed of thousands of individual reefs and hundreds of islands, housing an extraordinarily diverse ecosystem that includes thousands of marine species. However, over the past few decades, the reef has suffered unprecedented damage due to rising ocean temperatures driven by climate change. When water temperatures remain elevated for extended periods, corals expel the symbiotic algae living in their tissues, causing the coral to turn completely white—a phenomenon known as coral bleaching. While bleached corals are not dead, they are under severe stress and highly vulnerable to mortality if conditions do not normalize. Conservationists argue that urgent global reductions in carbon emissions, alongside localized protection measures, are required to prevent catastrophic ecosystem collapse.\n\nIt is clearly stated in the passage that bleached corals ----.",
+      "options": {
+        "A": "are already dead and cannot recover under any circumstances",
+        "B": "are more resilient to temperature changes than unbleached corals",
+        "C": "are alive but under extreme stress and at higher risk of dying",
+        "D": "recover immediately once sunlight exposure decreases",
+        "E": "release dangerous toxins into the surrounding marine environment"
       },
       "correct_option": "C"
     },
     {
-      "question_text": "----, the most promising ones are the harnessing of tidal power and ocean thermal energy conversion.",
+      "question_text": "The Great Barrier Reef, stretching over 2,300 kilometers off the northeastern coast of Australia, is the world's largest coral reef system. It is composed of thousands of individual reefs and hundreds of islands, housing an extraordinarily diverse ecosystem that includes thousands of marine species. However, over the past few decades, the reef has suffered unprecedented damage due to rising ocean temperatures driven by climate change. When water temperatures remain elevated for extended periods, corals expel the symbiotic algae living in their tissues, causing the coral to turn completely white—a phenomenon known as coral bleaching. While bleached corals are not dead, they are under severe stress and highly vulnerable to mortality if conditions do not normalize. Conservationists argue that urgent global reductions in carbon emissions, alongside localized protection measures, are required to prevent catastrophic ecosystem collapse.\n\nWhat is the main purpose of the passage?",
       "options": {
-        "A": "Despite the differences between high and low water levels",
-        "B": "While there are several issues related to the efficiency of oceanic tidal power",
-        "C": "Once methods are found to monitor ocean temperature near the tropics",
-        "D": "Although there are several ways of utilizing energy from the oceans",
-        "E": "Because energy conversion relies on temperature differences rather than tide strength"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "People are generally advised not to take naps ----.",
-      "options": {
-        "A": "given that naps and caffeine combined are effective in combating midday sleepiness",
-        "B": "because they can disturb the normal pattern of sleep and wakefulness",
-        "C": "as long as they can improve alertness, performance and mood",
-        "D": "since napping at particular times of day can be more beneficial than at other times",
-        "E": "even though they can negatively affect night-time sleep quality"
-      },
-      "correct_option": "B"
-    },
-    {
-      "question_text": "Because the gasoline used by most cars causes pollution and adds to global warming, ----.",
-      "options": {
-        "A": "car manufacturers are turning to electric engines that can use energy from cleaner sources",
-        "B": "gasoline is also used in light trucks, motorcycles, small aircraft, and boats",
-        "C": "people use about 385 million gallons of gasoline per day in the US",
-        "D": "burning a gallon of gasoline produces about 19.6 pounds of carbon dioxide",
-        "E": "biofuels are plant-derived liquid fuels that can be used as alternatives to gasoline"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "---- in case the expected technological aids for their presentation do not function properly.",
-      "options": {
-        "A": "It is suggested that speakers talk to the audience as if they were talking to one person",
-        "B": "Much research has been conducted on ways in which public speeches can be presented effectively",
-        "C": "It is important for speakers to prepare a presentation that does not extend past the allotted time",
-        "D": "Speakers should be able to change the message to include more examples",
-        "E": "Good public speakers make sure that they have alternative strategies prepared"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "Although our bodies and brains continue transforming throughout life, ----.",
-      "options": {
-        "A": "the most dramatic changes happen in infancy and during the teenage years",
-        "B": "the brain of a baby has almost the same number of cells as an adult's",
-        "C": "brain cells form a dense web of connections to each other helping us learn new skills",
-        "D": "the physical changes are accompanied by emotional and behavioural changes",
-        "E": "changes in an area called the reticular formation allow a child to pay attention for longer periods"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "While the ultimate cause or causes of Alzheimer's disease are still unknown, ----.",
-      "options": {
-        "A": "other non-genetic causes have also been studied in relation to the causes of this disease",
-        "B": "vitamin E, which is an antioxidant, can be of benefit for people with this disease",
-        "C": "a person with the disease may forget the names of family members",
-        "D": "there are several risk factors that increase a person's likelihood of developing the disease",
-        "E": "the symptoms of this disease begin gradually, usually with memory lapses"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "Although a lot of studies have been carried out over the decades to help the millions of people with spinal cord injuries, ----.",
-      "options": {
-        "A": "researchers have achieved frustratingly little success so far",
-        "B": "a new device has been offering hope for treatment",
-        "C": "three patients at Kentucky Spinal Cord Center in the US have received their implants",
-        "D": "electrical stimulation is one of the most effective methods to help patients",
-        "E": "reawakening connections between the brain and the lower body is essential"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "---- so that fewer people are hurt or killed in accidents.",
-      "options": {
-        "A": "Millions of people are injured each year in road crashes around the world",
-        "B": "Driving too fast is considered by authorities to be a major cause of accidents",
-        "C": "Scientists are always looking for ways to improve safety on the roads",
-        "D": "Nine out of ten collisions with a pedestrian at 60 km/h are fatal",
-        "E": "There are many injuries in car accidents that go unreported"
+        "A": "To outline the geographic discovery of Australia's Great Barrier Reef",
+        "B": "To compare the biodiversity of tropical reefs with cold-water ecosystems",
+        "C": "To explain the threats facing the Great Barrier Reef and the cause of bleaching",
+        "D": "To argue that marine tourism is the primary driver of reef destruction",
+        "E": "To present a detailed history of conservation efforts in Australia"
       },
       "correct_option": "C"
     },
     {
-      "question_text": "Although almost every type of packaged food today features calorie counts on the labelling, ----",
+      "question_text": "The Great Barrier Reef, stretching over 2,300 kilometers off the northeastern coast of Australia, is the world's largest coral reef system. It is composed of thousands of individual reefs and hundreds of islands, housing an extraordinarily diverse ecosystem that includes thousands of marine species. However, over the past few decades, the reef has suffered unprecedented damage due to rising ocean temperatures driven by climate change. When water temperatures remain elevated for extended periods, corals expel the symbiotic algae living in their tissues, causing the coral to turn completely white—a phenomenon known as coral bleaching. While bleached corals are not dead, they are under severe stress and highly vulnerable to mortality if conditions do not normalize. Conservationists argue that urgent global reductions in carbon emissions, alongside localized protection measures, are required to prevent catastrophic ecosystem collapse.\n\nWhich of the following can be inferred from the passage?",
       "options": {
-        "A": "their counts are based on our understanding of human digestion",
-        "B": "many people do not eat them when they pay attention to the calorie content",
-        "C": "our immune system distinguishes good food from bad food",
-        "D": "most of them are inaccurate because they ignore the complexity of human digestion",
-        "E": "our digestive system is hardly put to use for some foods such as honey"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "Since water is much more resistant to movement compared to air, ----.",
-      "options": {
-        "A": "there are some examples of swimmers who won medals due to the shape of their body",
-        "B": "the main factor that determines your success in water is how developed your digestive system is",
-        "C": "athletes transfer as much of their own energy as possible into their resistance exercises outside the pool",
-        "D": "full body swimsuits have been banned from contests because they give swimmers an extra advantage in water",
-        "E": "swimmers have to use four times as much energy as runners to cover the same distance"
-      },
-      "correct_option": "E"
-    },
-    {
-      "question_text": "Although the terms 'stress' and 'anxiety' are used interchangeably in everyday life, ----.",
-      "options": {
-        "A": "stress is experienced by most people as a pattern of physiological responses to real or imagined stimuli",
-        "B": "stress and anxiety have attracted research interest in psychology",
-        "C": "anxiety disorder may be defined as an emotional discomfort characterized by worry and tension",
-        "D": "psychologists believe that stress is a much broader term than anxiety",
-        "E": "'stressors' are the environmental demands that people face under pressure"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "As robots advance into the service industries, ----",
-      "options": {
-        "A": "they are starting to look less like machines and more like living creatures",
-        "B": "their work will be of no value in the emerging industries",
-        "C": "they have been doing manual jobs since the 1960s",
-        "D": "they cannot be replaced by human beings",
-        "E": "they are machines that can perform a complicated series of tasks automatically"
-      },
-      "correct_option": "A"
-    },
-    {
-      "question_text": "While physiological factors such as fat regulation and metabolic rate are important determinants of body weight, ----.",
-      "options": {
-        "A": "there might be not a single disorder but a host of disorders",
-        "B": "overweight people tend to eat more when they are tense or anxious",
-        "C": "the self-perception of being overweight is common among women",
-        "D": "there is no question that overeating can also cause obesity",
-        "E": "there can be a contribution to a high incidence of diabetes, high blood pressure, and heart disease"
-      },
-      "correct_option": "D"
-    },
-    {
-      "question_text": "Although plants can be highly diverse in appearance, ----.",
-      "options": {
-        "A": "their leaves might come in different shapes and sizes depending on where they grow",
-        "B": "most share characteristic structures such as leaves and roots",
-        "C": "photosynthesis is a process in which plants capture and use the sunlight",
-        "D": "their basic similarity can be confusing",
-        "E": "seed plants are a highly diverse and widely distributed group"
+        "A": "Local protection measures alone are sufficient to save the Great Barrier Reef.",
+        "B": "Carbon emission reductions on a global scale are necessary for the reef's survival.",
+        "C": "The Great Barrier Reef has completely lost its status as a diverse ecosystem.",
+        "D": "Symbiotic algae are harmful organisms that cause coral mortality.",
+        "E": "Coral bleaching is a natural seasonal phenomenon that has occurred for centuries."
       },
       "correct_option": "B"
     },
     {
-      "question_text": "Although the temple form is the most important architectural type in Greek history, ----.",
+      "question_text": "The development of electric vehicles (EVs) represents a major milestone in the transition toward sustainable transportation. Unlike conventional internal combustion engine vehicles, EVs produce zero tailpipe emissions, significantly reducing urban air pollution and greenhouse gas emissions. However, the widespread adoption of EVs presents several challenges. The manufacturing of lithium-ion batteries requires the extraction of rare metals such as cobalt and lithium, an industry often associated with environmental degradation and human rights concerns in mining regions. Furthermore, the environmental benefit of EVs depends heavily on the source of the electricity used to charge them; if power grids rely on coal-fired plants, the net reduction in carbon emissions is minimized. Therefore, achieving truly clean mobility requires both sustainable battery supply chains and a transition toward renewable power generation.\n\nAccording to the passage, electric vehicles contribute to urban environments by ----.",
       "options": {
-        "A": "there are a number of other kinds of structures to consider such as the theatre and tombs",
-        "B": "the history of Greek architecture is essentially the history of the development of the Greek Temple",
-        "C": "the earliest examples of temples of the Greek age can be deduced from archaeological evidence",
-        "D": "the Parthenon in Athens might be one of the best-preserved Greek temples in the modern world",
-        "E": "the Temple of Olympian Zeus was one of the largest in Athens in the antiquity"
+        "A": "eliminating tailpipe emissions and reducing air pollution",
+        "B": "requiring fewer natural resources during manufacturing",
+        "C": "operating without any reliance on local electrical grids",
+        "D": "lowering the cost of public transportation systems",
+        "E": "generating renewable electricity while in motion"
       },
       "correct_option": "A"
     },
     {
-      "question_text": "Even though credit cards seem to be everywhere today and are a basic requirement of Internet shopping, ----.",
+      "question_text": "The development of electric vehicles (EVs) represents a major milestone in the transition toward sustainable transportation. Unlike conventional internal combustion engine vehicles, EVs produce zero tailpipe emissions, significantly reducing urban air pollution and greenhouse gas emissions. However, the widespread adoption of EVs presents several challenges. The manufacturing of lithium-ion batteries requires the extraction of rare metals such as cobalt and lithium, an industry often associated with environmental degradation and human rights concerns in mining regions. Furthermore, the environmental benefit of EVs depends heavily on the source of the electricity used to charge them; if power grids rely on coal-fired plants, the net reduction in carbon emissions is minimized. Therefore, achieving truly clean mobility requires both sustainable battery supply chains and a transition toward renewable power generation.\n\nAccording to the passage, battery manufacturing for EVs is problematic because ----.",
       "options": {
-        "A": "recently some banks have issued cards containing microchips that are activated with a personal identification number",
-        "B": "they have only been around since the 1950s when a club card was issued as the first general credit card",
-        "C": "the advantages of these cards in terms of security and universality make them suitable for online shopping",
-        "D": "they may eventually replace the use of paper money in certain situations",
-        "E": "they consist of hundreds of tiny magnetic particles contained in a film of plastic"
+        "A": "lithium-ion batteries decay within a few months of daily usage",
+        "B": "metal extraction involves environmental degradation and ethical issues",
+        "C": "cobalt is an abundant material that causes high market inflation",
+        "D": "batteries cannot be recharged using solar or wind power sources",
+        "E": "internal combustion engines perform better in cold weather conditions"
       },
       "correct_option": "B"
     },
     {
-      "question_text": "Ever since psychologists started studying intelligence, ----.",
+      "question_text": "The development of electric vehicles (EVs) represents a major milestone in the transition toward sustainable transportation. Unlike conventional internal combustion engine vehicles, EVs produce zero tailpipe emissions, significantly reducing urban air pollution and greenhouse gas emissions. However, the widespread adoption of EVs presents several challenges. The manufacturing of lithium-ion batteries requires the extraction of rare metals such as cobalt and lithium, an industry often associated with environmental degradation and human rights concerns in mining regions. Furthermore, the environmental benefit of EVs depends heavily on the source of the electricity used to charge them; if power grids rely on coal-fired plants, the net reduction in carbon emissions is minimized. Therefore, achieving truly clean mobility requires both sustainable battery supply chains and a transition toward renewable power generation.\n\nThe passage points out that the true environmental benefit of EVs is linked to ----.",
       "options": {
-        "A": "common measuring factors of intelligence include memory, attention and concentration",
-        "B": "it is meant to represent how generally intelligent you are based on your performance",
-        "C": "some psychologists come up with a test of mental abilities",
-        "D": "they have relied heavily on psychological tests for their concepts",
-        "E": "the first ad most popular form of intelligence is called the two-factor theory"
+        "A": "the price of rare metals on international commodities markets",
+        "B": "whether the electricity used for charging comes from clean sources",
+        "C": "the speed at which EVs can travel on high-speed highways",
+        "D": "the total number of conventional vehicles replaced in urban areas",
+        "E": "government subsidies provided to luxury EV manufacturers"
       },
-      "correct_option": "D"
+      "correct_option": "B"
     },
     {
-      "question_text": "Today hoatzins, the Amazon's mystery birds, live only in South America, ----.",
+      "question_text": "The development of electric vehicles (EVs) represents a major milestone in the transition toward sustainable transportation. Unlike conventional internal combustion engine vehicles, EVs produce zero tailpipe emissions, significantly reducing urban air pollution and greenhouse gas emissions. However, the widespread adoption of EVs presents several challenges. The manufacturing of lithium-ion batteries requires the extraction of rare metals such as cobalt and lithium, an industry often associated with environmental degradation and human rights concerns in mining regions. Furthermore, the environmental benefit of EVs depends heavily on the source of the electricity used to charge them; if power grids rely on coal-fired plants, the net reduction in carbon emissions is minimized. Therefore, achieving truly clean mobility requires both sustainable battery supply chains and a transition toward renewable power generation.\n\nWhat is the author's tone regarding electric vehicles?",
       "options": {
-        "A": "although the hoatzin is one of the most interesting species in the bird kingdom",
-        "B": "as young hoatzins have claws on their wings, like their dinosaur ancestors",
-        "C": "while the oldest hoatzin fossil dates back to 34 million years ago",
-        "D": "but the oldest known fossil of these odd birds reveals they once roamed France",
-        "E": "because there is enough evidence that they evolved in South America"
+        "A": "Dismissive and hostile",
+        "B": "Balanced and analytical",
+        "C": "Highly skeptical and pessimistic",
+        "D": "Overly enthusiastic and uncritical",
+        "E": "Completely indifferent and neutral"
       },
-      "correct_option": "D"
+      "correct_option": "B"
     },
     {
-      "question_text": "Even though nearly all people are equipped with the biological hardware to produce a wide range of notes, ----.",
+      "question_text": "Deep-sea hydrothermal vents, discovered in the late 1970s, changed our understanding of life on Earth. Located thousands of meters below the ocean surface along tectonic plate boundaries, these volcanic vents spew superheated, mineral-rich fluid into pitch-black waters. Despite the extreme pressure, toxicity, and complete absence of sunlight, vibrant ecosystems flourish around these vents. Instead of relying on photosynthesis, the food chain here is supported by chemosynthetic bacteria. These microorganisms convert chemical compounds, such as hydrogen sulfide, into organic energy, sustaining specialized creatures like giant tube worms, blind shrimp, and unique crabs. Scientists believe studying these extremophiles could shed light on how life originated on early Earth and whether life could exist in sub-surface oceans on extraterrestrial bodies like Jupiter's moon, Europa.\n\nHow do ecosystems near hydrothermal vents survive without sunlight?",
       "options": {
-        "A": "many neurobiologists have investigated musical ability",
-        "B": "most people are quite good at timing and note memory",
-        "C": "the relationship between song and language needs to be studied",
-        "D": "musical talent, especially singing, varies between human beings",
-        "E": "some people with musical aptitude carry a tune easily"
+        "A": "They absorb thermal radiation emitted by underwater volcanoes.",
+        "B": "They rely on chemosynthetic bacteria converting chemicals into energy.",
+        "C": "They consume organic matter floating down from the ocean surface.",
+        "D": "They store energy captured during rare shallow-water migrations.",
+        "E": "They utilize artificial light sources brought by deep-sea submersibles."
       },
-      "correct_option": "D"
+      "correct_option": "B"
     },
     {
-      "question_text": "Although the greenhouse gas emissions generated by pollution were relatively small at first, ----.",
+      "question_text": "Deep-sea hydrothermal vents, discovered in the late 1970s, changed our understanding of life on Earth. Located thousands of meters below the ocean surface along tectonic plate boundaries, these volcanic vents spew superheated, mineral-rich fluid into pitch-black waters. Despite the extreme pressure, toxicity, and complete absence of sunlight, vibrant ecosystems flourish around these vents. Instead of relying on photosynthesis, the food chain here is supported by chemosynthetic bacteria. These microorganisms convert chemical compounds, such as hydrogen sulfide, into organic energy, sustaining specialized creatures like giant tube worms, blind shrimp, and unique crabs. Scientists believe studying these extremophiles could shed light on how life originated on early Earth and whether life could exist in sub-surface oceans on extraterrestrial bodies like Jupiter's moon, Europa.\n\nWhich of the following is TRUE about hydrothermal vents according to the text?",
       "options": {
-        "A": "they grew dramatically as more countries industrialized",
-        "B": "it was in no country's interest to reduce them until recently",
-        "C": "carbon dioxide emissions by the US have decreased since the 1950s",
-        "D": "in 2007, the EU decided to take further essential steps towards reducing them",
-        "E": "the effects of the emissions on climate change have been ignored by a number of countries"
+        "A": "They were discovered during the early 19th century by coastal fishermen.",
+        "B": "They are surrounded by ecosystems dependent entirely on photosynthesis.",
+        "C": "They release superheated, mineral-dense water into the ocean depths.",
+        "D": "They support life forms identical to those found in surface waters.",
+        "E": "They exist only in shallow, sunlit tropical coastal waters."
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "Deep-sea hydrothermal vents, discovered in the late 1970s, changed our understanding of life on Earth. Located thousands of meters below the ocean surface along tectonic plate boundaries, these volcanic vents spew superheated, mineral-rich fluid into pitch-black waters. Despite the extreme pressure, toxicity, and complete absence of sunlight, vibrant ecosystems flourish around these vents. Instead of relying on photosynthesis, the food chain here is supported by chemosynthetic bacteria. These microorganisms convert chemical compounds, such as hydrogen sulfide, into organic energy, sustaining specialized creatures like giant tube worms, blind shrimp, and unique crabs. Scientists believe studying these extremophiles could shed light on how life originated on early Earth and whether life could exist in sub-surface oceans on extraterrestrial bodies like Jupiter's moon, Europa.\n\nWhy are scientists interested in studying extremophiles at hydrothermal vents?",
+      "options": {
+        "A": "To develop industrial chemicals for deep-sea mining operations",
+        "B": "To understand early life on Earth and potential extraterrestrial life",
+        "C": "To prove that photosynthesis occurs at all ocean depths",
+        "D": "To build underwater human colonies near tectonic boundaries",
+        "E": "To predict major earthquakes along coastal continental plates"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Deep-sea hydrothermal vents, discovered in the late 1970s, changed our understanding of life on Earth. Located thousands of meters below the ocean surface along tectonic plate boundaries, these volcanic vents spew superheated, mineral-rich fluid into pitch-black waters. Despite the extreme pressure, toxicity, and complete absence of sunlight, vibrant ecosystems flourish around these vents. Instead of relying on photosynthesis, the food chain here is supported by chemosynthetic bacteria. These microorganisms convert chemical compounds, such as hydrogen sulfide, into organic energy, sustaining specialized creatures like giant tube worms, blind shrimp, and unique crabs. Scientists believe studying these extremophiles could shed light on how life originated on early Earth and whether life could exist in sub-surface oceans on extraterrestrial bodies like Jupiter's moon, Europa.\n\nThe word \"flourish\" in the passage is closest in meaning to ----.",
+      "options": {
+        "A": "collapse",
+        "B": "thrive",
+        "C": "struggle",
+        "D": "vanish",
+        "E": "mutate"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Sleep is a fundamental biological necessity, yet modern lifestyle factors have led to a global sleep deprivation epidemic. Chronic sleep deficiency is linked to severe health issues, including cardiovascular disease, obesity, weakened immune function, and impaired cognitive performance. During sleep, particularly deep REM stages, the brain undergoes crucial maintenance: consolidating memories, clearing toxic metabolic waste products, and repairing cellular tissue. Despite clear scientific evidence regarding its importance, many individuals sacrifice sleep for work or digital entertainment. Health organizations stress that adults should aim for 7 to 9 hours of quality sleep per night, emphasizing that consistent sleep hygiene is as vital to long-term health as balanced nutrition and regular physical exercise.\n\nAccording to the passage, during deep REM sleep, the brain ----.",
+      "options": {
+        "A": "shuts down cognitive processing entirely to conserve body heat",
+        "B": "consolidates memories and clears toxic metabolic waste products",
+        "C": "produces high levels of adrenaline to stimulate muscular repair",
+        "D": "increases physical activity while decreasing cellular recovery rates",
+        "E": "prevents the immune system from releasing protective antibodies"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Sleep is a fundamental biological necessity, yet modern lifestyle factors have led to a global sleep deprivation epidemic. Chronic sleep deficiency is linked to severe health issues, including cardiovascular disease, obesity, weakened immune function, and impaired cognitive performance. During sleep, particularly deep REM stages, the brain undergoes crucial maintenance: consolidating memories, clearing toxic metabolic waste products, and repairing cellular tissue. Despite clear scientific evidence regarding its importance, many individuals sacrifice sleep for work or digital entertainment. Health organizations stress that adults should aim for 7 to 9 hours of quality sleep per night, emphasizing that consistent sleep hygiene is as vital to long-term health as balanced nutrition and regular physical exercise.\n\nThe passage states that chronic sleep deprivation can lead to ----.",
+      "options": {
+        "A": "improved athletic endurance and cognitive agility",
+        "B": "lower risks of cardiovascular disease and metabolic conditions",
+        "C": "severe health problems, including obesity and cognitive impairment",
+        "D": "reduced dependence on proper nutrition and daily exercise",
+        "E": "immediate loss of long-term memory functions in young adults"
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "Sleep is a fundamental biological necessity, yet modern lifestyle factors have led to a global sleep deprivation epidemic. Chronic sleep deficiency is linked to severe health issues, including cardiovascular disease, obesity, weakened immune function, and impaired cognitive performance. During sleep, particularly deep REM stages, the brain undergoes crucial maintenance: consolidating memories, clearing toxic metabolic waste products, and repairing cellular tissue. Despite clear scientific evidence regarding its importance, many individuals sacrifice sleep for work or digital entertainment. Health organizations stress that adults should aim for 7 to 9 hours of quality sleep per night, emphasizing that consistent sleep hygiene is as vital to long-term health as balanced nutrition and regular physical exercise.\n\nWhat do health organizations recommend regarding sleep?",
+      "options": {
+        "A": "Adults should sleep less than 6 hours to maximize daily productivity.",
+        "B": "Sleep hygiene is secondary to physical exercise and diet.",
+        "C": "Adults should aim for 7 to 9 hours of quality sleep every night.",
+        "D": "Digital entertainment before bed improves REM sleep quality.",
+        "E": "Deep sleep stages are unnecessary if total duration is sufficient."
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "Sleep is a fundamental biological necessity, yet modern lifestyle factors have led to a global sleep deprivation epidemic. Chronic sleep deficiency is linked to severe health issues, including cardiovascular disease, obesity, weakened immune function, and impaired cognitive performance. During sleep, particularly deep REM stages, the brain undergoes crucial maintenance: consolidating memories, clearing toxic metabolic waste products, and repairing cellular tissue. Despite clear scientific evidence regarding its importance, many individuals sacrifice sleep for work or digital entertainment. Health organizations stress that adults should aim for 7 to 9 hours of quality sleep per night, emphasizing that consistent sleep hygiene is as vital to long-term health as balanced nutrition and regular physical exercise.\n\nThe passage is primarily concerned with ----.",
+      "options": {
+        "A": "comparing sleep patterns between children and older adults",
+        "B": "explaining the biological importance of sleep and consequences of deprivation",
+        "C": "criticizing modern technology companies for creating digital distraction",
+        "D": "outlining clinical drug treatments for severe chronic insomnia",
+        "E": "describing historical changes in human sleep habits since the Industrial Era"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "The Rosetta Stone, discovered by French soldiers in Egypt in 1799, is one of the most important archaeological artifacts in history. The stone slab contains a royal decree issued in 196 BC carved in three distinct scripts: Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek. Because scholars were already familiar with Ancient Greek, the stone provided the long-sought key to deciphering hieroglyphs, which had been unreadable for over a millennium. British polymath Thomas Young and French linguist Jean-François Champollion led the groundbreaking decipherment efforts. Champollion ultimately cracked the code in 1822 by realizing that hieroglyphs represented both phonetic sounds and symbolic ideas. This monumental breakthrough opened up centuries of recorded Egyptian history to modern scholars.\n\nWhy was the Rosetta Stone crucial for deciphering Egyptian hieroglyphs?",
+      "options": {
+        "A": "It contained a dictionary translating hieroglyphic symbols into Latin.",
+        "B": "It featured the same decree written in Ancient Greek alongside hieroglyphs.",
+        "C": "It was the only ancient Egyptian artifact surviving undamaged.",
+        "D": "It proved that hieroglyphs were purely picture-based, non-phonetic symbols.",
+        "E": "It was written directly by French linguist Jean-François Champollion."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "The Rosetta Stone, discovered by French soldiers in Egypt in 1799, is one of the most important archaeological artifacts in history. The stone slab contains a royal decree issued in 196 BC carved in three distinct scripts: Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek. Because scholars were already familiar with Ancient Greek, the stone provided the long-sought key to deciphering hieroglyphs, which had been unreadable for over a millennium. British polymath Thomas Young and French linguist Jean-François Champollion led the groundbreaking decipherment efforts. Champollion ultimately cracked the code in 1822 by realizing that hieroglyphs represented both phonetic sounds and symbolic ideas. This monumental breakthrough opened up centuries of recorded Egyptian history to modern scholars.\n\nWhat major realization enabled Jean-François Champollion to crack the code?",
+      "options": {
+        "A": "Hieroglyphs were used exclusively for astronomical calculations.",
+        "B": "The Demotic script was identical in structure to modern European languages.",
+        "C": "Hieroglyphs represented both phonetic sounds and symbolic ideas.",
+        "D": "The stone was created thousands of years before the Pharaohs reigned.",
+        "E": "Ancient Greek text on the stone was an inaccurate translation."
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "The Rosetta Stone, discovered by French soldiers in Egypt in 1799, is one of the most important archaeological artifacts in history. The stone slab contains a royal decree issued in 196 BC carved in three distinct scripts: Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek. Because scholars were already familiar with Ancient Greek, the stone provided the long-sought key to deciphering hieroglyphs, which had been unreadable for over a millennium. British polymath Thomas Young and French linguist Jean-François Champollion led the groundbreaking decipherment efforts. Champollion ultimately cracked the code in 1822 by realizing that hieroglyphs represented both phonetic sounds and symbolic ideas. This monumental breakthrough opened up centuries of recorded Egyptian history to modern scholars.\n\nIt is clear from the passage that before the decipherment of the Rosetta Stone, ----.",
+      "options": {
+        "A": "Ancient Egyptian hieroglyphs could not be read for over a thousand years",
+        "B": "scholars had already fully translated all ancient Egyptian texts",
+        "C": "no historical artifacts had ever been discovered in Egypt",
+        "D": "Ancient Greek was an entirely unknown and lost language",
+        "E": "French soldiers destroyed most of the inscribed text on the stone"
       },
       "correct_option": "A"
     },
     {
-      "question_text": "When a local, native language is not embraced by younger generations, ----.",
+      "question_text": "The Rosetta Stone, discovered by French soldiers in Egypt in 1799, is one of the most important archaeological artifacts in history. The stone slab contains a royal decree issued in 196 BC carved in three distinct scripts: Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek. Because scholars were already familiar with Ancient Greek, the stone provided the long-sought key to deciphering hieroglyphs, which had been unreadable for over a millennium. British polymath Thomas Young and French linguist Jean-François Champollion led the groundbreaking decipherment efforts. Champollion ultimately cracked the code in 1822 by realizing that hieroglyphs represented both phonetic sounds and symbolic ideas. This monumental breakthrough opened up centuries of recorded Egyptian history to modern scholars.\n\nWhich title best suits this passage?",
       "options": {
-        "A": "our understanding is still quite imperfect as to why a language death occurs",
-        "B": "the linguistic diversity is found in places with small and sparsely distributed populations",
-        "C": "it is shocking to learn that almost 40 percent of languages are now endangered",
-        "D": "its demise draws nearer with the passing of each native speaker",
-        "E": "linguistic extinction is happening much faster under the pressure of globalization"
+        "A": "The Military Campaigns of Napoleon in Egypt",
+        "B": "The Rosetta Stone: Unlocking the Secrets of Ancient Egypt",
+        "C": "A Comparative Study of Demotic and Greek Grammar",
+        "D": "The Architectural Marvels of the Ancient Egyptian Empire",
+        "E": "Why Hieroglyphs Disappeared from Recorded History"
       },
-      "correct_option": "D"
+      "correct_option": "B"
+    }
+  ],
+  "dialogue": [
+    {
+      "question_text": "Sarah: Are you planning to attend the conference on renewable energy next week?\nMark: I really want to, but registration fees are extremely high.\nSarah: ----\nMark: Really? I didn't know that. I'll submit my application right away then.",
+      "options": {
+        "A": "That's a shame, because the keynote speaker is an expert in solar power.",
+        "B": "Don't worry, the university offers full student discounts if you register today.",
+        "C": "I heard the venue was changed to a smaller auditorium downtown.",
+        "D": "Neither do I, but my supervisor insisted that I attend the morning sessions.",
+        "E": "You should wait until next year when the conference will be held locally."
+      },
+      "correct_option": "B"
     },
     {
-      "question_text": "----, insects flourish in every land habitat and play a key role in the global ecosystem.",
+      "question_text": "David: Have you noticed how much time people spend on short video apps lately?\nElena: Yes, it seems like everyone's attention span is getting shorter and shorter.\nDavid: ----\nElena: Exactly. That's why long-form reading and deep focus have become so rare.",
       "options": {
-        "A": "Although they recycle dead plants and animals",
-        "B": "While they are the most numerous of the animals with tough external skeletons",
-        "C": "Even if the eyes of adult insects are made up of tiny lenses",
-        "D": "If many touch-sensitive bristles on the insect's body help to detect air movement",
-        "E": "Because they have developed amazing adaptations"
+        "A": "I prefer watching full-length documentaries on weekend evenings.",
+        "B": "Constant stimulation makes it hard for the brain to concentrate on complex tasks.",
+        "C": "Most content creators spend hours editing their clips before posting.",
+        "D": "Smartphone batteries deplete quickly when streaming high-definition videos.",
+        "E": "Technology companies are developing tools to limit daily screen time."
       },
-      "correct_option": "E"
+      "correct_option": "B"
     },
     {
-      "question_text": "---- but they can also appear elsewhere, at hotspots where rock moves upward from deep inside the Earth.",
+      "question_text": "Jason: What do you think about the company's decision to allow remote work permanently?\nClaire: I think it's great for work-life balance, but I worry about team collaboration.\nJason: ----\nClaire: True, but face-to-face interactions often build trust much faster than virtual meetings.",
       "options": {
-        "A": "The outside layer of the Earth is broken up into giant pieces called tectonic plates",
-        "B": "Volcanic activity has contributed to the creation of large portions of the Earth's surface",
-        "C": "Thinner plates, such as those under oceans, lead to more volcanic activity",
-        "D": "Volcanoes often form near the boundaries between tectonic plates",
-        "E": "It is almost impossible to guess the exact time of volcanic eruptions"
+        "A": "Remote employees work longer hours than office-based staff on average.",
+        "B": "Modern communication tools allow teams to stay connected seamlessly.",
+        "C": "Office space rental costs have plummeted in major business districts.",
+        "D": "I agree; working from home makes commuting entirely unnecessary.",
+        "E": "Management should mandate that everyone returns to the office next month."
       },
-      "correct_option": "D"
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Kevin: Do you believe artificial intelligence will replace human graphic designers?\nLisa: Not completely. AI can generate images, but it lacks genuine human creativity and emotional depth.\nKevin: ----\nLisa: Precisely. It will serve as an efficiency tool rather than a replacement.",
+      "options": {
+        "A": "So you think designers will use AI as an assistant to speed up their workflow?",
+        "B": "Many graphic design agencies are closing down due to automated tools.",
+        "C": "Computer algorithms can generate artwork in a matter of seconds.",
+        "D": "Human artists have always struggled to find stable employment options.",
+        "E": "I doubt that AI image generators will improve significantly in the future."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Doctor: Your blood pressure is higher than normal. Have you been under stress lately?\nPatient: Yes, work has been very demanding, and I rarely get enough sleep.\nDoctor: ----\nPatient: I understand. I'll start making time for evening walks and adjust my routine.",
+      "options": {
+        "A": "High blood pressure is a common genetic trait in many families.",
+        "B": "You need to combine lifestyle changes with daily light exercise to manage it.",
+        "C": "I will prescribe a temporary sleep aid to help you rest during weekends.",
+        "D": "Your cholesterol levels look perfectly fine according to the lab results.",
+        "E": "You should avoid eating heavy meals right before going to sleep."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Alex: The municipal council is proposing a ban on single-use plastics in all local shops.\nMaya: That's a bold move, but how will small business owners react to the added cost?\nAlex: ----\nMaya: If that's the case, the transition should go smoothly for most retailers.",
+      "options": {
+        "A": "Plastic pollution in coastal regions has reached alarming levels recently.",
+        "B": "The city plans to offer financial subsidies to help businesses buy eco-friendly packaging.",
+        "C": "Customers will likely complain about bringing their own reusable tote bags.",
+        "D": "Many shopkeepers have already expressed strong opposition to the proposal.",
+        "E": "Paper bags are actually more expensive to produce than traditional plastic."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Tom: I'm thinking of enrolling in a professional coding bootcamp this summer.\nRachel: Isn't it intense? I heard students study 10 hours a day for three months.\nTom: ----\nRachel: Well, if it guarantees a career transition, the hard work will definitely pay off.",
+      "options": {
+        "A": "It is demanding, but it equips you with practical skills needed by tech employers quickly.",
+        "B": "University computer science degrees take four full years to complete.",
+        "C": "Programming languages are updated every few years anyway.",
+        "D": "I might drop out if the coursework becomes too difficult for me.",
+        "E": "Online video tutorials are available for free on internet platforms."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Hannah: Why do you think urban gardening has become so popular in major cities?\nLiam: People want fresh, organic produce, and it also connects them with nature.\nHannah: ----\nLiam: Absolutely. Rooftop gardens and community plots transform urban grey spaces into vibrant green areas.",
+      "options": {
+        "A": "Supermarkets sell imported vegetables at very competitive prices.",
+        "B": "Plus, it helps reduce the urban heat island effect and beautifies neighborhoods.",
+        "C": "Most apartment balconies don't receive enough direct sunlight for growing tomatoes.",
+        "D": "Soil contamination is a serious concern when planting vegetables in urban zones.",
+        "E": "Farmers in rural regions are facing severe drought conditions this season."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Professor: Your research paper on ocean acidification is well-structured, but you need more empirical data.\nStudent: Thank you for the feedback. Should I include data from recent marine expedition reports?\nProfessor: ----\nStudent: Got it. I'll analyze those reports and add the statistics to my revised draft.",
+      "options": {
+        "A": "No, that would make your bibliography excessively long and complicated.",
+        "B": "Yes, incorporating recent field data will strengthen your overall argument significantly.",
+        "C": "You should change your research topic to atmospheric carbon emissions instead.",
+        "D": "I have already submitted your grade to the registrar's office this morning.",
+        "E": "Scientific journals rarely publish undergraduate research projects anyway."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Julia: I tried learning a new foreign language using a mobile app, but I'm not making progress.\nMartin: Apps are great for vocabulary, but conversation practice is essential for fluency.\nJulia: ----\nMartin: Joining a language exchange group or speaking with native speakers online would help a lot.",
+      "options": {
+        "A": "I spend over two hours every day completing flashcard exercises on my phone.",
+        "B": "So what practical step do you suggest I take to practice speaking?",
+        "C": "Grammar rules are the hardest part of learning any new language.",
+        "D": "I studied French in high school for three years, but I forgot most of it.",
+        "E": "Translation applications have made learning foreign languages completely obsolete."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Ethan: Did you read about the new satellite launched to study solar flares?\nSophie: Yes, scientists hope it will give early warnings before solar storms reach Earth.\nEthan: ----\nSophie: Exactly. A severe solar storm could disrupt satellite communication and power grids globally.",
+      "options": {
+        "A": "Solar energy is becoming the main power source for household electricity.",
+        "B": "That's crucial because our modern technology infrastructure is extremely vulnerable to radiation spikes.",
+        "C": "The Moon mission was postponed due to technical failures in the rocket boosters.",
+        "D": "Most people don't care about space research when economic issues exist on Earth.",
+        "E": "Astronomers have been observing sunspots using optical telescopes since Galileo."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Manager: Our customer satisfaction ratings dropped by 15% during the last quarter.\nEmployee: I believe the main reason is the delayed delivery times caused by logistics bottlenecks.\nManager: ----\nEmployee: We should partner with local courier services to handle peak shipping periods.",
+      "options": {
+        "A": "Excellent, let me congratulate the logistics team on their outstanding effort.",
+        "B": "If logistics is the bottleneck, what actionable measures can we take immediately?",
+        "C": "Customers always complain regardless of how fast we deliver their orders.",
+        "D": "Marketing campaigns have generated record sales figures across all product lines.",
+        "E": "We need to increase our product prices to offset shipping expenses."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Emma: Are you going to visit the new modern art exhibit at the city gallery?\nLucas: I went yesterday, but to be honest, I didn't understand most of the abstract installations.\nEmma: ----\nLucas: That makes sense. Knowing the artist's intent probably adds a lot of context.",
+      "options": {
+        "A": "Abstract art is definitely superior to traditional portrait paintings.",
+        "B": "Modern art often requires reading the curatorial notes to grasp the concept behind it.",
+        "C": "Tickets were sold out weeks before the official opening ceremony.",
+        "D": "Gallery entry fees should be free for high school and university students.",
+        "E": "I prefer classical Renaissance sculptures over contemporary installations."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Daniel: Why are electric power companies investing so heavily in battery storage technology?\nChloe: Because renewable sources like solar and wind don't generate electricity continuously.\nDaniel: ----\nChloe: Right. Storage batteries hold surplus power generated during peak times and release it when needed.",
+      "options": {
+        "A": "So batteries help balance power supply when the sun isn't shining or the wind stops?",
+        "B": "Solar panels generate more energy on cloudy winter days than in summer.",
+        "C": "Fossil fuel power plants can be turned on and off within seconds.",
+        "D": "Electricity prices are regulated by national regulatory commissions.",
+        "E": "Lithium mining causes environmental degradation in arid regions."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Grace: Do you think remote medical consultations will remain popular after the pandemic?\nBen: Definitely, especially for patients living in rural areas far from hospitals.\nGrace: ----\nBen: True, physical examinations will always require in-person visits, but telehealth is great for routine follow-ups.",
+      "options": {
+        "A": "Doctors can perform complex surgical operations via video calls.",
+        "B": "However, virtual visits cannot replace comprehensive physical examinations for all illnesses.",
+        "C": "Rural health clinics are being closed down due to lack of medical staff.",
+        "D": "Health insurance companies refuse to cover online doctor consultations.",
+        "E": "Internet connectivity in remote mountain villages is faster than in urban areas."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Oliver: The university library is replacing printed academic journals with digital subscriptions.\nZoe: That will save space, but won't it make old research harder to access for some students?\nOliver: ----\nZoe: Oh, in that case, digital search tools will actually make research faster.",
+      "options": {
+        "A": "Actually, all archived back issues are indexed online with instant search features.",
+        "B": "Many students still prefer holding physical copies while studying.",
+        "C": "Paper manufacturing consumes millions of trees annually worldwide.",
+        "D": "Librarians will lose their jobs as automated systems take over.",
+        "E": "Internet access on campus is frequently interrupted by network maintenance."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Ryan: I read that deforestation in rainforests is accelerating global climate change.\nJessica: Yes, trees absorb massive amounts of carbon dioxide, so cutting them down releases stored carbon.\nRyan: ----\nJessica: Precisely. Protecting rainforests is essential for regulating global climate patterns.",
+      "options": {
+        "A": "Planting urban parks can fully replace the biodiversity of tropical rainforests.",
+        "B": "So forests act as critical carbon sinks that keep greenhouse gas levels in check?",
+        "C": "Timber export is the main source of income for many developing nations.",
+        "D": "Wildfires are primarily caused by lightning strikes in dry coniferous forests.",
+        "E": "Rain levels in tropical zones have reached record highs in recent decades."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Chloe: Should we book our flight tickets now or wait for a price drop next month?\nLiam: Flight prices usually rise as the departure date approaches, especially during peak season.\nChloe: ----\nLiam: Good idea. Securing them early will also give us better seat selection options.",
+      "options": {
+        "A": "Then we had better buy them today before prices increase further.",
+        "B": "Let's wait until the day before departure to get last-minute discounts.",
+        "C": "Airline companies rarely change ticket prices once schedules are published.",
+        "D": "Travelling by train is much more scenic than flying across the continent.",
+        "E": "Hotel accommodations are fully booked during summer holiday periods."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Selin: Plastik atıkların okyanuslara karışmasını engellemek için geri dönüşüm yeterli mi?\nArda: Ne yazık ki hayır. Üretilen plastiğin yalnızca küçük bir yüzdesi gerçekten geri dönüştürülebiliyor.\nSelin: ----\nArda: Kesinlikle. Asıl çözüm tek kullanımlık plastik üretimini kaynağında sınırlandırmaktır.",
+      "options": {
+        "A": "Yani geri dönüşüm tesislerinin kapasitesini iki katına çıkarmamız mı gerekiyor?",
+        "B": "O halde sadece geri dönüşüme güvenmek yerine plastik kullanımını kökten azaltmalıyız.",
+        "C": "Deniz canlılarının plastik parçalarını yiyecek sanıp tüketmesi çok üzücü.",
+        "D": "Belediye otobüslerinde plastik şişe getirenlere indirim yapılması güzel bir uygulama.",
+        "E": "Ambalaj sanayisi biyobozunur alternatifler üzerinde çalışmaya devam ediyor."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Can: Bilim insanları neden Mars'ta geçmişte su bulunup bulunmadığını bu kadar çok araştırıyor?\nDeniz: Çünkü suyun varlığı, kızıl gezegende bir zamanlar mikrobiyal yaşamın var olmuş olabileceğini gösterir.\nCan: ----\nDeniz: Aynen öyle. Yaşam izi arayışında su her zaman en temel ipucudur.",
+      "options": {
+        "A": "Mars yüzeyinde sıcaklık geceleri eksi yüz derecenin altına düşüyor.",
+        "B": "Yani su aramak aslında geçmişteki olası bir yaşamın ayak izlerini takip etmektir.",
+        "C": "Uzay gemilerinin Mars'a ulaşması yaklaşık altı ila sekiz ay sürüyor.",
+        "D": "Gelecekte Mars'a insanlı koloniler kurulması hedefleniyor.",
+        "E": "Atmosferdeki karbondioksit oranı oksijen üretimi için dönüştürülebilir."
+      },
+      "correct_option": "B"
+    }
+  ],
+  "restatement": [
+    {
+      "question_text": "Although the initial cost of installing solar panels is high, homeowners save money in the long run through reduced electricity bills.",
+      "options": {
+        "A": "Installing solar panels costs a lot initially, but it eventually leads to financial savings for homeowners by lowering energy bills.",
+        "B": "Homeowners who install solar panels immediately recover their expenses due to massive drops in electricity prices.",
+        "C": "Despite low installation costs, solar panels do not save homeowners money unless electricity bills increase significantly.",
+        "D": "High electricity bills force many homeowners to invest in solar panels, even though long-term savings are minimal.",
+        "E": "Lowering electricity bills requires a high initial investment in solar panel technology that rarely pays off for homeowners."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "Had the medical research team received adequate funding, they could have completed the clinical trials much earlier.",
+      "options": {
+        "A": "The medical research team completed the clinical trials early because they were granted excessive financial funding.",
+        "B": "The clinical trials were delayed because the medical research team lacked sufficient financial resources.",
+        "C": "Unless the medical research team receives more funding, the clinical trials will take a very long time to finish.",
+        "D": "Even with sufficient funding, the medical research team was unable to accelerate the pace of their clinical trials.",
+        "E": "Adequate funding was provided to the medical research team, allowing them to complete trials ahead of schedule."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Few inventions in human history have had as profound an impact on communication as the mobile smartphone.",
+      "options": {
+        "A": "Mobile smartphones have transformed human communication more significantly than almost any other invention in history.",
+        "B": "The mobile smartphone is one of several historical inventions that had very little effect on global communication.",
+        "C": "Human communication was barely impacted by historical technological inventions before the arrival of smartphones.",
+        "D": "Only a small number of smartphones produced in history failed to influence modern communication methods.",
+        "E": "No historical invention except the mobile smartphone has ever brought about changes in human communication."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "So heavy was the snowstorm in the mountain pass that rescue teams had to postpone their search operations.",
+      "options": {
+        "A": "Rescue teams managed to continue their search operations despite experiencing a severe snowstorm in the mountains.",
+        "B": "The snowstorm in the mountain pass was so severe that rescue workers were forced to delay search efforts.",
+        "C": "Had rescue teams postponed their search operations earlier, the heavy snowstorm in the mountains would have ceased.",
+        "D": "Search operations in the mountain pass were delayed because rescue teams were caught unprepared by the weather.",
+        "E": "The snowstorm in the mountain pass gradually cleared up, allowing rescue teams to resume operations immediately."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Hardly had the keynote speaker finished her presentation when the audience erupted into enthusiastic applause.",
+      "options": {
+        "A": "The audience began clapping enthusiastically long before the keynote speaker completed her presentation.",
+        "B": "As soon as the keynote speaker ended her talk, the audience started applauding with great enthusiasm.",
+        "C": "The keynote speaker was interrupted by applause several times throughout her presentation to the audience.",
+        "D": "Although the keynote speaker presented brilliantly, the audience reacted with very little enthusiasm.",
+        "E": "The audience applauded enthusiastically to encourage the keynote speaker to finish her presentation quickly."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "No sooner had the new regulation been announced than shopkeepers started protesting against its strict requirements.",
+      "options": {
+        "A": "Shopkeepers had been protesting against strict regulations long before the new policy was official.",
+        "B": "Immediately after the new policy was announced, shopkeepers began protesting its rigid demands.",
+        "C": "The new regulation was announced only after shopkeepers agreed to fulfill its strict requirements.",
+        "D": "Despite protests from local shopkeepers, the authority announced a set of strict new regulations.",
+        "E": "Shopkeepers refused to protest against the new regulation because its requirements were not strict."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "It was not until the late 19th century that scientists fully understood the microbial cause of infectious diseases.",
+      "options": {
+        "A": "Scientists discovered infectious diseases in the 19th century, but failed to understand their microbial nature until recently.",
+        "B": "Before the late 19th century, scientists did not completely grasp that infectious diseases were caused by microbes.",
+        "C": "In the late 19th century, infectious diseases ceased to be a threat because scientists eliminated harmful microbes.",
+        "D": "Until scientists understood microbes in the late 19th century, infectious diseases were completely incurable.",
+        "E": "Infectious diseases were caused by microbes that scientists had already fully identified prior to the 19th century."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "It is virtually impossible for biodiversity to recover unless human activities in protected forest zones are restricted.",
+      "options": {
+        "A": "Restricting human activities in protected forest areas is essential if biodiversity is to have any chance of recovery.",
+        "B": "Biodiversity in protected forest zones will recover naturally regardless of whether human activities are restricted.",
+        "C": "Human activities in forest zones have been so severely restricted that biodiversity has already fully recovered.",
+        "D": "Even if human activities are restricted in protected forests, biodiversity recovery is impossible to achieve.",
+        "E": "Forest protection zones allow human activities to continue without causing any harm to local biodiversity."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "The company's profit margin expanded significantly last year, largely due to successful marketing strategies in international markets.",
+      "options": {
+        "A": "International marketing campaigns were ineffective, causing the company's profit margin to shrink last year.",
+        "B": "The company's profits grew substantially last year primarily because of effective marketing efforts abroad.",
+        "C": "Had the company not expanded into foreign markets, its marketing strategies would have generated higher profits.",
+        "D": "Last year's expanded profit margin allowed the company to invest heavily in international marketing campaigns.",
+        "E": "Marketing strategies in domestic markets contributed more to last year's profit expansion than international ones."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "The archeological team wouldn't have discovered the buried tomb if they hadn't used ground-penetrating radar technology.",
+      "options": {
+        "A": "Ground-penetrating radar technology enabled the archeological team to locate the buried tomb.",
+        "B": "The archeological team failed to discover the buried tomb despite using advanced ground-penetrating radar.",
+        "C": "Using ground-penetrating radar prevented the archeological team from discovering the ancient tomb.",
+        "D": "The tomb was discovered by chance before the archeological team brought ground-penetrating radar equipment.",
+        "E": "Had the archeological team used ground-penetrating radar, they could have saved time locating the tomb."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "The more people rely on digital navigation devices, the less confident they feel when reading traditional paper maps.",
+      "options": {
+        "A": "Using digital navigation tools frequently boosts people's ability to navigate with traditional paper maps.",
+        "B": "As reliance on digital navigation tools increases, people's confidence in using paper maps decreases.",
+        "C": "People who lack confidence in reading paper maps refuse to use digital navigation devices on trips.",
+        "D": "Paper maps are more reliable than digital navigation tools, yet fewer people use them today.",
+        "E": "Confidence in map reading is necessary whether one uses digital navigation devices or paper maps."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Regardless of how severe the criticism was, the director refused to modify the controversial ending of his film.",
+      "options": {
+        "A": "The director modified the ending of his film because the audience expressed severe criticism.",
+        "B": "Severe criticism led the director to reconsider whether to change the film's controversial ending.",
+        "C": "No matter how harsh the criticism became, the director kept the controversial ending of his movie unchanged.",
+        "D": "The director received criticism because he changed the film's ending to avoid controversial topics.",
+        "E": "Had the criticism been less severe, the director would have modified the ending of his controversial movie."
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "In spite of extensive efforts by conservationists, several endemic species in the region are nearing extinction.",
+      "options": {
+        "A": "Extensive conservation efforts succeeded in protecting all endemic species in the region from extinction.",
+        "B": "Regional endemic species are going extinct because conservationists made very little effort to save them.",
+        "C": "Even though conservationists worked hard, a number of local endemic species are close to dying out.",
+        "D": "Conservationists stopped their efforts once endemic species in the region recovered from threat of extinction.",
+        "E": "Endemic species in the region are nearing extinction faster than conservationists had originally anticipated."
+      },
+      "correct_option": "C"
+    },
+    {
+      "question_text": "So rapidly is urban population growing that municipal authorities are struggling to provide adequate public infrastructure.",
+      "options": {
+        "A": "Municipal authorities are upgrading public infrastructure quickly enough to match rapid urban population growth.",
+        "B": "Urban population is increasing at such a fast rate that local authorities find it difficult to deliver sufficient infrastructure.",
+        "C": "Public infrastructure in urban areas has improved so much that population growth has accelerated.",
+        "D": "Unless urban population growth slows down, municipal authorities will reduce spending on public infrastructure.",
+        "E": "Municipal authorities have successfully resolved infrastructure shortages despite rapid urban growth."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Only by reducing global carbon emissions can we prevent catastrophic rises in global sea levels.",
+      "options": {
+        "A": "Reducing global carbon emissions is the sole way to stop disastrous rises in global sea levels.",
+        "B": "Global sea levels will rise catastrophically even if we manage to reduce global carbon emissions.",
+        "C": "Catastrophic rises in sea levels can be prevented through various methods other than carbon reduction.",
+        "D": "Carbon emissions have dropped significantly, preventing global sea levels from rising catastrophically.",
+        "E": "If sea levels continue to rise catastrophically, global carbon emissions will inevitably decrease."
+      },
+      "correct_option": "A"
+    },
+    {
+      "question_text": "No matter how complex the financial software is, human accountants must verify final auditing reports.",
+      "options": {
+        "A": "Human accountants are no longer required to check auditing reports when complex financial software is used.",
+        "B": "Regardless of the complexity of financial software, final audit reports still require verification by human accountants.",
+        "C": "Complex financial software was designed specifically to replace human accountants in final auditing tasks.",
+        "D": "Human accountants must simplify financial software before generating accurate final auditing reports.",
+        "E": "Financial software is so complex that human accountants often struggle to verify final audit reports."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "The museum's new exhibition attracted far more visitors than the curators had originally anticipated.",
+      "options": {
+        "A": "Curators expected the new exhibition to draw huge crowds, but visitor numbers were disappointing.",
+        "B": "The number of visitors to the museum's new exhibition was much higher than the curators expected.",
+        "C": "The curators intentionally limited visitor numbers at the new exhibition to protect delicate artifacts.",
+        "D": "More visitors attended the museum's previous exhibition compared to the new exhibition curated recently.",
+        "E": "Had the curators anticipated higher attendance, they would have expanded the museum exhibition space."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Without clean water sanitation systems, infectious diseases spread rapidly throughout overcrowded urban refugee camps.",
+      "options": {
+        "A": "Infectious diseases in urban refugee camps are easily contained even when water sanitation systems fail.",
+        "B": "The lack of clean water sanitation facilities causes infectious diseases to spread quickly in crowded refugee camps.",
+        "C": "Overcrowded refugee camps have installed clean water sanitation systems to eliminate all infectious diseases.",
+        "D": "Water sanitation systems in refugee camps are maintained properly to prevent overcrowding in urban areas.",
+        "E": "Even with clean water sanitation systems, overcrowded refugee camps experience rapid disease outbreaks."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "She couldn't have passed the rigorous flight simulator test without months of intensive training.",
+      "options": {
+        "A": "She failed the flight simulator test because her intensive training lasted for only a few months.",
+        "B": "It was her months of intensive training that enabled her to pass the demanding flight simulator test.",
+        "C": "She passed the flight simulator test easily despite receiving no prior intensive flight training.",
+        "D": "Intensive flight simulator training for months guaranteed that every candidate passed the test.",
+        "E": "Flight simulator tests are so rigorous that even months of intensive training rarely yield passing scores."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Yapay zekâ teknolojilerinin tıp alanında kullanımı arttıkça, teşhis hatalarının önemli ölçüde azaldığı gözlemlenmektedir.",
+      "options": {
+        "A": "As the use of artificial intelligence technologies in medicine increases, a significant decrease in diagnostic errors is observed.",
+        "B": "Medical diagnostic errors have been completely eliminated because artificial intelligence is used in all hospitals.",
+        "C": "Increasing diagnostic errors in medicine have forced healthcare providers to adopt artificial intelligence technologies.",
+        "D": "Although artificial intelligence technology is widely used in medicine, diagnostic error rates remain unchanged.",
+        "E": "Doctors observe that diagnostic errors decrease only when artificial intelligence technologies replace human personnel."
+      },
+      "correct_option": "A"
+    }
+  ],
+  "situation": [
+    {
+      "question_text": "You are working on a group project with classmates, but one team member consistently misses deadlines and fails to complete assigned tasks. You want to address the issue politely but firmly without creating unnecessary conflict. What do you say?",
+      "options": {
+        "A": "You are ruining our project grade, and I am going to report you to the professor immediately!",
+        "B": "We noticed you've been struggling with deadlines; let's discuss how we can help you catch up so we finish on time.",
+        "C": "Don't worry about the project at all; I will do all your work for you so you can rest.",
+        "D": "Group projects are completely useless because there is always someone who does nothing.",
+        "E": "Why haven't you attended any meetings? Nobody wants to work with you anymore."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "A friend invites you to a weekend hiking trip, but you have an important university exam on Monday and need to study. You want to decline the invitation politely while expressing hope to join next time. What do you say?",
+      "options": {
+        "A": "Hiking is exhausting and boring, so I definitely don't want to come with you.",
+        "B": "I'd love to join, but I have a major exam on Monday that requires my full attention. Let's plan another trip soon!",
+        "C": "Sure, I will come hiking with you! Exams aren't that important anyway.",
+        "D": "You should cancel the hiking trip too and stay home to study for your exams.",
+        "E": "Why do you always invite me on trips when you know I am busy with academic work?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You ordered a specific book online, but when the package arrives, you open it and discover a completely different book inside. You call customer service to request a replacement. What do you say?",
+      "options": {
+        "A": "Your company is incompetent, and I demand an immediate cash refund for this terrible service!",
+        "B": "I received my package today, but it contains a different item than what I ordered. Could you please send the correct book?",
+        "C": "I am calling to tell you that I really enjoyed reading the book you sent me by mistake.",
+        "D": "Can you tell me when the next discount sale on academic books will begin?",
+        "E": "I forgot which book I ordered, so could you check my online purchase history?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are attending an academic seminar, and the speaker makes a statement that directly contradicts data you recently read in an authoritative journal. You want to ask a polite clarifying question during Q&A. What do you say?",
+      "options": {
+        "A": "Your presentation is completely wrong because recent studies prove the exact opposite of what you claimed!",
+        "B": "Thank you for the talk. According to a recent study in Journal X, data suggests Y. Could you elaborate on how your findings align with that?",
+        "C": "I don't think you are qualified to speak on this subject given the mistakes in your slides.",
+        "D": "Why did you choose such a boring topic for today's university seminar presentation?",
+        "E": "Could you please speak louder because people in the back row cannot hear you clearly?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Your neighbor plays very loud music late at night, preventing you from sleeping before an early morning work meeting. You knock on their door to ask them to turn down the volume tactfully. What do you say?",
+      "options": {
+        "A": "Turn off that noise right now or I am calling the police immediately!",
+        "B": "Hi! I have a very early meeting tomorrow and am struggling to sleep. Would you mind turning the volume down a bit?",
+        "C": "Your music taste is terrible, and everyone in the building is complaining about you.",
+        "D": "Could you turn up the volume a little? I really like the song you are playing right now.",
+        "E": "I am moving out of this apartment building tomorrow because of your loud music."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are at a job interview and the interviewer asks if you have experience managing unexpected crisis situations in your previous workplace. You want to answer confidently with an example. What do you say?",
+      "options": {
+        "A": "I have never faced any problems or crises in my career because everything always goes perfectly.",
+        "B": "Yes, in my previous role, when a server went down, I coordinated with tech support to restore systems within an hour.",
+        "C": "Crises are stressful, so I usually prefer to leave the office when unexpected problems arise.",
+        "D": "I don't think crisis management is relevant for the job position I am applying for today.",
+        "E": "My previous supervisor handled all issues, so I never had to take responsibility for anything."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "A colleague asks to borrow your laptop for a presentation because theirs broke down suddenly. You need your laptop for an upcoming meeting in 30 minutes. You want to offer a helpful alternative. What do you say?",
+      "options": {
+        "A": "I can't help you at all; you should have taken better care of your computer equipment.",
+        "B": "I need my laptop for a meeting in 30 minutes, but you can borrow my flash drive to load your slides on the conference room PC.",
+        "C": "Sure, take my laptop for the rest of the day! My meeting isn't important anyway.",
+        "D": "Why don't you cancel your presentation and reschedule it for next month?",
+        "E": "Laptops break down all the time, so you should just present without any visual slides."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are staying at a hotel and notice that the air conditioner in your room is leaking water onto the carpet. You call the front desk to report the issue promptly. What do you say?",
+      "options": {
+        "A": "I want to check out immediately and leave a negative review on travel websites!",
+        "B": "Hello, the air conditioner in Room 304 is leaking water onto the floor. Could you please send someone to inspect or fix it?",
+        "C": "Is the hotel swimming pool open for guests during late evening hours?",
+        "D": "The carpet in my room is very nice, but I think the room temperature is slightly too cold.",
+        "E": "I lost my room key card at the restaurant, can you issue me a new key?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Your younger sibling is feeling overwhelmed and anxious about choosing a university major. You want to reassure them and offer supportive advice. What do you say?",
+      "options": {
+        "A": "If you choose the wrong major, your entire career will be completely ruined forever.",
+        "B": "It's totally normal to feel uncertain. Take your time to explore your interests, and remember you can always adapt along the way.",
+        "C": "You should just pick the major that earns the most money regardless of whether you like it.",
+        "D": "Why are you worrying about university when you still have months before applications open?",
+        "E": "I picked my major in five minutes, so I don't understand why you are making a big deal out of it."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are presenting a proposal to your department supervisor, and she asks if the project can be completed within the current budget. You know additional funds will be needed. What do you say honestly?",
+      "options": {
+        "A": "Yes, absolutely! It will cost almost nothing to implement this entire strategy.",
+        "B": "Based on our estimates, the current budget will cover initial phases, but we will need about 10% additional funding to finish.",
+        "C": "Budgeting is not my responsibility, so you should ask the finance department instead.",
+        "D": "We will double the project budget immediately without giving any financial justification.",
+        "E": "If you don't give us unlimited funds, we will cancel the project right now."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Bir kütüphanede ders çalışırken yan masadaki kişilerin yüksek sesle konuştuğunu fark ediyorsunuz. Onları kibarca uyararak sessiz olmalarını rica etmek istiyorsunuz. Ne dersiniz?",
+      "options": {
+        "A": "Sessiz olun yoksa sizi güvenlik görevlisine şikayet edeceğim!",
+        "B": "Affedersiniz, sınava odaklanmaya çalışıyorum da sesinizi biraz alçaltmanız mümkün mü acaba?",
+        "C": "Kütüphaneler ders çalışmak için hiç uygun yerler değil zaten, ben gidiyorum.",
+        "D": "Konuştuğunuz konu çok ilgi çekici, ben de sohbetinize katılabilir miyim?",
+        "E": "Kütüphanede yüksek sesle konuşmak kanunen yasaktır, bilmiyor musunuz?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "A passenger on a train asks if the seat next to you is occupied. It is free because your friend got off at the previous station. You reply welcomingly. What do you say?",
+      "options": {
+        "A": "Yes, someone is sitting here, so please find another seat elsewhere in the carriage.",
+        "B": "No, it's completely free now. Please, feel free to sit down!",
+        "C": "I put my heavy luggage on that seat, so you cannot sit there.",
+        "D": "Train tickets are very expensive these days, aren't they?",
+        "E": "The train is running thirty minutes behind schedule today."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are dining at a restaurant and notice that your food is lukewarm when it should be served hot. You inform the waiter politely. What do you say?",
+      "options": {
+        "A": "This food is completely inedible! I am leaving without paying a single cent.",
+        "B": "Excuse me, my meal seems to have cooled down. Would you mind heating it up or bringing a fresh plate?",
+        "C": "The decor in this restaurant is lovely, but the waiter service is very slow.",
+        "D": "Could you bring me the dessert menu as soon as possible?",
+        "E": "I didn't like the ingredients used in this soup, so please change the recipe."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Your friend asks for your opinion on a jacket they just bought. You think the style doesn't suit them, but you want to give constructive criticism without hurting their feelings. What do you say?",
+      "options": {
+        "A": "That jacket looks terrible on you; you should throw it in the trash immediately!",
+        "B": "It's a nice jacket, but I think the blue one you tried earlier suited your personal style much better.",
+        "C": "I don't care about fashion at all, so why are you asking me?",
+        "D": "You spent way too much money on clothes this month.",
+        "E": "Everyone in the store was laughing at that jacket when you bought it."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are leading a workshop and run out of time before finishing your last few slides. You want to end the session professionally and share materials later. What do you say?",
+      "options": {
+        "A": "We ran out of time because you asked too many unnecessary questions during the talk.",
+        "B": "Since our time is up, I will email the remaining slides and supplementary resources to all participants today.",
+        "C": "I will stay here for another two hours until I finish every single slide in my presentation.",
+        "D": "The remaining slides were not important anyway, so we can just skip them completely.",
+        "E": "Please turn off the projector and exit the room immediately as the session is over."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "Your flight has been delayed by four hours, causing you to miss your connecting flight. You approach the airline desk to seek assistance calmly. What do you say?",
+      "options": {
+        "A": "You ruined my entire holiday trip and I am going to sue your airline company!",
+        "B": "Hello, due to the four-hour delay, I missed my connecting flight. Could you help me rebook onto the next available flight?",
+        "C": "Can you tell me what the weather forecast is like at my final destination?",
+        "D": "I would like to buy an extra luggage allowance for my international flight.",
+        "E": "Is there a comfortable lounge where I can wait for my original flight to board?"
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You receive an email offering you a job position after an interview, but you have already accepted another offer. You want to decline professionally. What do you say?",
+      "options": {
+        "A": "I found a much better job with a higher salary, so I don't need your offer.",
+        "B": "Thank you very much for the offer. However, I have recently accepted another position that aligns with my career goals. I wish you all the best.",
+        "C": "Why did it take your HR department so long to send me this job offer email?",
+        "D": "I accept the position and can start working at your office early next Monday morning.",
+        "E": "Please send me more details about employee health insurance and holiday allowances."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "A colleague asks you to explain a complex software feature while you are rushing to an urgent meeting. You want to reschedule the explanation for later today. What do you say?",
+      "options": {
+        "A": "Figure it out yourself by reading the instruction manual on the company website!",
+        "B": "I am rushing to an urgent meeting right now, but I can pop by your desk at 3 PM to walk you through it.",
+        "C": "Software updates are very confusing for everyone in our department.",
+        "D": "Sure, let's sit down right now for an hour and go through the software step by step.",
+        "E": "I don't know how to use that software feature either, so ask someone else."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are returning a borrowed car to your friend and notice the fuel tank is almost empty. You fill up the tank before returning it and hand over the keys. What do you say?",
+      "options": {
+        "A": "Your car uses too much fuel, so you should consider buying a hybrid vehicle.",
+        "B": "Thanks so much for lending me your car! I filled up the tank for you as a token of appreciation.",
+        "C": "The fuel light was flashing when I drove, but I didn't have time to visit a petrol station.",
+        "D": "Here are the keys, but I accidentally scratched the side mirror while parking.",
+        "E": "I borrowed your car for three days because my own vehicle was at the mechanic shop."
+      },
+      "correct_option": "B"
+    },
+    {
+      "question_text": "You are presenting at a university conference and your microphone suddenly stops working mid-sentence. You handle the technical glitch calmly with humor. What do you say?",
+      "options": {
+        "A": "Technology always fails! I refuse to continue speaking until someone replaces this equipment.",
+        "B": "It seems technology wants me to test my projection voice today! Can everyone in the back still hear me clearly?",
+        "C": "The sound technician in this venue is clearly not doing their job properly today.",
+        "D": "I guess my presentation was so boring that even the microphone decided to go to sleep.",
+        "E": "Please leave the auditorium while we spend forty minutes trying to repair the audio system."
+      },
+      "correct_option": "B"
     }
   ]
 }
