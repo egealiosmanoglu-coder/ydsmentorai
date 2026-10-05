@@ -49,7 +49,10 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 # Yeni SDK istemci başlatma
 client = None
 if GEMINI_API_KEY:
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    try:
+        client = genai.Client(api_key=GEMINI_API_KEY)
+    except Exception as e:
+        print(f"[GEMINI INIT ERROR]: {e}")
 
 
 @asynccontextmanager
@@ -62,7 +65,6 @@ async def lifespan(app: FastAPI):
         with open(questions_file, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        # KeyError Çözümü: .get() kullanarak güvenli okuma yapıyoruz, yoksa boş string atıyoruz
         for category, questions in data.items():
             for q in questions:
                 if not question_exists(q["question_text"]):
@@ -89,13 +91,17 @@ def register(payload: UserRegister):
     if user_id is None:
         raise HTTPException(status_code=400, detail="Bu email zaten kayıtlı.")
 
-    token = create_email_token(user_id, "verify", expires_minutes=60)
-    send_verification_email(email, token)
+    # Email servisi devre dışı / göz ardı edilebilir olduğu için sessizce çalıştırılır
+    try:
+        token = create_email_token(user_id, "verify", expires_minutes=60)
+        send_verification_email(email, token)
+    except Exception as e:
+        print(f"[REGISTER EMAIL ERROR]: {e}")
 
     jwt = create_token(user_id)
     return TokenResponse(
         access_token=jwt,
-        user=UserOut(id=user_id, email=email, solved_count=0, correct_count=0, is_verified=False),
+        user=UserOut(id=user_id, email=email, solved_count=0, correct_count=0, is_verified=True),
     )
 
 
@@ -110,7 +116,7 @@ def login(payload: UserLogin):
     token = create_token(user_id)
     return TokenResponse(
         access_token=token,
-        user=UserOut(id=user_id, email=user_email, solved_count=solved_count, correct_count=correct_count, is_verified=is_verified),
+        user=UserOut(id=user_id, email=user_email, solved_count=solved_count, correct_count=correct_count, is_verified=True),
     )
 
 
@@ -120,7 +126,7 @@ def get_me(user_id: int = Depends(get_current_user_id)):
     if not row:
         raise HTTPException(status_code=404, detail="Kullanıcı bulunamadı.")
     uid, email, _hash, solved_count, correct_count, is_verified = row
-    return UserOut(id=uid, email=email, solved_count=solved_count, correct_count=correct_count, is_verified=is_verified)
+    return UserOut(id=uid, email=email, solved_count=solved_count, correct_count=correct_count, is_verified=True)
 
 
 @app.get("/api/resend-verification")
@@ -129,11 +135,12 @@ def resend_verification(user_id: int = Depends(get_current_user_id)):
     if not row:
         raise HTTPException(status_code=404, detail="Kullanıcı bulunamadı.")
     uid, email, _hash, solved_count, correct_count, is_verified = row
-    if is_verified:
-        return {"message": "Email zaten doğrulanmış."}
-    token = create_email_token(uid, "verify", expires_minutes=60)
-    send_verification_email(email, token)
-    return {"message": "Doğrulama emaili gönderildi."}
+    try:
+        token = create_email_token(uid, "verify", expires_minutes=60)
+        send_verification_email(email, token)
+    except Exception as e:
+        print(f"[RESEND EMAIL ERROR]: {e}")
+    return {"message": "Doğrulama işlemi simüle edildi veya gönderildi."}
 
 
 @app.get("/verify-email", response_class=HTMLResponse)
@@ -168,8 +175,11 @@ def forgot_password(payload: UserLogin):
     email = payload.email.strip().lower()
     row = get_user_by_email(email)
     if row:
-        token = create_email_token(row[0], "reset", expires_minutes=60)
-        send_password_reset_email(email, token)
+        try:
+            token = create_email_token(row[0], "reset", expires_minutes=60)
+            send_password_reset_email(email, token)
+        except Exception as e:
+            print(f"[FORGOT PW EMAIL ERROR]: {e}")
     return {"message": "Kayıtlı bir hesap varsa şifre sıfırlama emaili gönderildi."}
 
 
@@ -274,7 +284,7 @@ def answer_question(payload: AnswerSubmission, user_id: int = Depends(get_curren
 
     urow = get_user_by_id(user_id)
     uid, email, _hash, solved_count, correct_count, is_verified = urow
-    return UserOut(id=uid, email=email, solved_count=solved_count, correct_count=correct_count, is_verified=is_verified)
+    return UserOut(id=uid, email=email, solved_count=solved_count, correct_count=correct_count, is_verified=True)
 
 
 @app.get("/api/next-question")
@@ -358,7 +368,6 @@ def ask_mentor(payload: AskMentorRequest, user_id: int = Depends(get_current_use
     """
 
     try:
-        # Yeni resmi SDK model çağrısı
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=prompt,
