@@ -31,7 +31,7 @@ def init_db():
                 id SERIAL PRIMARY KEY,
                 email TEXT UNIQUE NOT NULL,
                 password_hash TEXT NOT NULL,
-                is_verified BOOLEAN DEFAULT FALSE,
+                is_verified BOOLEAN DEFAULT TRUE,
                 created_at TIMESTAMP DEFAULT NOW(),
                 solved_count INTEGER DEFAULT 0,
                 correct_count INTEGER DEFAULT 0
@@ -48,12 +48,9 @@ def init_db():
                 created_at TIMESTAMP DEFAULT NOW()
             )
         """)
-        # Eski users tablosunda is_verified yoksa ekle
         cursor.execute("""
-            ALTER TABLE users ADD COLUMN IF NOT EXISTS is_verified BOOLEAN DEFAULT FALSE
+            ALTER TABLE users ADD COLUMN IF NOT EXISTS is_verified BOOLEAN DEFAULT TRUE
         """)
-        
-        # YENİ: Öğrencilerin çözdüğü soruları takip edeceğimiz tablo
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS user_solved_questions (
                 id SERIAL PRIMARY KEY,
@@ -62,13 +59,10 @@ def init_db():
                 UNIQUE(user_id, question_id)
             )
         """)
-        
         conn.commit()
     finally:
         conn.close()
 
-
-# ── Kullanıcı işlemleri ──────────────────────────────────────────────────────
 
 def create_user(email, password_hash):
     conn = get_connection()
@@ -77,7 +71,7 @@ def create_user(email, password_hash):
         try:
             cursor.execute("""
                 INSERT INTO users (email, password_hash, is_verified)
-                VALUES (%s, %s, FALSE) RETURNING id
+                VALUES (%s, %s, TRUE) RETURNING id
             """, (email, password_hash))
             user_id = cursor.fetchone()[0]
             conn.commit()
@@ -152,7 +146,6 @@ def update_user_password(user_id, new_password_hash):
 
 
 def get_all_users():
-    """Admin paneli için tüm kullanıcıları döndürür."""
     conn = get_connection()
     try:
         cursor = conn.cursor()
@@ -165,17 +158,13 @@ def get_all_users():
         conn.close()
 
 
-# ── Token işlemleri ──────────────────────────────────────────────────────────
-
 def create_email_token(user_id, token_type, expires_minutes=60):
-    """Doğrulama veya şifre sıfırlama tokeni oluşturur."""
     import datetime
     token = secrets.token_urlsafe(32)
     expires_at = datetime.datetime.utcnow() + datetime.timedelta(minutes=expires_minutes)
     conn = get_connection()
     try:
         cursor = conn.cursor()
-        # Aynı kullanıcı için eski tokenleri geçersiz kıl
         cursor.execute("""
             UPDATE email_tokens SET used = TRUE
             WHERE user_id = %s AND token_type = %s AND used = FALSE
@@ -191,10 +180,6 @@ def create_email_token(user_id, token_type, expires_minutes=60):
 
 
 def use_email_token(token, token_type):
-    """
-    Tokeni doğrular ve kullanılmış olarak işaretler.
-    Geçerliyse user_id döner, değilse None.
-    """
     import datetime
     conn = get_connection()
     try:
@@ -216,8 +201,6 @@ def use_email_token(token, token_type):
         conn.close()
 
 
-# ── Soru işlemleri ───────────────────────────────────────────────────────────
-
 def save_ai_question(category, question_text, options, correct_option, ai_explanation):
     conn = get_connection()
     try:
@@ -232,7 +215,6 @@ def save_ai_question(category, question_text, options, correct_option, ai_explan
 
 
 def get_random_stored_question(category):
-    """Bağlam dışı rastgele soru getirir (Eski sistem)."""
     conn = get_connection()
     try:
         cursor = conn.cursor()
@@ -246,15 +228,9 @@ def get_random_stored_question(category):
 
 
 def get_unsolved_random_question(user_id, category):
-    """
-    Kullanıcıya daha önce çözmediği rastgele bir soru getirir. 
-    Eğer tüm sorular bittiyse, kullanıcının geçmişini silip havuzu sıfırlar.
-    """
     conn = get_connection()
     try:
         cursor = conn.cursor()
-        
-        # 1. Kullanıcının daha önce çözmediği soruları ara
         cursor.execute("""
             SELECT id, question_text, options, correct_option, ai_explanation
             FROM ai_questions 
@@ -265,13 +241,9 @@ def get_unsolved_random_question(user_id, category):
         """, (category, user_id))
         row = cursor.fetchone()
         
-        # 2. Eğer çözülmemiş soru KALMADIYSA (Tüm sorular bittiyse)
         if not row:
-            # Kullanıcının çözme geçmişini temizle (Sıfırla)
             cursor.execute("DELETE FROM user_solved_questions WHERE user_id = %s", (user_id,))
             conn.commit()
-            
-            # Şimdi tüm havuzdan tekrar rastgele bir soru getir
             cursor.execute("""
                 SELECT id, question_text, options, correct_option, ai_explanation
                 FROM ai_questions WHERE category = %s ORDER BY RANDOM() LIMIT 1
@@ -284,7 +256,6 @@ def get_unsolved_random_question(user_id, category):
 
 
 def log_user_solved_question(user_id, question_id):
-    """Kullanıcının bir soruyu çözdüğünü veritabanına kaydeder."""
     conn = get_connection()
     try:
         cursor = conn.cursor()
