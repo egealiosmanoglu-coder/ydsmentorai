@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* TÜM SAYFAYI EKRAN BOYUTUNA ÇİVİLE */
         html, body { margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden; background: #090d16; font-family: 'Inter', sans-serif; color: #f8fafc; }
         body { display: flex; }
         
-        /* 1. SOL MENÜ (SIDEBAR) - KİLİTLİ BOYUT */
         .sidebar { width: 240px; height: 100vh; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
         .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 20px 15px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .mentor-avatar { font-size: 40px; margin-bottom: 8px; display: inline-block; animation: float 3s infinite ease-in-out; }
@@ -31,10 +29,8 @@
         
         .logout-btn { margin-top: 15px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
 
-        /* 2. WORKSPACE */
         .workspace { flex: 1; height: 100vh; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
         
-        /* ORTA TARAF: SORU ALANI (KAYMA ENGELLENDİ) */
         .quiz-side { flex: 1; height: 100vh; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; box-sizing: border-box; }
         .quiz-card { width: 100%; max-width: 600px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
         .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); }
@@ -54,14 +50,12 @@
         .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
         .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); }
         
-        /* 3. SAĞ TARAF: YAPAY ZEKA PANELİ (MUTLAK KİLİTLİ ALAN) */
         .ai-side { width: 440px; height: 100vh; max-height: 100vh; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
         .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); flex-shrink: 0; }
         .ai-status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
         .ai-title { font-weight: 700; font-size: 15px; color: #f1f5f9; }
         .ai-subtitle { font-size: 12px; color: #64748b; margin-top: 1px; }
         
-        /* CHAT ALANI ESNEYEMEZ, SADECE İÇTEN KAYABİLİR (SICRAMA ÇÖZÜMÜ) */
         .chat-container { flex: 1; min-height: 0; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; background: transparent; }
         .chat-placeholder { margin: auto; text-align: center; color: #334155; padding: 40px; }
         .chat-placeholder-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.4; }
@@ -77,7 +71,6 @@
 
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
-        /* Auth ekranı */
         .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
         .auth-container { display: flex; gap: 60px; align-items: center; max-width: 900px; width: 100%; }
         .welcome-side { flex: 1; }
@@ -135,7 +128,7 @@
                 <input class="auth-input" type="email" id="authEmail" placeholder="Email adresin">
                 <input class="auth-input" type="password" id="authPassword" placeholder="Şifre">
                 <button class="btn-submit" id="authSubmitBtn" onclick="handleAuthSubmit()">Giriş Yap</button>
-                <div class="auth-toggle">Hesabın yok mu? <a onclick="toggleAuthMode()">Kayıt ol</a></div>
+                <div class="auth-toggle"><span id="toggleText">Hesabın yok mu?</span> <a onclick="toggleAuthMode()" id="toggleLink">Kayıt ol</a></div>
             </div>
         </div>
     </div>
@@ -228,6 +221,7 @@
             const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value;
             if (!email || !password) { showAuthError("Lütfen alanları doldurun."); return; }
+            
             const endpoint = isRegisterMode ? '/api/register' : '/api/login';
             try {
                 const res = await fetch(endpoint, {
@@ -236,12 +230,15 @@
                     body: JSON.stringify({ email, password })
                 });
                 const data = await res.json();
-                if (!res.ok) { showAuthError(data.detail || "Kimlik doğrulama hatası."); return; }
+                if (!res.ok) { showAuthError(data.detail || "Giriş/Kayıt hatası oluştu."); return; }
+                
                 authToken = data.access_token;
                 currentUser = data.user;
                 localStorage.setItem('yds_token', authToken);
                 enterApp();
-            } catch (e) { showAuthError("Bağlantı hatası."); }
+            } catch (e) { 
+                showAuthError("Sunucuya bağlanılamadı."); 
+            }
         }
 
         function showAuthError(msg) { const el = document.getElementById('authError'); el.innerText = msg; el.style.display = "block"; }
@@ -251,6 +248,9 @@
             isRegisterMode = !isRegisterMode; 
             document.getElementById('authTitle').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
             document.getElementById('authSubmitBtn').innerText = isRegisterMode ? "Kayıt Ol" : "Giriş Yap";
+            document.getElementById('toggleText').innerText = isRegisterMode ? "Zaten hesabın var mı?" : "Hesabın yok mu?";
+            document.getElementById('toggleLink').innerText = isRegisterMode ? "Giriş yap" : "Kayıt ol";
+            hideAuthError();
         }
         
         function logout() { authToken = null; localStorage.removeItem('yds_token'); showAuthScreen(); }
@@ -424,7 +424,6 @@
             document.getElementById('progressBar').style.width = ratio + "%";
         }
 
-        async function showForgotPassword() { alert("Şifre sıfırlama linki için lütfen sistem yöneticisiyle iletişime geçin."); }
         tryAutoLogin();
     </script>
 </body>
