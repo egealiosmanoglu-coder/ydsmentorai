@@ -8,37 +8,37 @@
         html, body { margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden; background: #090d16; font-family: 'Inter', sans-serif; color: #f8fafc; }
         body { display: flex; }
         
-        .sidebar { width: 240px; height: 100vh; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
-        .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 20px 15px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .mentor-avatar { font-size: 40px; margin-bottom: 8px; display: inline-block; animation: float 3s infinite ease-in-out; }
-        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 15px; letter-spacing: 0.5px; }
-        .user-badge { margin-top: 10px; display: inline-block; background: rgba(56, 189, 248, 0.08); color: #38bdf8; font-size: 11px; padding: 4px 10px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; word-break: break-all; border: 1px solid rgba(56, 189, 248, 0.15); }
+        .sidebar { width: 260px; height: 100vh; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.06); padding: 25px 15px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
+        .mentor-profile { background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7)); padding: 18px 12px; border-radius: 14px; text-align: center; border: 1px solid rgba(56, 189, 248, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .mentor-avatar { font-size: 36px; margin-bottom: 6px; display: inline-block; animation: float 3s infinite ease-in-out; }
+        .mentor-name { font-weight: 700; color: #38bdf8; font-size: 14px; letter-spacing: 0.5px; }
+        .user-badge { margin-top: 8px; display: inline-block; background: rgba(56, 189, 248, 0.08); color: #38bdf8; font-size: 11px; padding: 4px 10px; border-radius: 9999px; font-weight: 600; word-break: break-all; border: 1px solid rgba(56, 189, 248, 0.15); }
         
-        .nav-container { margin-top: 30px; display: flex; flex-direction: column; gap: 6px; }
+        .nav-container { margin-top: 20px; display: flex; flex-direction: column; gap: 5px; overflow-y: auto; max-height: calc(100vh - 320px); }
         .nav-label { font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; padding-left: 6px; }
-        .nav-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 13px; text-align: left; transition: all 0.3s ease; }
+        .nav-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #94a3b8; font-weight: 600; cursor: pointer; font-size: 12.5px; text-align: left; transition: all 0.3s ease; }
         .nav-btn:hover { color: #f8fafc; background: rgba(255, 255, 255, 0.03); transform: translateX(3px); }
         .nav-btn.active { background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.02)); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25); font-weight: 700; }
         
-        .stats-container { margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .stat-box { background: rgba(30, 41, 59, 0.2); padding: 12px; border-radius: 10px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.02); }
-        .stat-val { font-size: 20px; font-weight: 700; color: #f8fafc; }
-        .stat-lbl { font-size: 11px; color: #64748b; }
-        .progress-bg { background: rgba(255,255,255,0.04); height: 5px; border-radius: 9999px; margin-top: 8px; overflow: hidden; }
+        .stats-container { margin-top: auto; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .stat-box { background: rgba(30, 41, 59, 0.2); padding: 10px; border-radius: 10px; margin-bottom: 6px; border: 1px solid rgba(255,255,255,0.02); }
+        .stat-val { font-size: 18px; font-weight: 700; color: #f8fafc; }
+        .stat-lbl { font-size: 10.5px; color: #64748b; }
+        .progress-bg { background: rgba(255,255,255,0.04); height: 5px; border-radius: 9999px; margin-top: 6px; overflow: hidden; }
         .progress-bar { background: linear-gradient(90deg, #0ea5e9, #38bdf8); height: 100%; width: 0%; transition: width 0.6s ease; }
         
-        .logout-btn { margin-top: 15px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
+        .logout-btn { margin-top: 10px; width: 100%; background: rgba(239, 68, 68, 0.06); color: #f87171; border: 1px solid rgba(239,68,68,0.15); padding: 8px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 12px; }
 
         .workspace { flex: 1; height: 100vh; display: flex; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); overflow: hidden; }
         
         .quiz-side { flex: 1; height: 100vh; padding: 40px; display: flex; align-items: center; justify-content: center; overflow-y: auto; box-sizing: border-box; }
-        .quiz-card { width: 100%; max-width: 600px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
-        .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 24px; border: 1px solid rgba(56, 189, 248, 0.15); }
-        .question-text { font-size: 19px; font-weight: 600; line-height: 1.65; margin-bottom: 30px; color: #f1f5f9; }
+        .quiz-card { width: 100%; max-width: 650px; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(24px); padding: 36px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.07); }
+        .badge { background: rgba(56, 189, 248, 0.08); color: #38bdf8; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; border: 1px solid rgba(56, 189, 248, 0.15); }
+        .question-text { font-size: 15.5px; font-weight: 500; line-height: 1.65; margin-bottom: 24px; color: #f1f5f9; white-space: pre-line; }
         
-        .option-container { display: flex; align-items: center; padding: 16px 20px; margin-bottom: 12px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s ease; }
-        .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-        .checkmark { height: 18px; width: 18px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 18px; display: inline-block; flex-shrink: 0; }
+        .option-container { display: flex; align-items: center; padding: 14px 18px; margin-bottom: 10px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 14px; cursor: pointer; transition: all 0.25s ease; font-size: 13.5px; line-height: 1.4; }
+        .option-container:hover { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); transform: translateY(-1px); }
+        .checkmark { height: 16px; width: 16px; border: 2px solid rgba(255,255,255,0.15); border-radius: 50%; margin-right: 14px; display: inline-block; flex-shrink: 0; }
         
         .option-selected { background: rgba(56, 189, 248, 0.06) !important; border-color: rgba(56, 189, 248, 0.4) !important; color: #38bdf8; }
         .option-selected .checkmark { border-color: #38bdf8 !important; background: #38bdf8; box-shadow: inset 0 0 0 4px #0f172a; }
@@ -47,29 +47,26 @@
         .option-wrong { background: rgba(239, 68, 68, 0.08) !important; border-color: rgba(239, 68, 68, 0.4) !important; color: #f87171; }
         .option-wrong .checkmark { border-color: #ef4444 !important; background: #ef4444; box-shadow: inset 0 0 0 4px #0f172a; }
         
-        .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
-        .btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(56, 189, 248, 0.25); }
+        .btn-submit { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #0f172a; border: none; padding: 15px; font-size: 14.5px; font-weight: 700; border-radius: 12px; cursor: pointer; width: 100%; margin-top: 15px; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
+        .btn-submit:hover { transform: translateY(-1px); }
         
-        .ai-side { width: 440px; height: 100vh; max-height: 100vh; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
-        .ai-header { padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); flex-shrink: 0; }
+        .ai-side { width: 420px; height: 100vh; max-height: 100vh; background: #0b1324; border-left: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; box-sizing: border-box; flex-shrink: 0; overflow: hidden; }
+        .ai-header { padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; background: rgba(15, 23, 42, 0.2); flex-shrink: 0; }
         .ai-status-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
-        .ai-title { font-weight: 700; font-size: 15px; color: #f1f5f9; }
-        .ai-subtitle { font-size: 12px; color: #64748b; margin-top: 1px; }
+        .ai-title { font-weight: 700; font-size: 14.5px; color: #f1f5f9; }
+        .ai-subtitle { font-size: 11.5px; color: #64748b; margin-top: 1px; }
         
-        .chat-container { flex: 1; min-height: 0; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; background: transparent; }
-        .chat-placeholder { margin: auto; text-align: center; color: #334155; padding: 40px; }
-        .chat-placeholder-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.4; }
-        .chat-placeholder-text { font-size: 13.5px; font-weight: 500; line-height: 1.6; color: #475569; }
+        .chat-container { flex: 1; min-height: 0; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box; }
+        .chat-placeholder { margin: auto; text-align: center; color: #334155; padding: 30px; }
+        .chat-placeholder-icon { font-size: 36px; margin-bottom: 10px; opacity: 0.4; }
+        .chat-placeholder-text { font-size: 13px; font-weight: 500; line-height: 1.6; color: #475569; }
         
-        .chat-input-area { padding: 20px 24px 24px 24px; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(15, 23, 42, 0.4); flex-shrink: 0; }
-        .chat-input-wrapper { display: flex; gap: 10px; background: rgba(0,0,0,0.2); padding: 6px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
-        .chat-input { flex: 1; padding: 10px 14px; border: none; background: transparent; color: #f8fafc; outline: none; font-family: inherit; font-size: 13.5px; }
-        .chat-input::placeholder { color: #475569; }
-        .chat-input:disabled { cursor: not-allowed; opacity: 0.5; }
-        .chat-send-btn { background: #38bdf8; color: #0f172a; border: none; padding: 0 18px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
-        .chat-send-btn:disabled { background: #1e293b; color: #475569; cursor: not-allowed; }
+        .chat-input-area { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.06); background: rgba(15, 23, 42, 0.4); flex-shrink: 0; }
+        .chat-input-wrapper { display: flex; gap: 8px; background: rgba(0,0,0,0.2); padding: 5px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .chat-input { flex: 1; padding: 8px 12px; border: none; background: transparent; color: #f8fafc; outline: none; font-family: inherit; font-size: 13px; }
+        .chat-send-btn { background: #38bdf8; color: #0f172a; border: none; padding: 0 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 12.5px; }
 
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
         .auth-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: radial-gradient(circle at 50% 50%, #111827 0%, #090d16 100%); }
         .auth-container { display: flex; gap: 60px; align-items: center; max-width: 900px; width: 100%; }
@@ -77,31 +74,21 @@
         .welcome-logo { font-size: 48px; margin-bottom: 16px; display: inline-block; animation: float 3s infinite ease-in-out; }
         .welcome-title { font-size: 32px; font-weight: 800; color: #f8fafc; margin-bottom: 8px; line-height: 1.2; }
         .welcome-title span { color: #38bdf8; }
-        .welcome-desc { font-size: 15px; color: #94a3b8; line-height: 1.8; margin-bottom: 28px; }
+        .welcome-desc { font-size: 14.5px; color: #94a3b8; line-height: 1.8; margin-bottom: 28px; }
         .divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; min-height: 300px; }
-        .auth-card { width: 100%; max-width: 360px; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
-        .auth-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; text-align: center; color: #f1f5f9; }
-        .auth-sub { font-size: 13.5px; color: #64748b; text-align: center; margin-bottom: 28px; }
-        .auth-input { width: 100%; box-sizing: border-box; padding: 14px; margin-bottom: 14px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: #f8fafc; font-size: 14px; font-family: inherit; }
-        .auth-input:focus { outline: none; border-color: #38bdf8; background: rgba(255,255,255,0.04); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1); }
-        .auth-error { color: #f87171; font-size: 13.5px; margin-bottom: 14px; display: none; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; border: 1px solid rgba(239,68,68,0.2); }
-        .auth-toggle { text-align: center; margin-top: 18px; font-size: 13.5px; color: #64748b; }
+        .auth-card { width: 100%; max-width: 360px; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); padding: 36px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.07); }
+        .auth-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; text-align: center; color: #f1f5f9; }
+        .auth-sub { font-size: 13px; color: #64748b; text-align: center; margin-bottom: 24px; }
+        .auth-input { width: 100%; box-sizing: border-box; padding: 13px; margin-bottom: 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; color: #f8fafc; font-size: 13.5px; font-family: inherit; }
+        .auth-error { color: #f87171; font-size: 13px; margin-bottom: 12px; display: none; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 8px; border: 1px solid rgba(239,68,68,0.2); }
+        .auth-toggle { text-align: center; margin-top: 16px; font-size: 13px; color: #64748b; }
         .auth-toggle a { color: #38bdf8; cursor: pointer; text-decoration: none; font-weight: 600; }
         .hidden { display: none !important; }
 
         .loading-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #090d16; min-height: 100vh; width: 100%; }
-        .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(56,189,248,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
-        .loading-text { color: #475569; font-size: 14px; font-weight: 500; }
+        .loading-spinner { width: 36px; height: 36px; border: 3px solid rgba(56,189,248,0.1); border-top-color: #38bdf8; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        .loading-text { color: #475569; font-size: 13.5px; font-weight: 500; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        
-        @media (max-width: 1150px) {
-            body { flex-direction: column; overflow-y: auto; height: auto; width: 100%; }
-            .sidebar { width: 100%; height: auto; }
-            .nav-container { flex-direction: row; margin-top: 15px; }
-            .workspace { flex-direction: column; height: auto; overflow: visible; }
-            .quiz-side { height: auto; }
-            .ai-side { width: 100%; height: 450px; max-height: 450px; }
-        }
     </style>
 </head>
 <body>
@@ -142,9 +129,13 @@
                     <span class="user-badge" id="userEmailBadge">-</span>
                 </div>
                 <div class="nav-container">
-                    <div class="nav-label">Çalışma Alanı</div>
+                    <div class="nav-label">Kategoriler</div>
                     <button id="tab_vocabulary" class="nav-btn active" onclick="switchCategory('vocabulary')"><span>📚</span> Kelime Bilgisi</button>
                     <button id="tab_sentence_completion" class="nav-btn" onclick="switchCategory('sentence_completion')"><span>🧩</span> Cümle Tamamlama</button>
+                    <button id="tab_reading" class="nav-btn" onclick="switchCategory('reading')"><span>📖</span> Paragraf Soruları</button>
+                    <button id="tab_dialogue" class="nav-btn" onclick="switchCategory('dialogue')"><span>💬</span> Diyalog Tamamlama</button>
+                    <button id="tab_restatement" class="nav-btn" onclick="switchCategory('restatement')"><span>🔄</span> Yakın Anlamlı Cümle</button>
+                    <button id="tab_situation" class="nav-btn" onclick="switchCategory('situation')"><span>🎯</span> Duruma Uygun Cümle</button>
                 </div>
             </div>
             <div>
@@ -163,7 +154,7 @@
                     <div class="question-text" id="qText">Yükleniyor...</div>
                     <div id="optionsBox"></div>
                     <button id="actionBtn" class="btn-submit" onclick="checkAnswer()">Cevabı Gönder</button>
-                    <div style="font-size:11px;color:#475569;margin-top:18px;text-align:right;" id="stokInfo">Stok: -</div>
+                    <div style="font-size:11px;color:#475569;margin-top:16px;text-align:right;" id="stokInfo">Stok: -</div>
                 </div>
             </div>
 
@@ -172,7 +163,7 @@
                     <div class="ai-status-dot"></div>
                     <div>
                         <div class="ai-title">Mentor AI Asistanı</div>
-                        <div class="ai-subtitle">Soru analizi ve eşanlamlı kelime taktikleri</div>
+                        <div class="ai-subtitle">Soru analizi ve sınav taktikleri</div>
                     </div>
                 </div>
                 <div class="chat-container" id="chatHistory">
@@ -193,7 +184,14 @@
 
     <script>
         const NEXT_LABEL = "🔄 Sıradaki Soruyu Getir";
-        const RETRY_LABEL = "🔄 Soruları Kontrol Et";
+        const categoryMap = {
+            'vocabulary': 'KELİME BİLGİSİ (VOCABULARY)',
+            'sentence_completion': 'CÜMLE TAMAMLAMA',
+            'reading': 'PARAGRAF SORULARI',
+            'dialogue': 'DİYALOG TAMAMLAMA',
+            'restatement': 'YAKIN ANLAMLI CÜMLE',
+            'situation': 'DURUMA UYGUN CÜMLE'
+        };
 
         let currentQuestion = null;
         let selectedLetter = null;
@@ -204,15 +202,11 @@
 
         function switchCategory(category) {
             currentCategory = category;
-            if (category === 'vocabulary') {
-                document.getElementById('tab_vocabulary').classList.add('active');
-                document.getElementById('tab_sentence_completion').classList.remove('active');
-                document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (VOCABULARY)";
-            } else {
-                document.getElementById('tab_sentence_completion').classList.add('active');
-                document.getElementById('tab_vocabulary').classList.remove('active');
-                document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS AYARI (SENTENCE COMPLETION)";
-            }
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            const activeTab = document.getElementById('tab_' + category);
+            if (activeTab) activeTab.classList.add('active');
+            
+            document.getElementById('categoryBadge').innerText = "👑 ÖSYM YDS - " + (categoryMap[category] || category.toUpperCase());
             loadQuestion();
         }
 
@@ -305,8 +299,9 @@
                 const res = await fetch(`/api/next-question?category=${currentCategory}`, { headers: authHeaders() });
                 const data = await res.json();
                 if (data.error === "loading") {
-                    document.getElementById('qText').innerText = "Kategorideki çözülmemiş sorular yükleniyor veya bitti...";
+                    document.getElementById('qText').innerText = "Bu kategoride henüz soru yok veya tüm soruları çözdünüz.";
                     document.getElementById('optionsBox').innerHTML = "";
+                    document.getElementById('stokInfo').innerText = "Stok: 0";
                     return;
                 }
                 currentQuestion = data;
@@ -365,7 +360,7 @@
             const chatHistory = document.getElementById('chatHistory');
             chatHistory.innerHTML += `
                 <div style="align-self: flex-start; background: rgba(30, 41, 59, 0.6); padding: 14px; border-radius: 12px; border-left: 4px solid ${resultColor}; max-width: 90%; font-size:13.5px; line-height:1.5;">
-                    ${resultMessage}<br><span style="color:#64748b; font-size:12px; display:inline-block; margin-top:6px;">Detayları, kelime analizlerini veya diğer şıkları bana sormak için aşağıdaki kutuyu kullanabilirsin!</span>
+                    ${resultMessage}<br><span style="color:#64748b; font-size:12px; display:inline-block; margin-top:6px;">Detayları veya analizleri sormak için aşağıdaki kutuyu kullanabilirsin!</span>
                 </div>`;
 
             document.getElementById('actionBtn').innerText = NEXT_LABEL;
